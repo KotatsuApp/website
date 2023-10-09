@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 18
           cache: npm
-          cache-dependency-path: 'package-lock.json'
+          cache-dependency-path: './package-lock.json'
       - run: npm i --frozen-lockfile
       - name: Build
         run: npm run build
