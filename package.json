@@ -14,10 +14,8 @@
         }
     ],
     "scripts": {
-        "preinstall": "npx only-allow pnpm",
-		"test": "pnpm lint && pnpm build && pnpm preview",
 		"dev": "vitepress dev",
-		"build": "vitepress build",
+		"build": "node --max_old_space_size=4096 ./node_modules/vitepress/bin/vitepress.js build",
 		"preview": "vitepress preview",
 		"lint": "markdownlint **/*.md --disable MD045"
     },

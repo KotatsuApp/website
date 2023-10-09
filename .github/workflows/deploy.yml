@@ -15,10 +15,10 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: pnpm
-      - run: pnpm i --frozen-lockfile
+          cache: npm
+      - run: npm i --frozen-lockfile
       - name: Build
-        run: pnpm run build
+        run: npm run build
         env:
           NODE_OPTIONS: "--max_old_space_size=4096"
       - uses: easingthemes/ssh-deploy@main
