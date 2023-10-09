@@ -49,7 +49,7 @@ Some **DO**s and **DO NOT**s for [FAQ](/manuals/faq/general).
 - **DO** bold important words in your text:
 > ...checking the **Download badges** option...
 
-- **DO** use **[Shortcodes](https://github.com/KotatsuApp/kotatsuapp.github.io/.vitepress/config/shortcodes.ts)** items when applicable:
+- **DO** use **[Shortcodes](https://github.com/KotatsuApp/website/.vitepress/config/shortcodes.ts)** items when applicable:
 > <nav to="data"/>
 
 - **DO** use unordered lists when writing a list of stuff that's not an instruction:

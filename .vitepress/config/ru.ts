@@ -68,7 +68,7 @@ export const config: LocaleConfig<Theme.Config> = {
         next: 'Следующая страница',
       },
       editLink: {
-        pattern: 'https://github.com/KotatsuApp/kotatsuapp.github.io/edit/master/website/:path',
+        pattern: 'https://github.com/KotatsuApp/website/edit/master/website/:path',
         text: 'Предложить изменения на этой странице',
       },
       footer: {

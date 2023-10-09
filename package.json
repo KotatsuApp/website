@@ -1,7 +1,7 @@
 {
     "name": "kotatsu-website",
     "version": "1.0.0",
-    "repository": "https://github.com/KotatsuApp/kotatsuapp.github.io.git",
+    "repository": "https://github.com/KotatsuApp/website.git",
     "type": "module",
     "contributors": [
         {

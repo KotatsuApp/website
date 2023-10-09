@@ -14,7 +14,7 @@ author: ztimms73
 
 [![KotatsuApp/kotatsu-parsers - GitHub](https://gh-card.dev/repos/KotatsuApp/kotatsu-parsers.svg)](https://github.com/KotatsuApp/kotatsu-parsers)
 
-[![KotatsuApp/kotatsuapp.github.io - GitHub](https://gh-card.dev/repos/KotatsuApp/kotatsuapp.github.io.svg)](https://github.com/KotatsuApp/kotatsuapp.github.io)
+[![KotatsuApp/website - GitHub](https://gh-card.dev/repos/KotatsuApp/website.svg)](https://github.com/KotatsuApp/website)
 
 ## Перевод
 ![Graph of Weblate Translations](https://hosted.weblate.org/widgets/kotatsu/-/strings/open-graph.png)
