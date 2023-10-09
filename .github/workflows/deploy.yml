@@ -6,7 +6,7 @@ on:
       - main
 jobs:
   deploy:
-    if: github.repository_owner == 'ztimms73'
+    if: github.repository_owner == 'KotatsuApp'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
