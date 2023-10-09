@@ -18,7 +18,7 @@ import shortcodes from "./shortcodes"
 import generateOgImages from "./hooks/generateOgImages"
 import generateMeta from "./hooks/generateMeta"
 
-const SITE_HOST = 'http://86.57.183.214:4173'
+const SITE_HOST = 'https://kotatsu.app'
 const SITE_TITLE = 'kotatsu.app'
 const SITE_TITLE_SEPARATOR = ' / '
 
