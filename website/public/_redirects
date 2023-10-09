@@ -1,0 +1,16 @@
+# Requested URL -> Redirected URL -> HTTP Code
+/help/                                  /manuals/guides/troubleshooting/       301
+/manuals/guides/getting-started/        /manuals/guides/getting-started        301
+/manuals/guides/backups/                /manuals/guides/backups                301
+/manuals/guides/tracking/               /manuals/guides/tracking               301
+/manuals/guides/categories/             /manuals/guides/categories             301
+/manuals/guides/reader-settings/        /manuals/guides/reader-settings        301
+/manuals/faq/                           /manuals/faq/general                   301
+/manuals/faq/feed/                      /manuals/faq/feed                      301
+/manuals/faq/reader/                    /manuals/faq/reader                    301
+/manuals/faq/explore/sources/           /manuals/faq/explore/sources           301
+/manuals/faq/explore/local-storage/     /manuals/faq/explore/local-storage     301
+/manuals/faq/explore/bookmarks/         /manuals/faq/explore/bookmarks         301
+/manuals/faq/explore/random/            /manuals/faq/explore/random            301
+/manuals/faq/explore/downloads/         /manuals/faq/explore/downloads         301
+/manuals/faq/explore/suggestions/       /manuals/faq/explore/suggestions       301
