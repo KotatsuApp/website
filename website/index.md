@@ -39,7 +39,7 @@ features:
 <div class="divider" />
 <div class="dl">
   <h1>kotatsu-dl</h1>
-  <p>Cross-platform desktop application for downloading manga from various services. Allows you to search for manga and download it to the CBZ comic archives.</p>
+  <p>Cross-platform desktop application for downloading manga from various services. Allows you to search for manga and download it to the CBZ comic archives</p>
   <a href="https://github.com/KotatsuApp/kotatsu-dl" target="_blank" class="btn">View on GitHub</a>
   <img src="/img/kotatsu-dl.png">
 </div>
