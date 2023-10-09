@@ -1,0 +1,93 @@
+:root {
+    --vp-c-overlay: rgba(255 255 255 / .8);
+  }
+  
+  .dark {
+    --vp-c-overlay: rgba(0 0 0 / .8);
+  }
+  
+  .vp-doc img {
+    cursor: zoom-in;
+  }
+  
+  .glightbox-open.glightbox-mobile .VPLocalNav {
+    position: fixed;
+  }
+  
+  .glightbox-white {
+    color: var(--vp-c-text-1);
+  }
+  
+  .glightbox-white .goverlay {
+    background: var(--vp-c-overlay);
+  }
+  
+  .glightbox-white .gloader {
+    border: 2px solid var(--vp-c-text-1);
+    border-right-color: var(--vp-c-bg);
+  }
+  
+  .glightbox-white .gslide-description {
+    background: none;
+    padding-block: 20px;
+  }
+  
+  .glightbox-white .gclose {
+    top: 20px;
+    right: 20px;
+    position: absolute;
+  }
+  
+  .glightbox-white .gbtn:not(.disabled):hover {
+    background-color: var(--vp-c-gray-3);
+  }
+  
+  .glightbox-white .gnext,
+  .glightbox-white .gprev {
+    position: absolute;
+    top: -100%;
+  }
+  
+  .glightbox-white .gprev {
+    left: 30px;
+  }
+  
+  .glightbox-white .gnext {
+    right: 30px;
+  }
+  
+  .glightbox-white .gbtn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--vp-c-gray-soft);
+    border-radius: 50%;
+    box-shadow: var(--vp-shadow-1);
+    background-color: var(--vp-c-bg);
+  }
+  
+  .glightbox-white .gbtn svg {
+    fill: currentColor;
+  }
+  
+  @media (min-width: 767px) {
+    .glightbox-white .gclose {
+      top: 30px;
+      right: 30px;
+    }
+  
+    .glightbox-white .gbtn {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .glightbox-white .gprev,
+    .glightbox-white .gnext {
+      top: 45%;
+    }
+  }
+  
+  .glightbox-mobile .glightbox-container .gslide-title,
+  .glightbox-mobile .glightbox-container .gslide-description {
+    background: none;
+    color: var(--vp-c-text-1);
+  }

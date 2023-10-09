@@ -1,0 +1,70 @@
+{
+    "name": "kotatsu-website",
+    "version": "1.0.0",
+    "repository": "https://github.com/KotatsuApp/kotatsuapp.github.io.git",
+    "type": "module",
+    "contributors": [
+        {
+            "name": "Zakhar Timoshenko",
+            "email": "xtimms@live.com"
+        },
+        {
+            "name": "Koitharu",
+            "email": "nvasya95@gmail.com"
+        }
+    ],
+    "scripts": {
+        "preinstall": "npx only-allow pnpm",
+		"test": "pnpm lint && pnpm build && pnpm preview",
+		"dev": "vitepress dev",
+		"build": "vitepress build",
+		"preview": "vitepress preview",
+		"lint": "markdownlint **/*.md --disable MD045"
+    },
+    "devDependencies": {
+        "@docsearch/css": "^3.3.3",
+        "@docsearch/js": "^3.3.3",
+        "@modix/smarty-tmlanguage": "^1.1.0",
+        "@resvg/resvg-js": "2.4.1",
+        "@types/gtag.js": "0.0.14",
+        "@types/markdown-it": "^12.2.3",
+        "@types/node": "^18.16.13",
+        "dotenv": "^16.3.1",
+        "fast-glob": "^3.2.12",
+        "gray-matter": "^4.0.3",
+        "markdown-it": "^13.0.1",
+        "markdown-it-container": "^3.0.0",
+        "markdown-it-kbd": "^2.2.2",
+        "markdown-it-shortcode-tag": "1.1.0",
+        "markdownlint": "^0.29.0",
+        "markdownlint-cli": "^0.34.0",
+        "modx-tmlanguage": "^1.2.0",
+        "plop": "^3.1.2",
+        "stylus": "0.60.0",
+        "transliteration": "^2.3.5",
+        "vue3-carousel": "0.3.1",
+        "vitepress": "^1.0.0-rc.20",
+        "vitepress-plugin-tabs": "0.4.1",
+        "vue": "^3.3.4",
+        "x-satori": "0.1.5"
+    },
+    "pnpm": {
+        "peerDependencyRules": {
+            "ignoreMissing": [
+                "@algolia/client-search"
+            ]
+        }
+    },
+    "dependencies": {
+        "@octokit/rest": "20.0.2",
+		"@octokit/types": "12.0.0",
+        "@vueuse/core": "^10.1.2",
+        "@xobotyi/scrollbar-width": "^1.9.5",
+        "glightbox": "^3.2.0",
+        "moment": "2.29.4",
+        "uuid": "^9.0.0"
+    },
+    "engines": {
+        "node": ">=18"
+    }
+}

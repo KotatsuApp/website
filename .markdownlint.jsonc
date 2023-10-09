@@ -1,0 +1,15 @@
+{
+    "line-length": false,
+    "link-fragments": false,
+    "no-inline-html": {
+        "allowed_elements": ["Badge", "ul", "ol", "li", "small", "sub", "sup", "br"]
+    },
+    "fenced-code-language": false,
+    "no-duplicate-heading": {
+        "allow_different_nesting": true,
+        "siblings_only": true
+    },
+    "single-title": {
+        "front_matter_title": ""
+    }
+}

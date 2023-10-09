@@ -1,0 +1,31 @@
+name: Deploy
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    if: github.repository_owner == 'ztimms73'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: pnpm
+      - run: pnpm i --frozen-lockfile
+      - name: Build
+        run: pnpm run build
+        env:
+          NODE_OPTIONS: "--max_old_space_size=4096"
+      - uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: '--archive --compress --delete --exclude="/redirect.php"'
+          SOURCE: ".vitepress/dist/"
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: ${{ secrets.REMOTE_TARGET }}
