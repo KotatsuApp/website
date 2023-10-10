@@ -101,10 +101,10 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
 		{
 			text: "Поширені запитання",
 			items: [
-				{ text: "Загальне", link: "/ua/manuals/faq/general/" },
+				{ text: "Загальне", link: "/ua/manuals/faq/general" },
 				{
 					text: "Стрічка",
-					link: "/ua/manuals/faq/feed/",
+					link: "/ua/manuals/faq/feed",
 				},
 				{
 					text: "Огляд",
@@ -113,79 +113,79 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
 					items: [
 						{ 
 							text: "Джерела", 
-							link: "/ua/manuals/faq/explore/sources/" 
+							link: "/ua/manuals/faq/explore/sources" 
 						},
 						{
 							text: "Локальне сховище",
-							link: "/ua/manuals/faq/explore/local-storage/",
+							link: "/ua/manuals/faq/explore/local-storage",
 						},
 						{
 							text: "Закладки",
-							link: "/ua/manuals/faq/explore/bookmarks/",
+							link: "/ua/manuals/faq/explore/bookmarks",
 						},
 						{
 							text: "Випадкові серії",
-							link: "/ua/manuals/faq/explore/random/",
+							link: "/ua/manuals/faq/explore/random",
 						},
 						{
 							text: "Завантаження",
-							link: "/ua/manuals/faq/explore/downloads/",
+							link: "/ua/manuals/faq/explore/downloads",
 						},
 						{
 							text: "Рекомендації",
-							link: "/ua/manuals/faq/explore/suggestions/",
+							link: "/ua/manuals/faq/explore/suggestions",
 						},
 					],
 				},
 				{
 					text: "Читання",
-					link: "/ua/manuals/faq/reader/",
+					link: "/ua/manuals/faq/reader",
 				},
 				{
 					text: "Налаштування",
-					link: "/ua/manuals/faq/settings/",
+					link: "/ua/manuals/faq/settings",
 				},
 			],
 		},
 		{
-			text: "Guides",
+			text: "Гайди",
 			items: [
 				{
-					text: "Getting started",
-					link: "/ua/manuals/guides/getting-started/",
+					text: "Початок роботи",
+					link: "/ua/manuals/guides/getting-started",
 				},
 				{
-					text: "Troubleshooting",
+					text: "Вирішення проблем",
 					link: "/ua/manuals/guides/troubleshooting/",
 					collapsed: true,
 					items: [
 						{
-							text: "Common issues",
-							link: "/ua/manuals/guides/troubleshooting/common-issues/",
+							text: "Загальні питання",
+							link: "/ua/manuals/guides/troubleshooting/common-issues",
 						},
 						{
-							text: "Diagnosis",
-							link: "/ua/manuals/guides/troubleshooting/diagnosis/",
+							text: "Діагностика",
+							link: "/ua/manuals/guides/troubleshooting/diagnosis",
 						},
 					],
 				},
-				{ text: "Backups", link: "/ua/manuals/guides/backups/" },
-				{ text: "Tracking", link: "/ua/manuals/guides/tracking/" },
-				{ text: "Categories", link: "/ua/manuals/guides/categories/" },
+				{ text: "Резервні копії", link: "/ua/manuals/guides/backups" },
+				{ text: "Трекінг", link: "/ua/manuals/guides/tracking" },
+				{ text: "Категорії", link: "/ua/manuals/guides/categories" },
 				{
-					text: "Local storage",
+					text: "Локальне сховище",
 					link: "/ua/manuals/guides/local-storage/",
 					collapsed: true,
 					items: [
 						{
-							text: "Advanced editing",
-							link: "/ua/manuals/guides/local-source/advanced/",
+							text: "Розширене редагування",
+							link: "/ua/manuals/guides/local-source/advanced",
 						},
 					],
 				},
 				{
-					text: "Reader settings",
-					link: "/ua/manuals/guides/reader-settings/",
+					text: "Налаштування читання",
+					link: "/ua/manuals/guides/reader-settings",
 				},
 			],
 		},
