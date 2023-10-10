@@ -1,6 +1,6 @@
 ---
-title: Download
-description: Download page that allows users to access and install the latest version of the app.
+title: Завантажити
+description: Сторінка завантаження, яка дозволяє користувачам отримати доступ до останньої версії програми та встановити її.
 lastUpdated: false
 editLink: false
 prev: false
@@ -15,7 +15,7 @@ import Changelog from "@theme/components/Changelog.vue";
 
 # Download
 
-The latest stable version of **Kotatsu** was released **<ReleaseDate type="stable" />**.
+Остання стабільна версія **Kotatsu** була випущена **<ReleaseDate type="stable" />**.
 
 <DownloadButtons />
 
