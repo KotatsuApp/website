@@ -25,18 +25,5 @@ export default {
     enhanceAppWithTabs(app)
     createZoom(app, router)
     analytics({ id: "G-X37JGMJE4R" })
-    if (
-      import.meta.env.PROD &&
-      inBrowser
-    ) {
-      watch(
-        () => router.route.data.relativePath,
-        (_path, oldPath) => {
-          if (!oldPath) { // Skip initial change
-            return
-          }
-        }
-      )
-    }
   },
 }
