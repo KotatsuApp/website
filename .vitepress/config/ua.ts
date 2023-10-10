@@ -44,7 +44,7 @@ export const config: LocaleConfig<Theme.Config> = {
       nav: getNav(),
   
       sidebar: {
-          
+        "/": defaultSidebar(),
       },
 
       outline: {
@@ -77,6 +77,119 @@ export const config: LocaleConfig<Theme.Config> = {
       components: components.filter(component => component.path.startsWith('ru/components/')),
     }
   }
+}
+
+function defaultSidebar(): DefaultTheme.SidebarItem[] {
+	return [
+		{
+            text: "Загальні розділи",
+			items: [
+				{
+					text: "Завантажити",
+					link: "/ua/download/",
+				},
+				{
+					text: "Список змін",
+					link: "/ua/changelogs/",
+				},
+				{
+					text: "Зробити внесок",
+					link: "/ua/contribute/",
+				},
+			],
+		},
+		{
+			text: "Поширені запитання",
+			items: [
+				{ text: "Загальне", link: "/ua/manuals/faq/general/" },
+				{
+					text: "Стрічка",
+					link: "/ua/manuals/faq/feed/",
+				},
+				{
+					text: "Огляд",
+					link: "/ua/manuals/faq/explore/",
+					collapsed: true,
+					items: [
+						{ 
+							text: "Джерела", 
+							link: "/ua/manuals/faq/explore/sources/" 
+						},
+						{
+							text: "Локальне сховище",
+							link: "/ua/manuals/faq/explore/local-storage/",
+						},
+						{
+							text: "Закладки",
+							link: "/ua/manuals/faq/explore/bookmarks/",
+						},
+						{
+							text: "Випадкові серії",
+							link: "/ua/manuals/faq/explore/random/",
+						},
+						{
+							text: "Завантаження",
+							link: "/ua/manuals/faq/explore/downloads/",
+						},
+						{
+							text: "Рекомендації",
+							link: "/ua/manuals/faq/explore/suggestions/",
+						},
+					],
+				},
+				{
+					text: "Читання",
+					link: "/ua/manuals/faq/reader/",
+				},
+				{
+					text: "Налаштування",
+					link: "/ua/manuals/faq/settings/",
+				},
+			],
+		},
+		{
+			text: "Guides",
+			items: [
+				{
+					text: "Getting started",
+					link: "/ua/manuals/guides/getting-started/",
+				},
+				{
+					text: "Troubleshooting",
+					link: "/ua/manuals/guides/troubleshooting/",
+					collapsed: true,
+					items: [
+						{
+							text: "Common issues",
+							link: "/ua/manuals/guides/troubleshooting/common-issues/",
+						},
+						{
+							text: "Diagnosis",
+							link: "/ua/manuals/guides/troubleshooting/diagnosis/",
+						},
+					],
+				},
+				{ text: "Backups", link: "/ua/manuals/guides/backups/" },
+				{ text: "Tracking", link: "/ua/manuals/guides/tracking/" },
+				{ text: "Categories", link: "/ua/manuals/guides/categories/" },
+				{
+					text: "Local storage",
+					link: "/ua/manuals/guides/local-storage/",
+					collapsed: true,
+					items: [
+						{
+							text: "Advanced editing",
+							link: "/ua/manuals/guides/local-source/advanced/",
+						},
+					],
+				},
+				{
+					text: "Reader settings",
+					link: "/ua/manuals/guides/reader-settings/",
+				},
+			],
+		},
+	]
 }
 
 function getNav(): DefaultTheme.NavItem[] {
