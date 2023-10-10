@@ -1,19 +1,19 @@
 ---
-title: Downloads
-description: Frequently Asked Question about Downloads.
+title: Завантаження
+description: Поширені запитання про завантаження.
 ---
 
 # Downloads
-Frequently Asked Question about Downloads.
+Поширені запитання про завантаження.
 
-## Why did my downloads stop midway?
-Downloads stopping midway may be related to network connection issues or source problems.
-**Kotatsu** will provide notifications regarding encountered errors during download attempts.
+## Чому мої завантаження зупинилися на середині?
+Завантаження зупиняється на середині шляху, що може бути пов'язано з проблемами з'єднання з мережею або проблемами з джерелом.
+**Kotatsu** надасть сповіщення про помилки під час спроб завантаження.
 
-## How do I manage what's downloading?
-Navigate to <nav to="explore_downloads"> to interact with queued downloads.
+## Як керувати завантаженням?
+Перейдіть до <nav to="explore_downloads">, щоб взаємодіяти з завантаженнями у черзі.
 
-You can cancel item by clicking the **Cancel** button.
+Ви можете скасувати елемент, натиснувши кнопку **Скасувати**.
 
-## Can I use both internal storage and external SD card storage?
-No, you must choose a single location. Internal storage performs better than external SD cards.
+## Чи можу я використовувати як внутрішню пам'ять, так і зовнішню SD-карту?
+Ні, ви повинні вибрати одне місце. Внутрішня пам'ять працює краще, ніж зовнішні SD-карти.

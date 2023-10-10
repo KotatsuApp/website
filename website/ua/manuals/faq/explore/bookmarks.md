@@ -1,4 +1,4 @@
 ---
-title: Bookmarks
-description: Frequently Asked Questions about Bookmarks.
+title: Закладки
+description: Часті запитання про закладки.
 ---
