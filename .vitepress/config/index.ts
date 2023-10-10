@@ -11,6 +11,7 @@ import { fileURLToPath, URL } from 'node:url'
 import { telegram } from '../../website/icons'
 import { normalize } from 'vitepress/dist/client/shared'
 import { tabsMarkdownPlugin } from "vitepress-plugin-tabs"
+import pluginRewriteAll from 'vite-plugin-rewrite-all';
 
 import shortcode_plugin from "markdown-it-shortcode-tag"
 import shortcodes from "./shortcodes"
@@ -51,6 +52,7 @@ export default defineConfigWithTheme<Theme.Config>({
     config (md) {
       addPlugins(md)
       md.use(tabsMarkdownPlugin)
+      md.use(pluginRewriteAll)
       md.use(shortcode_plugin, shortcodes)
     },
   },

@@ -1,5 +1,5 @@
-import { type Router, inBrowser } from 'vitepress'
-import { type App, watch, defineComponent } from 'vue'
+import { type Router, inBrowser, useData } from 'vitepress'
+import { type App, watch, defineComponent, watchEffect } from 'vue'
 import { createZoom } from './composables/zoom'
 import { enhanceAppWithTabs } from "vitepress-plugin-tabs/client"
 import analytics from "./plugins/analytics"
@@ -11,6 +11,15 @@ import './styles/glightbox.css'
 export default {
   extends: DefaultTheme,
   Layout: Layout,
+
+  setup() {
+    const { lang } = useData()
+    watchEffect(() => {
+      if (inBrowser) {
+        document.cookie = `nf_lang=${lang.value}; expires=Mon, 1 Jan 2024 00:00:00 UTC; path=/`
+      }
+    })
+  },
 
   enhanceApp({ app, router }: { app: App, router: Router }) {
     enhanceAppWithTabs(app)
