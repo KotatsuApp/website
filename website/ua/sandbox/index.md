@@ -1,6 +1,6 @@
 ---
-title: Sandbox
-description: Area to test and demonstrate different features and capabilities.
+title: Пісочниця
+description: Зона для тестування та демонстрації різних функцій і можливостей.
 search: false
 sidebar: true
 sitemap: 
@@ -11,14 +11,14 @@ head:
       content: noindex, nofollow
 ---
 
-# Sandbox
-Sandbox playground for demonstrating and documenting how different website functions work for easier integration by contributors.
+# Пісочниця
+Пісочниця для демонстрації та документування того, як працюють різні функції веб-сайту, щоб полегшити інтеграцію для дописувачів.
 
-- [Style guide](/sandbox/style-guide)
+- [Посібник по стилю](/ua/sandbox/style-guide)
 
-## Shortcodes
+## Шорткоди
 
-### Full list
+### Повний список
 
 ```html
 <nav to="main_history">
