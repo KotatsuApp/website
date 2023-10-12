@@ -1,5 +1,6 @@
 import type { DefaultTheme, LocaleConfig } from 'vitepress'
 import type { Theme } from '../theme/types'
+import { sections } from '../theme/plugins/section'
 import 'dotenv/config'
 
 export const SITE_NAME = 'Kotatsu Website'
@@ -56,7 +57,6 @@ export const config: LocaleConfig<Theme.Config> = {
       sidebarMenuLabel: 'Меню',
       darkModeSwitchLabel: 'Тема',
       langMenuLabel: 'Изменить язык',
-      teamSectionTitle: 'Команда',
 
       lastUpdated: {
         text: 'Последнее обновление',
@@ -74,6 +74,8 @@ export const config: LocaleConfig<Theme.Config> = {
         message: "<a href=\"https://www.gnu.org/licenses/gpl-3.0.en.html\" target=\"_blank\">Лицензия GPL-3.0</a> <span class=\"divider\">|</span> <a href=\"/privacy/\">Политика конфиденциальности</a>",
         copyright: `Copyright © 2020 - ${new Date().getFullYear()} Kotatsu Developers`,
       },
+
+      sections: sections
     },
   }
 }

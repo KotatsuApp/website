@@ -94,7 +94,7 @@ export default defineConfigWithTheme<Theme.Config>({
       },
     },
 
-    sections,
+    sections
   },
 
   locales: {

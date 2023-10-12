@@ -73,6 +73,8 @@ export const config: LocaleConfig<Theme.Config> = {
         message: "<a href=\"https://www.gnu.org/licenses/gpl-3.0.en.html\" target=\"_blank\">Ліцензія GPL-3.0</a> <span class=\"divider\">|</span> <a href=\"/privacy/\">Політика конфіденційності</a>",
         copyright: `Copyright © 2020 - ${new Date().getFullYear()} Kotatsu Developers`,
       },
+
+	  sections: sections
     }
   }
 }
