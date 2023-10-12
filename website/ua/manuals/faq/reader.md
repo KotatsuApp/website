@@ -1,18 +1,17 @@
 ---
-title: Reader
-titleTemplate: Frequently Asked Questions
-description: Frequently Asked Questions about the Reader.
+title: Читання
+description: Поширені запитання про читання.
 ---
 
-# Reader
-Frequently Asked Questions about the Reader.
+# Читання
+Поширені запитання про читання.
 
-## Why didn't the page load?
-Besides network-related problems, **Kotatsu** may occasionally fail to recognize certain images.
-To address this, simply exit and re-enter the reader or click **Try again** button, often resolving the issue.
+## Чому сторінка не завантажилася?
+Окрім проблем, пов'язаних з мережею, **Kotatsu** іноді може не розпізнавати певні зображення.
+Щоб вирішити цю проблему, просто вийдіть і знову увійдіть у програму або натисніть кнопку **Повторити**, що часто вирішує проблему.
 
-## Can I see two pages at once?
-Not currently. Creating an effective dual-page reader that accommodates scanlator page inconsistencies and other complexities poses challenges. This feature may be added in the future.
+## Чи можу я бачити дві сторінки одночасно?
+Створення ефективної програми для читання двох сторінок, яка враховує невідповідність сторінок та інші складнощі, є складним завданням. Ця функція може бути додана в майбутньому.
 
-## What do all the settings do?
-For detailed instructions, please consult the guides section on the website here.
+## Що роблять всі налаштування?
+Для отримання детальних інструкцій, будь ласка, зверніться до розділу гайдів на сайті тут.

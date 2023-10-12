@@ -12,7 +12,7 @@ import { generateSidebarItem, getTitleFromContent } from './sidebar'
 import type { Translator } from '../../../website/translators'
 import { findPath } from '../utils'
 
-export interface ComponentData {
+export interface SectionData {
   path: string
   link: string
   title: string
@@ -31,14 +31,26 @@ export interface ComponentData {
 }
 
 export interface DocsPageData extends PageData {
-  component?: ComponentData
+  section?: SectionData
   breadcrumbs?: DefaultTheme.SidebarItem[]
 }
 
-export const components: ComponentData[] = fg
+export const sections: SectionData[] = fg
   .sync([
-    'website/manuals/faq/explore/*.md',
-    '!website/manuals/faq/explore/index.md',
+    'website/manuals/*.md',
+    '!website/manuals/index.md',
+    '!website/manuals/faq/*/index.md',
+    '!website/manuals/guides/*/index.md',
+
+    'website/ua/manuals/*.md',
+    '!website/ua/manuals/index.md',
+    '!website/ua/manuals/faq/*/index.md',
+    '!website/ua/manuals/guides/*/index.md',
+
+    'website/ru/manuals/*.md',
+    '!website/ru/manuals/index.md',
+    '!website/ru/manuals/faq/*/index.md',
+    '!website/ru/manuals/guides/*/index.md',
   ])
   .map(file => {
     const content = readFileSync(file, 'utf-8')
@@ -55,7 +67,7 @@ export const components: ComponentData[] = fg
     } = data
 
     const filePath = file.substring(file.indexOf('/') + 1)
-    const component: ComponentData = {
+    const section: SectionData = {
       path: filePath,
       link: ensureStartingSlash(normalize(filePath)),
       repository,
@@ -68,24 +80,24 @@ export const components: ComponentData[] = fg
       categories: Array.isArray(categories) ? categories : Array(categories),
     }
 
-    component.translator = getTranslator(translator)
+    section.translator = getTranslator(translator)
 
     if (items) {
-      component.items = generateSidebarItem(items, component.link)
+      section.items = generateSidebarItem(items, section.link)
     }
 
-    return component
+    return section
   })
   .sort((a, b) => (a.text && b.text) ? a.text.localeCompare(b.text) : 0)
 
-export default class DocsComponent {
+export default class DocsSection {
   static prepareData(
     pageData: DocsPageData,
     siteConfig: SiteConfig,
   ): DocsPageData {
-    const component = components.find(component => pageData.relativePath.startsWith(component.path.replace(/index\.md$/, '')))
+    const section = sections.find(section => pageData.relativePath.startsWith(section.path.replace(/index\.md$/, '')))
 
-    pageData.component = component
+    pageData.section = section
     pageData.breadcrumbs = findPath(pageData, siteConfig.userConfig)
 
     pageData.title = !pageData.frontmatter.title && pageData.breadcrumbs.length
@@ -93,17 +105,17 @@ export default class DocsComponent {
         : pageData.title
 
     if (
-      component
+      section
       && !pageData.description
-      && pageData.component.description
+      && pageData.section.description
     ) {
-      pageData.description = pageData.component.description
+      pageData.description = pageData.section.description
     }
 
     return pageData
   }
 }
 
-export { DocsComponent }
+export { DocsSection }
 
-export const { prepareData } = DocsComponent
+export const { prepareData } = DocsSection

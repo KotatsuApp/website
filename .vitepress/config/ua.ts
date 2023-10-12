@@ -1,6 +1,6 @@
 import type { DefaultTheme, LocaleConfig } from 'vitepress'
 import type { Theme } from '../theme/types'
-import { components } from '../theme/plugins/component'
+import { sections } from '../theme/plugins/section'
 
 export const SITE_NAME = 'Kotatsu Website'
 export const META_DESCRIPTION = 'Проста і зручна читалка манги з відкритим вихідним кодом від спільноти і для спільноти, де ви можете знайти і читати вашу улюблену мангу простіше як ніколи.'
@@ -73,8 +73,6 @@ export const config: LocaleConfig<Theme.Config> = {
         message: "<a href=\"https://www.gnu.org/licenses/gpl-3.0.en.html\" target=\"_blank\">Ліцензія GPL-3.0</a> <span class=\"divider\">|</span> <a href=\"/privacy/\">Політика конфіденційності</a>",
         copyright: `Copyright © 2020 - ${new Date().getFullYear()} Kotatsu Developers`,
       },
-
-      components: components.filter(component => component.path.startsWith('ru/components/')),
     }
   }
 }

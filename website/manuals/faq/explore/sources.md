@@ -25,7 +25,7 @@ Learn more in this [Wikipedia article](https://en.wikipedia.org/wiki/Scanlation)
 Check the removed [parsers list](https://github.com/KotatsuApp/kotatsu-parsers/issues/39) first.
 
 ## Why was a source removed?
-Extensions can be removed due to several reasons:
+Sources can be removed due to several reasons:
 
 * Frequent website changes.
 * Image scrambling.

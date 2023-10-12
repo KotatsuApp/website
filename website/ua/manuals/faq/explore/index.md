@@ -1,6 +1,6 @@
 ---
-title: Explore
-description: Help center of Explore section.
+title: Огляд
+description: Довідковий центр розділу Огляд.
 lastUpdated: false
 editLink: false
 prev: false

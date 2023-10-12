@@ -1,19 +1,20 @@
 ---
-title: General
-description: Frequently Asked Questions
+title: Загальне
+description: Поширені запитання
+translator: CakesTwix
 ---
 
-# General
-Frequently Asked Questions
+# Загальне
+Поширені запитання
 
-## Why isn't Kotatsu on the Google Play Store?
-**Kotatsu** won't be on the **Google Play Store**. **Google** might take down the app due to certain content, which the developers wishes to avoid.
+## Чому Kotatsu немає в Google Play Маркеті?
+**Kotatsu** не буде в магазині **Google Play**. **Google** може видалити додаток через певний контент, якого розробники хотіли б уникнути.
 
-To report **Kotatsu** copycats on the **Google Play Store**, fill out [this form](https://support.google.com/googleplay/android-developer/contact/takedown) following the steps below.
+Щоб повідомити про підробки **Kotatsu** в **Google Play Store**, заповніть [цю форму](https://support.google.com/googleplay/android-developer/contact/takedown) дотримуючись наведених нижче інструкцій.
 
-:::details Steps to report Kotatsu copycats
-1. Go to the page -> three dots menu -> Flag as inappropriate -> Other objection.
-1. After choosing "Other objection", you may choose to put down any or all of the following:
+:::details Кроки для повідомлення про копії Kotatsu
+1. Перейдіть на сторінку -> меню з трьома крапками -> Позначити як недоречне -> Інше заперечення.
+1. Вибравши "Інше заперечення", ви можете вказати будь-яке або всі наступні заперечення:
 
 	The app infringes on the Google Play Developer Policy by
 
@@ -34,16 +35,16 @@ To report **Kotatsu** copycats on the **Google Play Store**, fill out [this form
 	> - Apps that are improperly categorized.
 :::
 
-## Is Kotatsu available for iOS/iPadOS?
-There is no iOS or iPadOS version and neither are there plans for one.
-Porting is difficult due to the separate codebases of iOS and Android apps.
+## Чи є Kotatsu на iOS/iPadOS?
+Версії для iOS чи iPadOS не існує і не планується.
+Портування ускладнене через окремі кодові бази додатків для iOS та Android.
 
-Any app proclaiming to be "**Kotatsu for iOS**" is not by us and should be treated as a scam.
+Будь-який додаток, що проголошує себе "**Kotatsu для iOS**", не створений нами, і його слід розглядати як шахрайство.
 
-## Can I read light novels?
-**Kotatsu** can't read light novels; it's an image parser, not a text parser.
+## Чи можна читати ранобе?
+**Kotatsu** не може читати ранобе; це аналізатор зображень, а не тексту.
 
-## Can I stream anime?
-**Kotatsu** isn't designed for anime streaming.
+## Чи можна дивитися аніме?
+**Kotatsu** не призначений для показу аніме.
 
-Projects using the **Kotatsu** name for anime streaming aren't affiliated with the main project.
+Проекти, що використовують ім'я **Kotatsu** для показу аніме, не пов'язані з основним проектом.

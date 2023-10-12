@@ -1,4 +1,4 @@
 ---
-title: Suggestions
-description: Frequently Asked Questions about Suggestions.
+title: Рекомендації
+description: Поширені запитання про рекомендації.
 ---

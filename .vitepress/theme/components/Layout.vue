@@ -3,7 +3,7 @@ import DefaultTheme from 'vitepress/theme-without-fonts'
 
 import Home from './Home.vue'
 import TranslatorWidget from './TranslatorWidget.vue'
-import ScreenAuthorWidget from './ScreenAuthorWidget.vue'
+import ScreenTranslatorWidget from './ScreenTranslatorWidget.vue'
 import Breadcrumbs from './Breadcrumbs.vue'
 import NotFound from './NotFound.vue'
 
@@ -22,7 +22,7 @@ const { Layout } = DefaultTheme
       <Breadcrumbs />
     </template>
     <template #doc-footer-before>
-      <ScreenAuthorWidget />
+      <ScreenTranslatorWidget />
     </template>
     <template #not-found>
       <NotFound />

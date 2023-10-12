@@ -1,15 +1,14 @@
 ---
-title: Feed
-titleTemplate: Frequently Asked Questions
-description: Frequently Asked Questions about the Feed.
+title: Стрічка
+description: Поширені запитання про стрічку.
 ---
 
-# Feed
-Frequently Asked Questions about the Feed.
+# Стрічка
+Поширені запитання про стрічку.
 
-## Why aren't series updates working?
-Some Android skins (e.g., **MIUI**) aggressively save battery, potentially shutting down apps in the background.
+## Чому не працюють оновлення серій?
+Деякі скіни Android (наприклад, **MIUI**) агресивно економлять заряд акумулятора, потенційно закриваючи програми у фоновому режимі.
 
-Whitelist **Kotatsu** from your battery saver by going to <nav to="checking"> and tapping **Disable battery optimization**.
+Вилучіть **Kotatsu** з екрана економії заряду батареї, перейшовши до <nav to="checking"> і натиснувши **Вимкнути оптимізацію заряду батареї**.
 
-If unsuccessful, refer to [Don't Kill My App](https://dontkillmyapp.com/) for how to disable specific battery-saving options for your device.
+Якщо це не вдасться, зверніться до [Don't Kill My App](https://dontkillmyapp.com/), щоб дізнатися, як вимкнути певні опції економії заряду акумулятора для вашого пристрою.

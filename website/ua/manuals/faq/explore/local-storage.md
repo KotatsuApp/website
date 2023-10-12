@@ -1,4 +1,4 @@
 ---
-title: Local storage
-description: Frequently Asked Questions about Local storage.
+title: Локальне сховище
+description: Поширені запитання про локальне сховище.
 ---

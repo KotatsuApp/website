@@ -68,6 +68,10 @@
   [lang|="ru"] {
     --vp-code-copy-copied-text-content: 'Скопировано';
   }
+
+  [lang|="ua"] {
+    --vp-code-copy-copied-text-content: 'Скопійовано';
+  }
   
   .dark {
     --vp-c-blue-1: #7da1e9;

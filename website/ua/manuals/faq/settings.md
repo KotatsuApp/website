@@ -1,14 +1,14 @@
 ---
-title: Settings
-description: Frequently Asked Questions about various app settings.
+title: Налаштування
+description: Поширені запитання щодо різних налаштувань програми.
 ---
 
-# Settings
-Frequently Asked Questions about various app settings.
+# Налаштування
+Поширені запитання щодо різних налаштувань програми.
 
-## Why is taking screenshots blocked?
-Turn off **Screenshot policy** in <nav to="reader">.
+## Чому заблоковано створення скріншотів?
+Вимкніть **Політику скріншотів** у <nav to="reader">.
 
-## What is DNS over HTTPS?
-**DNS over HTTPS** (in <nav to="network">) offers secure DNS resolution through HTTPS, preventing attacks.
-Learn more [here](https://www.cloudflare.com/learning/dns/dns-over-tls/). This may help bypass some basic website blocking.
+## Що таке DNS через HTTPS?
+**DNS через HTTPS** (у <nav to="network">) пропонує безпечне вирішення DNS через HTTPS, запобігаючи атакам.
+Дізнайтеся більше [тут](https://www.cloudflare.com/learning/dns/dns-over-tls/). Це може допомогти обійти деякі основні блокування веб-сайтів.

@@ -1,6 +1,5 @@
 import type { DefaultTheme, LocaleConfig } from 'vitepress'
 import type { Theme } from '../theme/types'
-import { components } from '../theme/plugins/component'
 import 'dotenv/config'
 
 export const SITE_NAME = 'Kotatsu Website'
@@ -75,8 +74,6 @@ export const config: LocaleConfig<Theme.Config> = {
         message: "<a href=\"https://www.gnu.org/licenses/gpl-3.0.en.html\" target=\"_blank\">Лицензия GPL-3.0</a> <span class=\"divider\">|</span> <a href=\"/privacy/\">Политика конфиденциальности</a>",
         copyright: `Copyright © 2020 - ${new Date().getFullYear()} Kotatsu Developers`,
       },
-
-      components: components.filter(component => component.path.startsWith('ru/components/')),
     },
   }
 }

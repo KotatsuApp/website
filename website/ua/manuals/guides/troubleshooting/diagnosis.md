@@ -1,63 +1,62 @@
 ---
-title: Diagnosis
-description: Facing issues with a source or the app? Follow these steps to troubleshoot and find solutions.
+title: Діагностика
+description: Виникли проблеми з джерелом або додатком? Виконайте ці кроки, щоб усунути несправності та знайти рішення.
 ---
 
-# Diagnosis
+# Діагностика
 
-Facing issues with a source or the app?
-Follow these steps to troubleshoot and find solutions.
+Виникли проблеми з джерелом або додатком? Виконайте ці кроки, щоб усунути несправності та знайти рішення.
 
-## Primary diagnosis
+## Первинний діагноз
 
-1. **Update app**: Go to <nav to="about"> and tap **Check for updates**.
-1. **Manual series refresh**: Go to <nav to="main_feed"> and drag down to manually refresh problematic series.
-1. **Test other series**: Try different series from the same source.
-1. **Update WebView**: Ensure your WebView is current.
-1. **Public WebView**: Attempt opening series in public WebView. Solve for CAPTCHA or Cloudflare protection if needed.
-1. **Change connection**: Switch networks (Wi-Fi, mobile data, VPN) and confirm IP change.
-1. **Collaborative check**: Get others to replicate the error.
-1. **Source status**: Verify the source's status in a browser.
-1. **Retry button**: Look for a retry button on the series page.
-1. **Advanced settings**: Under <nav to="data">, try these options:
-    - Clear thumbnails cache
-    - Clear page cache
-    - Clear network cache
-    - Clear cookies
-    - Under <nav to="network">, try to enable DNS over HTTPS
-1. **Download issues**: Delete the queue and retry downloads.
-1. **Restart Kotatsu**: Force close and reopen the app.
+1. **Оновити програму**: Перейдіть до <nav to="about"> і натисніть **Перевірити наявність оновлень**.
+1. **Оновлення серій вручну**: Перейдіть до <nav to="main_feed"> і перетягніть вниз, щоб вручну оновити проблемні серії.
+1. **Перевірити інші серії**: Спробуйте інші серії з того самого джерела.
+1. **Оновити WebView**: Переконайтеся, що ваш WebView актуальний.
+1. **Публічний WebView**: Спробуйте відкрити серію у загальнодоступному WebView. Вирішіть проблему за допомогою CAPTCHA або захисту Cloudflare, якщо це необхідно.
+1. **Змінити з'єднання**: Переключити мережі (Wi-Fi, мобільні дані, VPN) і підтвердити зміну IP-адреси.
+1. **Спільна перевірка**: Попросіть інших повторити помилку.
+1. **Статус джерела**: Перевірте статус джерела у браузері.
+1. **Кнопка повтору**: Натисніть кнопку повтору на сторінці серії.
+1. **Розширені налаштування**: У розділі <nav to="data"> спробуйте ці параметри:
+    - Очистити кеш мініатюр
+    - Очистити кеш сторінок
+    - Очистити кеш мережі
+    - Очистити файли cookie
+    - У розділі <nav to="network"> спробуйте увімкнути DNS через HTTPS
+1. **Проблеми із завантаженням**: Видаліть чергу та повторіть завантаження.
+1. **Перезапустіть Kotatsu**: Примусово закрити та перезапустити програму.
 
-If any of these solutions help, go to [Personalized Issue](#personalized-issue).
-If it is not just you, go to [Widespread Issue](#widespread-issue).
+Якщо будь-яке з цих рішень допоможе, перейдіть до [Персоналізована проблема](#personalized-issue).
+Якщо проблема не лише у вас, перейдіть до [Поширена проблема](#widespread-issue).
 
-If none of these solutions help, try asking in our [Telegram group](https://t.me/kotatsuapp).
+Якщо жодне з цих рішень не допомогло, спробуйте запитати в нашій [Telegram-групі](https://t.me/kotatsuapp).
 
-State your app version and the source, series, and chapter with the problem.
+Вкажіть версію програми, а також джерело, серію та розділ, в якому виникла проблема.
 
-::: tip An app update may fix your issue
-Wait or check for an app update if you have not already.
-There are no ETAs for updates.
+::: tip Оновлення програми може вирішити вашу проблему
+Зачекайте або перевірте оновлення додатку, якщо ви ще не зробили цього.
+Очікуваних дат для оновлень немає.
 :::
 
-## Personalized issue
-If you're the only one facing a problem, you might be encountering an IP ban, or other countermeasures set by website owners against programs like **Kotatsu**.
+## Персоналізована проблема
+Якщо ви єдиний, хто зіткнувся з проблемою, можливо, ви зіткнулися з забороною IP-адреси або іншими контрзаходами, встановленими власниками веб-сайтів проти таких програм, як **Kotatsu**.
 
-**To minimize future issues:**
-- Avoid using downloads with the source.
-- Reduce the number of series in your favourites/history from that source.
+**Щоб мінімізувати майбутні проблеми:**
+- Уникайте завантажень з джерела.
+- Зменшіть кількість серії у вибраному/історії з цього джерела.
 
-::: warning
-These are general guidelines as each site has its specific undisclosed limits and triggers.
+::: warning Попередження
+Це загальні рекомендації, оскільки кожен сайт має свої специфічні нерозкриті ліміти та тригери.
 :::
 
-## Widespread issue
-When everyone experiences a problem, it could be with the extension or app:
+## Поширена проблема
+Коли у всіх виникають проблеми, це може бути пов'язано з джерелом або додатком:
 
-1. Check open issues [for the app](https://github.com/KotatsuApp/Kotatsu/issues) and/or [**parsers**](https://github.com/KotatsuApp/kotatsu-parsers/issues).
-1. Check closed issues ([app](https://github.com/KotatsuApp/Kotatsu/issues?q=is%3Aissue+is%3Aclosed)/[parsers](https://github.com/KotatsuApp/kotatsu-parsers/issues?q=is%3Aissue+is%3Aclosed)) in case it's resolved but not yet released.
-1. If not found, create a new issue.
+1. Перевірте відкриті проблеми [для додатку](https://github.com/KotatsuApp/Kotatsu/issues) та/або [**парсерів**](https://github.com/KotatsuApp/kotatsu-parsers/issues).
+1. Перевірте закриті проблеми ([додаток](https://github.com/KotatsuApp/Kotatsu/issues?q=is%3Aissue+is%3Aclosed)/[парсери](https://github.com/KotatsuApp/kotatsu-parsers/issues?q=is%3Aissue+is%3Aclosed)), якщо вони вирішені, але ще не випущені.
+1. Якщо не знайдено, створіть нову проблему.
 
-::: warning
-If the site itself is problematic, patience is the only solution until it becomes functional again.
+::: warning Попередження
+Якщо сайт сам по собі проблематичний, терпіння - єдине рішення, поки він не стане функціональним.
 :::

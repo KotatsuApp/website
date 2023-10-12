@@ -1,5 +1,5 @@
 import type { DefaultTheme, UserConfig } from 'vitepress'
-import type { ComponentData, DocsPageData } from './plugins/component'
+import type { SectionData, DocsPageData } from './plugins/section'
 import { normalize } from 'vitepress/dist/client/shared'
 
 import { type Translator, translators } from '../../website/translators'
@@ -29,11 +29,11 @@ export function findPath(
     path.push({ text: root.text, link: root.link })
   }
 
-  let tree: DefaultTheme.SidebarItem | ComponentData
+  let tree: DefaultTheme.SidebarItem | SectionData
 
-  if (pageData.component) {
-    const { title, link, items } = pageData.component
-    tree = pageData.component
+  if (pageData.section) {
+    const { title, link, items } = pageData.section
+    tree = pageData.section
     path.push({ text: title, link, items })
   } else {
     const sidebar = Object.entries(localeConfig.sidebar).find(([link]) => searchable.startsWith(link))

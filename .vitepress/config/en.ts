@@ -1,6 +1,5 @@
 import type { DefaultTheme, LocaleConfig } from 'vitepress'
 import type { Theme } from '../theme/types'
-import { components } from '../theme/plugins/component'
 import 'dotenv/config'
 
 export const SITE_NAME = 'Kotatsu Website'
@@ -65,8 +64,6 @@ export const config: LocaleConfig<Theme.Config> = {
         message: "<a href=\"https://www.gnu.org/licenses/gpl-3.0.en.html\" target=\"_blank\">GPL-3.0 Licensed</a> <span class=\"divider\">|</span> <a href=\"/privacy/\">Privacy policy</a>",
         copyright: `Copyright © 2020 - ${new Date().getFullYear()} Kotatsu Developers`,
       },
-
-      components: components.filter(component => component.path.startsWith('components/')),
     },
   }
 }
@@ -80,10 +77,10 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
 					text: "Download",
 					link: "/download/",
 				},
-				{
+				/* {
 					text: "Parsers",
 					link: "/parsers/",
-				},
+				}, */
 				{
 					text: "Changelogs",
 					link: "/changelogs/",
@@ -209,7 +206,7 @@ function getNav(): DefaultTheme.NavItem[] {
 		link: "/manuals/guides/getting-started",
 		activeMatch: "/manuals/",
 	},
-	{
+	/* {
 		text: "News",
 		link: "/news/",
 		activeMatch: "/news/",
@@ -218,6 +215,6 @@ function getNav(): DefaultTheme.NavItem[] {
 		text: "Account",
 		link: "/account/",
 		activeMatch: "/account/"
-	}
+	} */
   ]
 }

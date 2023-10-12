@@ -52,7 +52,7 @@ These are general guidelines as each site has its specific undisclosed limits an
 :::
 
 ## Widespread issue
-When everyone experiences a problem, it could be with the extension or app:
+When everyone experiences a problem, it could be with the source or app:
 
 1. Check open issues [for the app](https://github.com/KotatsuApp/Kotatsu/issues) and/or [**parsers**](https://github.com/KotatsuApp/kotatsu-parsers/issues).
 1. Check closed issues ([app](https://github.com/KotatsuApp/Kotatsu/issues?q=is%3Aissue+is%3Aclosed)/[parsers](https://github.com/KotatsuApp/kotatsu-parsers/issues?q=is%3Aissue+is%3Aclosed)) in case it's resolved but not yet released.

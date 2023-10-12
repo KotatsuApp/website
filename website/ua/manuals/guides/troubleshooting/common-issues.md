@@ -1,74 +1,73 @@
 ---
-title: Common issues
-description: Facing issues with a source or the app? Here's how to tackle common challenges.
+title: Загальні проблеми
+description: Виникли проблеми з джерелом або додатком? Ось як вирішити найпоширеніші проблеми.
 ---
 
-# Common issues
+# Загальні проблеми
 
-Facing issues with a source or the app?
-Here's how to tackle common challenges.
+Виникли проблеми з джерелом або додатком? Ось як вирішити найпоширеніші проблеми.
 
-## Basic issues
+## Базові проблеми
 
-### Slow loading
-Sources being slow could stem from site slowness, your internet, or source-imposed rate limits/IP bans.
+### Повільне завантаження
+Повільна робота джерел може бути пов'язана з повільною роботою сайту, вашого інтернету або обмеженнями швидкості, встановленими джерелом, чи заборонами на IP-адреси.
 
-## Advanced errors
+## Розширені помилки
 
 ### `Unable to resolve host` / `Connection failed` / `Failed to connect to` / `timeout` / `connection reset`
-These errors indicate connection issues. Possible causes include:
+Ці помилки вказують на проблеми зі з'єднанням. Можливі причини включають:
 
-* Weak internet connection.
-* App lacks internet access.
-* Your ISP has blocked the site.
-* The site is down.
+* Слабке з'єднання з Інтернетом.
+* Додаток не має доступу до Інтернету.
+* Ваш провайдер заблокував сайт.
+* Сайт не працює.
 
-Try these solutions:
+Спробуйте ці рішення:
 
-* Enable **DNS over HTTPS**.
-* Change network (Wi-Fi, mobile data, VPN).
-* Reboot router.
+* Увімкніть **DNS через HTTPS**.
+* Змініть мережу (Wi-Fi, мобільна передача даних, VPN).
+* Перезавантажте роутер.
 
 ### `java.security.cert.CertPathValidatorException` / `Chain validation failed`
-Validation issue with source's certificate.
+Проблема з валідацією сертифіката джерела.
 
-Try these solutions:
+Спробуйте ці рішення:
 
-* Check expired certificate, use SSL checker.
-* Set correct device date and time.
-* Change network (Wi-Fi, mobile data, VPN).
-* Enable **Ignore SSL errors** in <nav to="network"/>
-* Reboot device.
+* Перевірте прострочений сертифікат, скористайтеся перевіркою SSL.
+* Встановіть правильну дату та час на пристрої.
+* Змініть мережу (Wi-Fi, мобільна передача даних, VPN).
+* Увімкніть **Ігнорувати помилки SSL** у <nav to="network"/>.
+* Перезавантажте пристрій.
 
-## HTTP errors
-Encountering HTTP errors? Here's what they mean and how to address them.
+## Помилки HTTP
+Виникли помилки HTTP? Ось що вони означають і як їх усунути.
 
 ### `HTTP Error: 403` - Forbidden
-Possible reasons for this error:
-* The selected source has Cloudflare protection. Check the [Cloudflare guide](/manuals/guides/troubleshooting/#cloudflare) for solutions.
-* The source might be down, removed the series, or banned your IP.
-  > Open WebView to confirm.
+Можливі причини цієї помилки:
+* Вибране джерело має захист Cloudflare. Зверніться до [Посібника з Cloudflare] (/ua/manuals/guides/troubleshooting/#cloudflare) для вирішення проблеми.
+* Джерело може не працювати, видалити серію або забанити вашу IP-адресу.
+  > Відкрийте WebView, щоб перевірити.
 
 ### `HTTP Error: 404` - Not Found
-This error likely indicates a down source or removed series.
-* Use **WebView** to verify.
-  > Consider switching to a different source for the series.
+Ця помилка, ймовірно, вказує на непрацююче джерело або видалену серію.
+* Використовуйте **WebView** для перевірки.
+  > Спробуйте переключитися на інше джерело для цієї серії.
 
 ### `HTTP Error: 429` - Too Many Requests
-This error suggests the source temporarily banned your IP due to fast downloads/reads.
+Ця помилка означає, що джерело тимчасово заблокувало ваш IP через швидке завантаження/читання.
 
 ### `HTTP Error: 5xx`
-Errors like `500`, `502`, etc., indicate server-side issues on the source's end.
+Помилки типу `500`, `502` і т.д. вказують на проблеми на стороні сервера на стороні джерела.
 
-[Check the source in WebView](/manuals/guides/troubleshooting/#accessing-websites-via-webview) to confirm if it's down.
+[Перевірте джерело у WebView](/ua/manuals/guides/troubleshooting/#accessing-websites-via-webview), щоб переконатися, що воно не працює.
 
 ### `HTTP Error: 1006`
-This error means a temporary IP ban by the source.
+Ця помилка означає тимчасову заборону IP-адреси джерелом.
 
 ### `HTTP Error: 1020`
-This error points to violating a firewall rule set by the site owner.
-The owner might raise Cloudflare protection or block IPs from outside their country.
+Ця помилка вказує на порушення правил брандмауера, встановлених власником сайту.
+Власник може підвищити рівень захисту Cloudflare або заблокувати IP-адреси з-за меж своєї країни.
 
-::: warning
-For unlisted errors or if instructions don't help, refer to [Diagnosis](/manuals/guides/troubleshooting/diagnosis).
+::: warning Попередження
+Якщо помилки не вказані в списку або якщо інструкції не допомагають, зверніться до розділу [Діагностика](/ua/manuals/guides/troubleshooting/diagnosis).
 :::

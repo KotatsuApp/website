@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { type Ref, computed } from 'vue'
 import { type PageData, useData } from 'vitepress'
-import type { DocsPageData } from '../plugins/component'
+import type { DocsPageData } from '../plugins/section'
 import { type Translator, translators } from '../../../website/translators'
 
 import { VPImage } from 'vitepress/theme-without-fonts'
@@ -15,9 +15,10 @@ export interface Data {
 
 const { page, frontmatter, lang }: Data = useData()
 
-const translatorLabel = computed<string>(() => lang.value === 'ru' ? 'Переводчик' : 'Translator')
+const translatorLabel = computed<string>(() => (lang.value === 'ru') ? ('Переводчик') : ((lang.value === 'ua') ? ('Перекладач') : ('Translator')))
+
 const translator = computed<Translator>(() => {
-  const data = page.value?.component?.translator || translators[frontmatter.value.translator]
+  const data = page.value?.section?.translator || translators[frontmatter.value.translator]
 
   if (!data) {
     return
@@ -33,7 +34,7 @@ const translator = computed<Translator>(() => {
 <template>
   <article
     v-if="translator"
-    class="ScreenAuthorWidget"
+    class="ScreenTranslatorWidget"
   >
     <VPLink
       :href="translator.github"
@@ -55,12 +56,12 @@ const translator = computed<Translator>(() => {
 
 
 <style scoped>
-.ScreenAuthorWidget {
+.ScreenTranslatorWidget {
   margin-bottom: 20px;
 }
 
 @media (min-width: 1280px) {
-  .ScreenAuthorWidget {
+  .ScreenTranslatorWidget {
     display: none;
   }
 }

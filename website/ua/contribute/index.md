@@ -1,7 +1,6 @@
 ---
 title: Зробити свій внесок
 description: Дізнайтеся, як допомогти у перекладі або створенні програми та парсерів.
-translator: CakesTwix
 lastUpdated: false
 editLink: false
 prev: false

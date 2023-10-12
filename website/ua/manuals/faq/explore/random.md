@@ -1,4 +1,4 @@
 ---
-title: Random
-description: Frequently Asked Questions about Random.
+title: Випадкові серії
+description: Часті запитання про випадкові серії.
 ---

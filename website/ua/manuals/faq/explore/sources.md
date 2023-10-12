@@ -1,37 +1,37 @@
 ---
-title: Sources
-description: Frequently Asked Questions about Sources.
+title: Джерела
+description: Поширені запитання про джерела.
 ---
 
-# Sources
-Frequently Asked Questions about Sources.
+# Джерела
+Поширені запитання про джерела.
 
-## What are some recommended sources?
-**Kotatsu** does not endorse or recommend any source, and there is no best source.
+## Які джерела рекомендується використовувати?
+**Kotatsu** не схвалює і не рекомендує жодне джерело, і найкращого джерела не існує.
 
-Instead, we encourage users to spend some time trying out a few sources themselves and discover what sources work best for them.
-What works well for somebody else might not work well for you.
+Натомість ми заохочуємо користувачів витратити деякий час на самостійне випробування декількох джерел і виявити, які з них найкраще підходять для них.
+Те, що добре працює для когось іншого, може не працювати добре для вас.
 
-::: info Disclaimer
-**Kotatsu** isn't responsible for slow, down, missing chapters, or subpar image quality of sources as it doesn't host content.
+::: info Відмова від відповідальності
+**Kotatsu** не несе відповідальності за повільну роботу, відсутність розділів або низьку якість зображення джерел, оскільки не є хостером контенту.
 :::
 
-## What is a scanlator source?
-Non-officially licensed series are translated by scanlators, often found on their websites or [MangaDex](https://mangadex.org/).
-Learn more in this [Wikipedia article](https://en.wikipedia.org/wiki/Scanlation).
+## Що таке джерело сканлятора?
+Неофіційно ліцензовані серії перекладають сканлятори, часто їх можна знайти на їхніх сайтах або на [MangaDex](https://mangadex.org/).
+Дізнайтеся більше в цій [статті Вікіпедії] (https://en.wikipedia.org/wiki/Scanlation).
 
-## How do I request new sources?
-[Open an issue](https://github.com/KotatsuApp/kotatsu-parsers/issues) on **GitHub** if not already there.
-Check the removed [parsers list](https://github.com/KotatsuApp/kotatsu-parsers/issues/39) first.
+## Як запросити нові джерела?
+[Створіть проблему](https://github.com/KotatsuApp/kotatsu-parsers/issues) на **GitHub**, якщо вона ще не створена.
+Спочатку перевірте [список вилучених парсерів](https://github.com/KotatsuApp/kotatsu-parsers/issues/39).
 
-## Why was a source removed?
-Extensions can be removed due to several reasons:
+## Чому було видалено джерело?
+Парсери можуть бути видалені з кількох причин:
 
-* Frequent website changes.
-* Image scrambling.
-* Scanlator removal request.
-* Paywall implementation.
-* Reverse engineering needs.
-* Site shutdown.
+* Часті зміни на сайті.
+* Шифрування зображень.
+* Запит на видалення.
+* Реалізація платного входу.
+* Потреби в реінжинірингу.
+* Закриття сайту.
 
-Find the list of removed sources [here](https://github.com/KotatsuApp/kotatsu-parsers/issues/39), excluding offline sites.
+Список вилучених джерел можна знайти [тут](https://github.com/KotatsuApp/kotatsu-parsers/issues/39).

@@ -1,6 +1,6 @@
 import { computed } from 'vue'
 import type { ComputedRef, Ref } from 'vue'
-import type { DocsPageData } from '../plugins/component'
+import type { DocsPageData } from '../plugins/section'
 import { useData } from 'vitepress'
 import { isActive } from 'vitepress/dist/client/shared'
 import { getFlatSideBarLinks } from 'vitepress/dist/client/theme-default/support/sidebar'
@@ -15,13 +15,13 @@ export function usePrevNext(): ComputedRef {
   const { page, theme, frontmatter }: Data = useData()
 
   return computed(() => {
-    const component = page.value.component
+    const section = page.value.section
 
-    if (!component) {
+    if (!section) {
       return ''
     }
 
-    const candidates = getFlatSideBarLinks([component])
+    const candidates = getFlatSideBarLinks([section])
     const index = candidates.findIndex((link) => isActive(page.value.relativePath, link.link))
 
     const hidePrev =

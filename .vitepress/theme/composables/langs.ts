@@ -1,6 +1,6 @@
 import { Ref, computed } from 'vue'
 import type { DefaultTheme, SiteData } from 'vitepress'
-import type { DocsPageData } from '../plugins/component'
+import type { DocsPageData } from '../plugins/section'
 import { useData } from 'vitepress'
 import { ensureStartingSlash } from '../utils'
 import { getFlatSideBarLinks } from 'vitepress/dist/client/theme-default/support/sidebar'
@@ -74,15 +74,15 @@ export function useLangs({
         }
       }
 
-      if (!page.value.component) {
+      if (!page.value.section) {
         return {
           text: value.label,
           link: rootLink,
         }
       }
 
-      const component = themeConfig.components.find(component => component.title === page.value.component.title)
-      if (!component) {
+      const section = themeConfig.sections.find(section => section.title === page.value.section.title)
+      if (!section) {
         return {
           text: value.label,
           link: rootLink,
@@ -91,7 +91,7 @@ export function useLangs({
 
       return {
         text,
-        link: component.link
+        link: section.link
       }
     }
   ))

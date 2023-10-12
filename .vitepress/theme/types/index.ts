@@ -1,5 +1,5 @@
 import { DefaultTheme } from 'vitepress'
-import type { ComponentData } from '../plugins/component'
+import type { SectionData } from '../plugins/section'
 
 export namespace Theme {
   export interface Sponsor {
@@ -10,11 +10,7 @@ export namespace Theme {
 
   export interface Config extends DefaultTheme.Config {
     titleSeparator?: string
-    components?: Array<ComponentData>
-    teamSectionTitle?: string
-
-    sponsorLink?: string
-    sponsor?: Sponsor
+    sections?: Array<SectionData>
   }
 
   export interface TeamMember extends Omit<DefaultTheme.TeamMember, 'name'> {
