@@ -6,6 +6,16 @@ description: Frequently Asked Questions
 # General
 Frequently Asked Questions
 
+## What is Kotatsu?
+Kotatsu is an open-source **Android** app that lets you read any from your device - faster and easier than ever.
+
+::: tip Disclaimer
+Kotatsu is not hosting any content, we are not affilated with or responsible for any source that is: slow, down, missing chapters, or has supbar image quality.
+:::
+
+## Where do i post app issues, bugs or feature requests?
+To post app issues, bugs, and feature requests please open a ticket on GitHub by following the link [here](https://github.com/KotatsuApp/Kotatsu/issues/new/choose)
+
 ## Why isn't Kotatsu on the Google Play Store?
 **Kotatsu** won't be on the **Google Play Store**. **Google** might take down the app due to certain content, which the developers wishes to avoid.
 
@@ -47,3 +57,25 @@ Any app proclaiming to be "**Kotatsu for iOS**" is not by us and should be treat
 **Kotatsu** isn't designed for anime streaming.
 
 Projects using the **Kotatsu** name for anime streaming aren't affiliated with the main project.
+
+## Can I use Kotatsu on desktop?
+No, you can't.
+
+:::tip Note
+[kotatsu-dl](https://github.com/KotatsuApp/kotatsu-dl) is a manga downloader for Windows, Mac and Linux, but you can't read from it.
+:::
+
+## Can Kotatsu sync across devices?
+Yes, the application supports synchronization between devices.
+
+Learn how to create a Kotatsu Sync account [here](/manuals/guides/synchronization)
+
+## What do I do if I have to switch to a new phone?
+
+Please follow these steps:
+1. Backup your entire favourites and history from your old device and transfer it to your new phone.
+1. Restore the backup.
+
+:::tip Note
+More information about backup and restore is listed [here](/manuals/guides/backups).
+:::

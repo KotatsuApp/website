@@ -141,6 +141,10 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
 					text: "Settings",
 					link: "/manuals/faq/settings",
 				},
+				{
+					text: "Miscellaneous",
+					link: "/manuals/faq/miscellaneous"
+				}
 			],
 		},
 		{
@@ -183,6 +187,10 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
 					text: "Reader settings",
 					link: "/manuals/guides/reader-settings",
 				},
+				{
+					text: "Synchronization",
+					link: "/manuals/guides/synchronization"
+				}
 			],
 		},
 	]

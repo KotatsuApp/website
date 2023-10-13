@@ -1,6 +1,5 @@
 ---
 title: Reader
-titleTemplate: Frequently Asked Questions
 description: Frequently Asked Questions about the Reader.
 ---
 
