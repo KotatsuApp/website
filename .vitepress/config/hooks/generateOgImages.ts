@@ -15,20 +15,20 @@ async function generateOgImages(config: SiteConfig) {
 
 	const fonts: SatoriOptions["fonts"] = [
 		{
-			name: "Roboto",
-			data: await readFile(resolve(__fonts, "Roboto-Regular.ttf")),
+			name: "Montserrat",
+			data: await readFile(resolve(__fonts, "Montserrat-Regular.ttf")),
 			weight: 400,
 			style: "normal",
 		},
 		{
-			name: "Roboto",
-			data: await readFile(resolve(__fonts, "Roboto-Medium.ttf")),
+			name: "Montserrat",
+			data: await readFile(resolve(__fonts, "Montserrat-Medium.ttf")),
 			weight: 500,
 			style: "normal",
 		},
 		{
-			name: "Roboto",
-			data: await readFile(resolve(__fonts, "Roboto-Bold.ttf")),
+			name: "Montserrat",
+			data: await readFile(resolve(__fonts, "Montserrat-Bold.ttf")),
 			weight: 700,
 			style: "normal",
 		},

@@ -212,7 +212,7 @@ function getNav(): DefaultTheme.NavItem[] {
     },
     {
 		text: "User manual",
-		link: "/manuals/guides/getting-started",
+		link: "/manuals/guides/getting-started/",
 		activeMatch: "/manuals/",
 	},
 	{

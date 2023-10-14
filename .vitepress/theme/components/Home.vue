@@ -2,6 +2,7 @@
 import { useData } from 'vitepress'
 
 import HomeHero from './HomeHero.vue'
+import Features from './Features.vue';
 
 const { frontmatter: fm } = useData()
 </script>
@@ -10,6 +11,7 @@ const { frontmatter: fm } = useData()
   <template v-if="fm.main">
     <div class="container">
       <HomeHero :data="fm.main" />
+      <Features :features="fm.main.features" />
     </div>
   </template>
 </template>

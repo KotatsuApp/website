@@ -104,7 +104,7 @@ gradlew :test --tests "org.koitharu.kotatsu.parsers.MangaParserTest"
 ```
 - Optionally, you can run the `generateTestsReport` gradle task to get a pretty readable html report from test results.
 
-### Help
+## Help
 
 If you need a help or have some questions, ask a community in our [Telegram chat](https://t.me/kotatsuapp)
 or [Discord server](https://discord.gg/NNJ5RgVBC5).

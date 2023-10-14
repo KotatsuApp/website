@@ -1,6 +1,5 @@
 <script setup lang="ts">
 defineProps<{
-  icon?: string
   title: string
   details?: string
 }>()
@@ -9,9 +8,6 @@ defineProps<{
 <template>
   <div class="Feature">
     <article class="box">
-      <article class="iconBox">
-        <h3 class="icon" v-html="icon"></h3>
-      </article>
       <h2 class="title" v-html="title"></h2>
       <p v-if="details" class="details" v-html="details"></p>
     </article>

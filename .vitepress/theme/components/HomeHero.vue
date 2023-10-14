@@ -24,9 +24,6 @@ defineProps<{
     <h1 class="title">
       <span class="accent">{{ data.title }}</span>
     </h1>
-    <h2 class="text">
-      {{ data.text }}
-    </h2>
     <p class="description">
       {{ data.tagline }}
     </p>
@@ -47,9 +44,6 @@ defineProps<{
 
 section {
   padding: 42px 32px;
-  background: var(--vp-c-bg-soft);
-  border-radius: var(--vp-border-radius);
-  margin: 48px 96px;
 }
 
 #hero {
@@ -58,10 +52,9 @@ section {
 }
 
 .title {
-  font-size: 76px;
-  line-height: 1.25;
-  font-weight: 900;
-  letter-spacing: -1.5px;
+  font-size: 48px;
+  line-height: 52px;
+  font-weight: 500;
   max-width: 1340px;
   margin: 0px auto;
 }
@@ -74,22 +67,13 @@ html:not(.dark) .accent,
   -webkit-text-fill-color: transparent;
 }
 
-.text {
-  font-size: 54px;
-  line-height: 1.25;
-  font-weight: 900;
-  letter-spacing: -1.5px;
-  max-width: 1340px;
-  margin: 0px auto;
-}
-
 .description {
-  max-width: 1340px;
+  max-width: 576px;
   line-height: 1.5;
   color: var(--vt-c-text-2);
   transition: color 0.5s;
-  font-size: 22px;
-  margin: 24px auto 40px;
+  font-size: 17px;
+  margin: 24px 0;
 }
 
 .actions {
@@ -109,15 +93,11 @@ html:not(.dark) .accent,
     font-size: 64px;
     letter-spacing: -0.5px;
   }
-  .description {
-    font-size: 18px;
-    margin-bottom: 48px;
-  }
 }
 
 @media (max-width: 768px) {
-  section {
-    margin: 24px;
+  #hero {
+    padding: 48px;
   }
   .tagline {
     font-size: 48px;
@@ -126,9 +106,6 @@ html:not(.dark) .accent,
 }
 
 @media (max-width: 576px) {
-  section {
-    margin: 24px;
-  }
   #hero {
     padding: 56px 32px;
   }
