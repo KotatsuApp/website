@@ -93,10 +93,10 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
 		{
 			text: "Frequently Asked Questions",
 			items: [
-				{ text: "General", link: "/manuals/faq/general" },
+				{ text: "General", link: "/manuals/faq/general/" },
 				{
 					text: "Feed",
-					link: "/manuals/faq/feed",
+					link: "/manuals/faq/feed/",
 				},
 				{
 					text: "Explore",
@@ -105,7 +105,7 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
 					items: [
 						{ 
 							text: "Sources", 
-							link: "/manuals/faq/explore/sources" 
+							link: "/manuals/faq/explore/sources/" 
 						},
 						/* {
 							text: "Local storage",
@@ -121,7 +121,7 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
 						}, */
 						{
 							text: "Downloads",
-							link: "/manuals/faq/explore/downloads",
+							link: "/manuals/faq/explore/downloads/",
 						},
 						/* {
 							text: "Suggestions",
@@ -131,15 +131,15 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
 				},
 				{
 					text: "Reader",
-					link: "/manuals/faq/reader",
+					link: "/manuals/faq/reader/",
 				},
 				{
 					text: "Settings",
-					link: "/manuals/faq/settings",
+					link: "/manuals/faq/settings/",
 				},
 				{
 					text: "Miscellaneous",
-					link: "/manuals/faq/miscellaneous"
+					link: "/manuals/faq/miscellaneous/"
 				}
 			],
 		},
@@ -148,7 +148,7 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
 			items: [
 				{
 					text: "Getting started",
-					link: "/manuals/guides/getting-started",
+					link: "/manuals/guides/getting-started/",
 				},
 				{
 					text: "Troubleshooting",
@@ -157,20 +157,20 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
 					items: [
 						{
 							text: "Common issues",
-							link: "/manuals/guides/troubleshooting/common-issues",
+							link: "/manuals/guides/troubleshooting/common-issues/",
 						},
 						{
 							text: "Diagnosis",
-							link: "/manuals/guides/troubleshooting/diagnosis",
+							link: "/manuals/guides/troubleshooting/diagnosis/",
 						},
 					],
 				},
-				{ text: "Backups", link: "/manuals/guides/backups" },
-				{ text: "Tracking", link: "/manuals/guides/tracking" },
-				{ text: "Categories", link: "/manuals/guides/categories" },
+				{ text: "Backups", link: "/manuals/guides/backups/" },
+				{ text: "Tracking", link: "/manuals/guides/tracking/" },
+				{ text: "Categories", link: "/manuals/guides/categories/" },
 				{
 					text: "Synchronization",
-					link: "/manuals/guides/synchronization"
+					link: "/manuals/guides/synchronization/"
 				}
 			],
 		},

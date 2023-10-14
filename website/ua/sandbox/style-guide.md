@@ -11,7 +11,7 @@ Style guide to aid website content contributors. For the code used for certain s
 Note that I am not experienced in making these and thus it was created on a whim, if you know any way to improve this page then please submit an edit for it or create an issue.
 
 ## FAQ Style
-Some **DO**s and **DO NOT**s for [FAQ](/manuals/faq/general).
+Some **DO**s and **DO NOT**s for [FAQ](/manuals/faq/general/).
 
 - **DO NOT** be afraid to ask for help, this includes clarifying what some parts on this page mean.
 

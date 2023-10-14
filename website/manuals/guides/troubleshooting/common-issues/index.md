@@ -45,7 +45,7 @@ Encountering HTTP errors? Here's what they mean and how to address them.
 
 ### `HTTP Error: 403` - Forbidden
 Possible reasons for this error:
-* The selected source has Cloudflare protection. Check the [Cloudflare guide](/manuals/guides/troubleshooting/#cloudflare) for solutions.
+* The selected source has Cloudflare protection. Check the [Cloudflare guide](/manuals/guides/troubleshooting/#cloudflare/) for solutions.
 * The source might be down, removed the series, or banned your IP.
   > Open WebView to confirm.
 
@@ -60,7 +60,7 @@ This error suggests the source temporarily banned your IP due to fast downloads/
 ### `HTTP Error: 5xx`
 Errors like `500`, `502`, etc., indicate server-side issues on the source's end.
 
-[Check the source in WebView](/manuals/guides/troubleshooting/#accessing-websites-via-webview) to confirm if it's down.
+[Check the source in WebView](/manuals/guides/troubleshooting/#accessing-websites-via-webview/) to confirm if it's down.
 
 ### `HTTP Error: 1006`
 This error means a temporary IP ban by the source.
@@ -70,5 +70,5 @@ This error points to violating a firewall rule set by the site owner.
 The owner might raise Cloudflare protection or block IPs from outside their country.
 
 ::: warning
-For unlisted errors or if instructions don't help, refer to [Diagnosis](/manuals/guides/troubleshooting/diagnosis).
+For unlisted errors or if instructions don't help, refer to [Diagnosis](/manuals/guides/troubleshooting/diagnosis/).
 :::

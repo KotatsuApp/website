@@ -68,7 +68,7 @@ No, you can't.
 ## Can Kotatsu sync across devices?
 Yes, the application supports synchronization between devices.
 
-Learn how to create a Kotatsu Sync account [here](/manuals/guides/synchronization)
+Learn how to create a Kotatsu Sync account [here](/manuals/guides/synchronization/)
 
 ## What do I do if I have to switch to a new phone?
 
@@ -77,5 +77,5 @@ Please follow these steps:
 1. Restore the backup.
 
 :::tip Note
-More information about backup and restore is listed [here](/manuals/guides/backups).
+More information about backup and restore is listed [here](/manuals/guides/backups/).
 :::

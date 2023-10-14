@@ -14,7 +14,7 @@ head:
 # Sandbox
 Sandbox playground for demonstrating and documenting how different website functions work for easier integration by contributors.
 
-- [Style guide](/sandbox/style-guide)
+- [Style guide](/sandbox/style-guide/)
 
 ## Shortcodes
 
