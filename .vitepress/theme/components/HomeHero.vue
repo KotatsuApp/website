@@ -47,6 +47,9 @@ defineProps<{
 
 section {
   padding: 42px 32px;
+  background: var(--vp-c-bg-soft);
+  border-radius: var(--vp-border-radius);
+  margin: 48px 96px;
 }
 
 #hero {
@@ -113,6 +116,9 @@ html:not(.dark) .accent,
 }
 
 @media (max-width: 768px) {
+  section {
+    margin: 24px;
+  }
   .tagline {
     font-size: 48px;
     letter-spacing: -0.5px;
@@ -120,6 +126,9 @@ html:not(.dark) .accent,
 }
 
 @media (max-width: 576px) {
+  section {
+    margin: 24px;
+  }
   #hero {
     padding: 56px 32px;
   }

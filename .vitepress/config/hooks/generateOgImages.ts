@@ -64,7 +64,9 @@ function getDir(url: string) {
 		return "News"
 	} else if (url.startsWith("/sandbox/")) {
         return "Sandbox"
-    } else if (url !== "/manuals/faq/" && url !== "/manuals/guides/" && url !== "/news/" && url !== "/sandbox/") {
+	} else if (url.startsWith("/dev/")) {
+        return "Dev"
+    } else if (url !== "/manuals/faq/" && url !== "/manuals/guides/" && url !== "/news/" && url !== "/sandbox/" && url !== "/dev/") {
 		return "Other"
 	}
 

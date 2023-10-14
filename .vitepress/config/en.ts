@@ -88,10 +88,6 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
 					text: "Changelogs",
 					link: "/changelogs/",
 				},
-				{
-					text: "Contribute",
-					link: "/contribute/",
-				},
 			],
 		},
 		{
@@ -111,26 +107,26 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
 							text: "Sources", 
 							link: "/manuals/faq/explore/sources" 
 						},
-						{
+						/* {
 							text: "Local storage",
 							link: "/manuals/faq/explore/local-storage",
-						},
-						{
+						}, */
+						/* {
 							text: "Bookmarks",
 							link: "/manuals/faq/explore/bookmarks",
 						},
 						{
 							text: "Random",
 							link: "/manuals/faq/explore/random",
-						},
+						}, */
 						{
 							text: "Downloads",
 							link: "/manuals/faq/explore/downloads",
 						},
-						{
+						/* {
 							text: "Suggestions",
 							link: "/manuals/faq/explore/suggestions",
-						},
+						}, */
 					],
 				},
 				{
@@ -173,26 +169,28 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
 				{ text: "Tracking", link: "/manuals/guides/tracking" },
 				{ text: "Categories", link: "/manuals/guides/categories" },
 				{
-					text: "Local storage",
-					link: "/manuals/guides/local-storage/",
-					collapsed: true,
-					items: [
-						{
-							text: "Advanced editing",
-							link: "/manuals/guides/local-source/advanced",
-						},
-					],
-				},
-				{
-					text: "Reader settings",
-					link: "/manuals/guides/reader-settings",
-				},
-				{
 					text: "Synchronization",
 					link: "/manuals/guides/synchronization"
 				}
 			],
 		},
+		{
+			text: "For developers",
+			items: [
+				{
+					text: "Contribute",
+					link: "/dev/contribute/",
+				},
+				{
+					text: "Parsers library",
+					link: "/dev/parsers-library/",
+				},
+				{
+					text: "Synchronization server",
+					link: "/dev/sync-server/",
+				},
+			]
+		}
 	]
 }
 
@@ -213,19 +211,19 @@ function getNav(): DefaultTheme.NavItem[] {
 		],
     },
     {
-		text: "Manual",
+		text: "User manual",
 		link: "/manuals/guides/getting-started",
 		activeMatch: "/manuals/",
 	},
-	/* {
-		text: "News",
-		link: "/news/",
-		activeMatch: "/news/",
+	{
+		text: "Desktop app",
+		link: "/desktop/",
+		activeMatch: "/desktop/",
 	},
 	{
-		text: "Account",
-		link: "/account/",
-		activeMatch: "/account/"
-	} */
+		text: "News",
+		link: "/news/",
+		activeMatch: "/news/"
+	}
   ]
 }

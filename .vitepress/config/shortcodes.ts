@@ -57,6 +57,10 @@ const navigationMappings: Record<string, Navigation> = {
 	"checking": { name: "Check for new chapters", icon: iconMappings.feed, dependsOn: "main_settings" },
 	"services": { name: "Services", icon: iconMappings.services, dependsOn: "main_settings" },
     "about": { name: "About", icon: iconMappings.about, dependsOn: "main_settings" },
+
+	// Sync
+	"sync_settings": { name: "Synchronization settings", dependsOn: "services" },
+	"server_address": { name: "Server address", dependsOn: "sync_settings" }
 }
 
 function generateNavigationHtml(navKey: string) {
