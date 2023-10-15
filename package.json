@@ -27,6 +27,7 @@
         "@types/gtag.js": "0.0.14",
         "@types/markdown-it": "^12.2.3",
         "@types/node": "^18.16.13",
+        "@vkontakte/icons": "2.71.0",
         "dotenv": "^16.3.1",
         "fast-glob": "^3.2.12",
         "gray-matter": "^4.0.3",
