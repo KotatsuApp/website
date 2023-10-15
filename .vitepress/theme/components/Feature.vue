@@ -16,12 +16,14 @@ defineProps<{
 
 <style scoped>
 .Feature {
+  color: inherit;
   display: block;
   border: 1px solid var(--vp-c-bg-soft);
-  border-radius: 12px;
+  border-radius: var(--vp-border-radius);
   height: 100%;
-  background-color: var(--vp-c-bg-soft);
-  transition: border-color 0.25s, background-color 0.25s;
+  overflow-x: hidden;
+  box-shadow: var(--vp-shadow-6);
+  transition: box-shadow .3s cubic-bezier(.22,.61,.36,1);
 }
 
 .box {

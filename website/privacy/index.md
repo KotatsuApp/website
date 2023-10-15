@@ -3,6 +3,9 @@ title: Privacy policy
 description: Privacy Policy that explains how Kotatsu collects, uses, and protects users' personal information.
 lastUpdated: false
 editLink: false
+prev: false
+next: false
+sidebar: false
 ---
 
 # Privacy policy

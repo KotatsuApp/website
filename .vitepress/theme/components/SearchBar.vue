@@ -3,6 +3,7 @@ import { ref, onMounted } from 'vue'
 import { useData } from 'vitepress'
 import { createTranslate } from 'vitepress/dist/client/theme-default/support/translation'
 import { v4 as uuidv4 } from 'uuid'
+import { Icon24Search } from '@vkontakte/icons'
 
 const uid = uuidv4()
 const { theme } = useData()
@@ -38,24 +39,7 @@ function onSearchBarClick(event: PointerEvent) {
 <template>
   <form class="search-bar" @pointerup="onSearchBarClick($event)" @submit.prevent="">
     <label :title="placeholder" id="localsearch-label" :for="uid">
-      <svg
-        class="search-icon"
-        width="18"
-        height="18"
-        viewBox="0 0 24 24"
-        aria-hidden="true"
-      >
-        <g
-          fill="none"
-          stroke="currentColor"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-        >
-          <circle cx="11" cy="11" r="8" />
-          <path d="m21 21l-4.35-4.35" />
-        </g>
-      </svg>
+      <Icon24Search width="18" height="18" fill="currentColor" />
     </label>
     <div
       v-if="backButton"
