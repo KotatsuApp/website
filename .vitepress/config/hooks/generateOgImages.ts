@@ -10,7 +10,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const __fonts = resolve(__dirname, "../../fonts")
 
 async function generateOgImages(config: SiteConfig) {
-	const pages = await createContentLoader("**/*.md", { excerpt: true }).load()
+	const pages = await createContentLoader("/website/**/*.md", { excerpt: true }).load()
 	const template = await readFile(resolve(__dirname, "../../theme/components/OgImageTemplate.vue"), "utf-8")
 
 	const fonts: SatoriOptions["fonts"] = [
