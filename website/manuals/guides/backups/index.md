@@ -1,6 +1,7 @@
 ---
 title: Backups
 description: Backups helps you prevent losing your library if something happens.
+footer: false
 ---
 
 # Backups

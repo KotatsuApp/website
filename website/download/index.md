@@ -5,6 +5,7 @@ lastUpdated: false
 editLink: false
 prev: false
 next: false
+footer: false
 ---
 
 <script setup>

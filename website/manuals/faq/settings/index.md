@@ -1,6 +1,7 @@
 ---
 title: Settings
 description: Frequently Asked Questions about various app settings.
+footer: false
 ---
 
 # Settings

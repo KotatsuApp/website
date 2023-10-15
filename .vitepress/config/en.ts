@@ -1,7 +1,8 @@
 import type { DefaultTheme, LocaleConfig } from 'vitepress'
-import type { Theme } from '../theme/types'
+import type { CustomConfig, Theme } from '../theme/types'
 import { sections } from '../theme/plugins/section'
 import 'dotenv/config'
+import { baseHelper } from '../theme/utils'
 
 export const SITE_NAME = 'Kotatsu Website'
 export const META_DESCRIPTION = 'A simple and convenient open source manga reader from and for the community, where you can find and read your favorite manga easier than ever.'
@@ -61,10 +62,7 @@ export const config: LocaleConfig<Theme.Config> = {
         pattern: 'https://github.com/KotatsuApp/website/edit/main/website/:path',
         text: 'Suggest changes to this page',
       },
-      footer: {
-        message: "<a href=\"https://www.gnu.org/licenses/gpl-3.0.en.html\" target=\"_blank\">GPL-3.0 Licensed</a> <span class=\"divider\">|</span> <a href=\"/privacy/\">Privacy policy</a>",
-        copyright: `Copyright © 2020 - ${new Date().getFullYear()} Kotatsu Developers`,
-      },
+      footer: baseHelper(getFooter(), ''),
 
 	  sections: sections
     },
@@ -226,4 +224,27 @@ function getNav(): DefaultTheme.NavItem[] {
 		activeMatch: "/news/"
 	}
   ]
+}
+
+function getFooter(): CustomConfig['footer'] {
+  return {
+	qrcodeTitle: 'Telegram Group',
+	qrcodeMessage: 'Contact us on Telegram',
+	qrcodeLink: 'https://t.me/kotatsuapp',
+	navigation: [
+	  {
+		title: 'Legal',
+		items: [
+		  {
+		    text: 'Privacy',
+			link: '/privacy/',
+		  },
+		  {
+			text: 'DMCA disclaimer',
+			link: '/dmca/',
+		  },
+		],
+	  },
+	],
+  }
 }

@@ -1,6 +1,7 @@
 ---
 title: Diagnosis
 description: Facing issues with a source or the app? Follow these steps to troubleshoot and find solutions.
+footer: false
 ---
 
 # Diagnosis

@@ -1,6 +1,7 @@
 ---
 title: Reader
 description: Frequently Asked Questions about the Reader.
+footer: false
 ---
 
 # Reader

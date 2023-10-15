@@ -1,6 +1,7 @@
 ---
 title: Miscellaneous
 description: Moments that can be useful, but not often.
+footer: false
 ---
 
 # Miscellaneous

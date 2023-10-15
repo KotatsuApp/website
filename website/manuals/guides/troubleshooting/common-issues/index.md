@@ -1,6 +1,7 @@
 ---
 title: Common issues
 description: Facing issues with a source or the app? Here's how to tackle common challenges.
+footer: false
 ---
 
 # Common issues

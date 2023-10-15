@@ -16,6 +16,7 @@ import shortcodes from "./shortcodes"
 
 import generateOgImages from "./hooks/generateOgImages"
 import generateMeta from "./hooks/generateMeta"
+import Unocss from 'unocss/vite'
 
 const SITE_HOST = 'https://kotatsu.app'
 const SITE_TITLE = 'kotatsu.app'
@@ -117,7 +118,8 @@ export default defineConfigWithTheme<Theme.Config>({
         'VPNavScreenTranslations',
         'VPNavBar',
         'VPNavBarMenu',
-        'VPNavScreenMenu'
+        'VPNavScreenMenu',
+        'VPFooter',
       ].map(componentName => ({
         find: new RegExp(`^.*\/${componentName}\.vue$`),
         replacement: fileURLToPath(
@@ -125,6 +127,9 @@ export default defineConfigWithTheme<Theme.Config>({
         )
       })),
     },
+    plugins: [
+      Unocss(),
+    ]
   },
 
   sitemap: {

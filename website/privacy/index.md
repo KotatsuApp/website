@@ -6,6 +6,7 @@ editLink: false
 prev: false
 next: false
 sidebar: false
+footer: false
 ---
 
 # Privacy policy

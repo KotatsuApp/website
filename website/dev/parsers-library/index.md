@@ -1,6 +1,7 @@
 ---
 title: Parsers library
 description: Instructions for using the Kotatsu parser library.
+footer: false
 ---
 
 # Kotatsu parsers

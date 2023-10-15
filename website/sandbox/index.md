@@ -9,6 +9,7 @@ head:
   - - meta
     - name: robots
       content: noindex, nofollow
+footer: false
 ---
 
 # Sandbox

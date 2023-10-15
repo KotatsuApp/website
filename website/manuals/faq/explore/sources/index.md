@@ -1,6 +1,7 @@
 ---
 title: Sources
 description: Frequently Asked Questions about Sources.
+footer: false
 ---
 
 # Sources

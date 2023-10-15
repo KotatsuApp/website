@@ -1,6 +1,7 @@
 ---
 title: Downloads
 description: Frequently Asked Question about Downloads.
+footer: false
 ---
 
 # Downloads

@@ -1,6 +1,7 @@
 ---
 title: Categories
 description: Organize your favorite series effortlessly with categories.
+footer: false
 ---
 
 # Categories

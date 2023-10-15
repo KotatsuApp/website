@@ -1,6 +1,7 @@
 ---
 title: Contribute
 description: Find out how to help translate or build the app and parsers.
+footer: false
 ---
 
 # Contribute

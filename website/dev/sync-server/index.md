@@ -1,6 +1,7 @@
 ---
 title: Synchronization server
 description: Instructions for installing the synchronization server.
+footer: false
 ---
 
 # Synchronization server

@@ -2,6 +2,7 @@
 title: Feed
 titleTemplate: Frequently Asked Questions
 description: Frequently Asked Questions about the Feed.
+footer: false
 ---
 
 # Feed

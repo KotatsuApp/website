@@ -1,6 +1,7 @@
 ---
 title: Tracking
 description: Tracking helps track your library with different online services.
+footer: false
 ---
 
 <script setup lang="ts">

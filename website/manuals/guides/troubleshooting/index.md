@@ -1,6 +1,7 @@
 ---
 title: Troubleshooting
 description: Facing source or app issues? Here's how to troubleshoot.
+footer: false
 ---
 
 # Troubleshooting

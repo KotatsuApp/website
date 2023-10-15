@@ -5,6 +5,8 @@ import { normalize } from 'vitepress/dist/client/shared'
 import { type Translator, translators } from '../../website/translators'
 import { Theme } from './types'
 
+const markdownLinkRegexp = /.md((\?|#).*)?$/
+
 export function findPath(
   pageData: DocsPageData,
   config: UserConfig,
@@ -108,4 +110,81 @@ export function getTranslator(translator: string): Translator | undefined {
   }
 
   return translators[translator]
+}
+
+export function isObject(value) {
+  const type = typeof value
+  return value != null && (type === 'object' || type === 'function')
+}
+
+export const isRelativeLink = (link: string) =>
+  /^(?!www\.|http[s]?:\/\/|[A-Za-z]:\\|\/\/).*/.test(link)
+
+/**
+ * Determine a link is http link or not
+ *
+ * - http://github.com
+ * - https://github.com
+ * - //github.com
+ */
+export const isLinkHttp = (link: string): boolean =>
+  /^(https?:)?\/\//.test(link)
+
+/**
+ * Determine a link is ftp link or not
+ */
+export const isLinkFtp = (link: string): boolean => link.startsWith('ftp://')
+
+export const isLinkExternal = (link: string, base = '/'): boolean => {
+  // http link or ftp link
+  if (isLinkHttp(link) || isLinkFtp(link)) {
+    return true
+  }
+  
+  // absolute link that does not start with `base` and does not end with `.md`
+  if (
+    link.startsWith('/') &&
+    !link.startsWith(base) &&
+    !markdownLinkRegexp.test(link)
+  ) {
+    return true
+  }
+  return false
+}
+
+export function baseHelper(obj, base): any {
+  function modifyLink(obj) {
+    if (Array.isArray(obj)) {
+      return obj.map((item) => modifyLink(item))
+    } else if (isObject(obj)) {
+      const newObj = {}
+      for (let key in obj) {
+        if (Array.isArray(obj[key]) || typeof obj[key] === 'object') {
+          newObj[key] = modifyLink(obj[key])
+        } else if (key === 'link' && isRelativeLink(obj[key])) {
+          newObj[key] = base + obj[key]
+          if (isLinkExternal(obj[key])) newObj['target'] = '_blank'
+        } else {
+          newObj[key] = obj[key]
+        }
+      }
+      return newObj
+    } else {
+      return obj
+    }
+  }
+
+  function modifyKey(obj) {
+    let newObj = {}
+    for (let key in obj) {
+      if (key.startsWith('/') && base !== '') {
+        newObj[base + key] = obj[key]
+      } else {
+        newObj[key] = obj[key]
+      }
+    }
+    return newObj
+  }
+
+  return modifyKey(modifyLink(obj))
 }

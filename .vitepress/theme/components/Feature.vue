@@ -18,7 +18,7 @@ defineProps<{
 .Feature {
   color: inherit;
   display: block;
-  border: 1px solid var(--vp-c-bg-soft);
+  border: 4px solid var(--vp-c-brand-soft);
   border-radius: var(--vp-border-radius);
   height: 100%;
   overflow-x: hidden;

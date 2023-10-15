@@ -1,6 +1,7 @@
 ---
 title: General
 description: Frequently Asked Questions
+footer: false
 ---
 
 # General
