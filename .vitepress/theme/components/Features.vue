@@ -5,7 +5,7 @@ import type { DefaultTheme } from 'vitepress/theme-without-fonts'
 import Feature from './Feature.vue'
 
 export interface Feature {
-  icon?: DefaultTheme.FeatureIcon
+  image?: DefaultTheme.ThemeableImage
   title: string
   details: string
   link?: string
@@ -44,7 +44,7 @@ const grid = computed(() => {
           :class="[grid]"
         >
           <Feature
-            :icon="feature.icon"
+            :image="feature.image"
             :title="feature.title"
             :details="feature.details"
             :link="feature.link"

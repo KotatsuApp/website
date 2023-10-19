@@ -80,3 +80,6 @@ Please follow these steps:
 :::tip Note
 More information about backup and restore is listed [here](/manuals/guides/backups/).
 :::
+
+## Can I restore my Tachiyomi backup to Kotatsu?
+No, you can't. This is due to the difficulty in supporting and adapting the `.proto.gz` format that **Tachiyomi** uses. Also **Kotatsu** and **Tachiyomi** and its forks have different data structures that they use.

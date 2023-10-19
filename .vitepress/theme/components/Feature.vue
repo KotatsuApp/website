@@ -1,5 +1,9 @@
 <script setup lang="ts">
+import VPImage from 'vitepress/dist/client/theme-default/components/VPImage.vue';
+import type { DefaultTheme } from 'vitepress/theme'
+
 defineProps<{
+  image: DefaultTheme.ThemeableImage
   title: string
   details?: string
 }>()
@@ -7,23 +11,28 @@ defineProps<{
 
 <template>
   <div class="Feature">
-    <article class="box">
-      <h2 class="title" v-html="title"></h2>
-      <p v-if="details" class="details" v-html="details"></p>
-    </article>
+    <div class="box">
+      <h1 v-if="title" class="title">
+        <span v-html="title" class="clip"></span>
+      </h1>
+      <p v-if="details" class="details">
+        <p v-html="details"></p>
+      </p>
+      <div class="image">
+        <VPImage class="image-src" :image="image" />
+      </div>
+    </div>
   </div>
 </template>
 
 <style scoped>
 .Feature {
-  color: inherit;
   display: block;
   border: 4px solid var(--vp-c-brand-soft);
   border-radius: var(--vp-border-radius);
   height: 100%;
-  overflow-x: hidden;
   box-shadow: var(--vp-shadow-6);
-  transition: box-shadow .3s cubic-bezier(.22,.61,.36,1);
+  transition: border-color 0.25s, background-color 0.25s;
 }
 
 .box {
@@ -46,6 +55,11 @@ defineProps<{
   font-size: 14px;
   font-weight: 500;
   color: var(--vp-c-text-2);
+}
+
+.image {
+  margin-top: 24px;
+  margin-bottom: -24px;
 }
 
 .details:deep(a) {

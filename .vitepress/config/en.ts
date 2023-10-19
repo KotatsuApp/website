@@ -213,16 +213,16 @@ function getNav(): DefaultTheme.NavItem[] {
 		link: "/manuals/guides/getting-started/",
 		activeMatch: "/manuals/",
 	},
-	{
+/* 	{
 		text: "Desktop app",
 		link: "/desktop/",
 		activeMatch: "/desktop/",
-	},
-	{
+	}, */
+/* 	{
 		text: "News",
 		link: "/news/",
 		activeMatch: "/news/"
-	}
+	} */
   ]
 }
 
