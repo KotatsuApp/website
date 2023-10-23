@@ -65,6 +65,10 @@ export default defineConfigWithTheme<Theme.Config>({
     ['link', { rel: 'icon', href: '/logo-compact.svg?v=2', type: 'image/svg+xml' }],
     ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png?v=2' }],
     ['link', { rel: 'manifest', href: '/site.webmanifest' }],
+
+    ["meta", { name: "al:android:url", content: "kotatsu://manga" }],
+	  ["meta", { name: "al:android:app_name", content: "Kotatsu" }],
+	  ["meta", { name: "al:android:package", content: "org.koitharu.kotatsu" }]
   ],
 
   themeConfig: {
