@@ -17,7 +17,7 @@ import { onMounted } from "vue"
 import DownloadButtons from "@theme/components/DownloadButtons.vue";
 
 onMounted(() => {
-  window.location = `kotatsu://manga${window.location.toString().split("manga/").pop()}`
+  window.location = `kotatsu://manga/manga${window.location.toString().split("manga/").pop()}`
 })
 </script>
 
