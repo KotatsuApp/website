@@ -117,7 +117,6 @@ function generateMeta(context: TransformContext, hostname: string) {
 		head.push(["meta", { property: "al:android:url", content: "kotatsu://manga" }])
 		head.push(["meta", { property: "al:android:app_name", content: "Kotatsu" }])
 		head.push(["meta", { property: "al:android:package", content: "org.koitharu.kotatsu" }])
-		/// head.push(["script", {}, `window.location = "kotatsu://manga?${window.location.toString().split("manga/?").pop()}"`])
 	}
 
 	return head
