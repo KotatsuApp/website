@@ -13,7 +13,12 @@ footer: false
 ---
 
 <script setup>
+import { onMounted } from "vue"
 import DownloadButtons from "@theme/components/DownloadButtons.vue";
+
+onMounted(() => {
+  window.location = `kotatsu://manga${window.location.toString().split("manga/").pop()}`
+})
 </script>
 
 # Hello here

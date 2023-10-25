@@ -18,9 +18,6 @@ export default {
     watchEffect(() => {
       if (inBrowser) {
         document.cookie = `nf_lang=${lang.value}; expires=Mon, 1 Jan 2024 00:00:00 UTC; path=/`
-        if (document.location = "https://kotatsu.app/manga/") {
-          document.location = `kotatsu://manga/manga?${window.location.toString().split("manga/?").pop()}`
-        }
       }
     })
   },
