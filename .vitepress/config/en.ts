@@ -88,6 +88,17 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
 				},
 			],
 		},
+		/* {
+			text: "Other projects",
+			items: [
+				{
+					text: "Kotatsu SSIV"
+				},
+				{
+					text: "kotatsu-dl"
+				}
+			]
+		}, */
 		{
 			text: "Frequently Asked Questions",
 			items: [

@@ -60,7 +60,10 @@ const navigationMappings: Record<string, Navigation> = {
 
 	// Sync
 	"sync_settings": { name: "Synchronization settings", dependsOn: "services" },
-	"server_address": { name: "Server address", dependsOn: "sync_settings" }
+	"server_address": { name: "Server address", dependsOn: "sync_settings" },
+
+	// Backups
+	"periodic_backups": { name: "Periodic backups", dependsOn: "data" }
 }
 
 function generateNavigationHtml(navKey: string) {
