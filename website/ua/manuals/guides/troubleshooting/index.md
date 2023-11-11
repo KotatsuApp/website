@@ -1,51 +1,53 @@
 ---
-title: Troubleshooting
-description: Facing source or app issues? Here's how to troubleshoot.
+title: Вирішення проблем
+description: Виникли проблеми з вихідним кодом або додатком? Ось як вирішити проблеми.
+footer: false
+translator: CakesTwix
 ---
 
-# Troubleshooting
+# Вирішення проблем
 
-Facing source or app issues? Here's how to troubleshoot.
+Виникли проблеми з вихідним кодом або додатком? Ось як вирішити проблеми.
 
-Be sure to check the [Frequently Asked Questions]() for how to address common issues too.
+Не забудьте також переглянути [Часті запитання](), щоб дізнатися, як вирішити поширені проблеми.
 
 ## WebView
 
-### Clearing cookies and WebView data
-This resets your WebView to a clean state, including any login states.
+### Очищення файлів cookie та даних WebView
+Це призведе до очищення WebView до чистого стану, включаючи всі записи для входу в системи.
 
-1. Navigate to <nav to="data">.
-1. Tap **Clear network cache**.
-1. Tap **Clear cookies**.
+1. Перейдіть до <nav to="data">.
+1. Натисніть **Очистити мережевий кеш**.
+1. Натисніть **Очистити кукі**.
 
-### WebView update
-To update WebView, you need to find what WebView implementation is used on your device.
+### Оновлення WebView
+Щоб оновити WebView, вам потрібно з'ясувати, яка реалізація WebView використовується на вашому пристрої.
 
-Typical default implementation depends on the Android version as follows:
+Типова реалізація за замовчуванням залежить від версії Android наступним чином:
 
 ::: tabs
-== Android 10 and above
+== Android 10 і вище
 [Android System WebView](https://play.google.com/store/apps/details?id=com.google.android.webview)
 == Android 7 - 9
 [Google Chrome](https://play.google.com/store/apps/details?id=com.android.chrome)
-== Android 6 and below
+== Android 6 і нижче
 [Android System WebView](https://play.google.com/store/apps/details?id=com.google.android.webview)
 :::
 
-::: tip **Android 7** and above
-Newer Android users can check/change WebView in [Developer Options](https://developer.android.com/studio/debug/dev-options).
+::: tip **Android 7** і вище
+Нові користувачі Android можуть перевірити/змінити WebView у [Параметри розробника](https://developer.android.com/studio/debug/dev-options).
 :::
 
-::: warning Caution with Non-Standard WebView
-Using non-standard WebView (like Firefox) might cause **Kotatsu** to malfunction or crash.
+::: warning Обережно з нестандартними WebView
+Використання нестандартного WebView (наприклад, Firefox) може призвести до неправильної роботи або аварійного завершення роботи **Kotatsu**.
 
-It's best to use the standard [Android System WebView](https://play.google.com/store/apps/details?id=com.google.android.webview) or [Google Chrome](https://play.google.com/store/apps/details?id=com.android.chrome).
+Найкраще використовувати стандартний [Android System WebView](https://play.google.com/store/apps/details?id=com.google.android.webview) або [Google Chrome](https://play.google.com/store/apps/details?id=com.android.chrome).
 :::
 
-## General
+## Загальне
 
-### Obtaining crash/error logs
-For crash investigations, navigate to <nav to="about"> and tap **Share logs**.
+### Отримання журналів збоїв/помилок
+Щоб дізнатися про причини збоїв, перейдіть до <nav to="about"> і натисніть **Поділиться логами**.
 
-### Obtaining more logs
-To diagnose abnormal app behavior, record device logs using a [Logcat Reader](https://play.google.com/store/apps/details?id=com.dp.logcatapp).
+### Отримання додаткових звітів
+Щоб діагностувати ненормальну поведінку програми, запишіть логи пристрою за допомогою [Logcat Reader](https://play.google.com/store/apps/details?id=com.dp.logcatapp).
