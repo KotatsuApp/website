@@ -1,10 +1,12 @@
 ---
 title: Список змін
-description: Журнали змін усіх стабільних випусків Kotatsu.
+description: Список змін усіх стабільних випусків Kotatsu.
 lastUpdated: false
 editLink: false
 prev: false
 next: false
+footer: false
+translator: CakesTwix
 ---
 
 <script setup>

@@ -9,12 +9,14 @@ head:
   - - meta
     - name: robots
       content: noindex, nofollow
+footer: false
+translator: CakesTwix
 ---
 
 # Пісочниця
 Пісочниця для демонстрації та документування того, як працюють різні функції веб-сайту, щоб полегшити інтеграцію для дописувачів.
 
-- [Посібник по стилю](/ua/sandbox/style-guide)
+- [Посібник зі стилю](/ua/sandbox/style-guide/)
 
 ## Шорткоди
 

@@ -1,45 +1,50 @@
 ---
-title: Privacy policy
-description: Privacy Policy that explains how Kotatsu collects, uses, and protects users' personal information.
+title: Політика конфіденційності
+description: Політика конфіденційності, яка пояснює, як збирає, використовує та захищає персональні дані користувачів Kotatsu.
 lastUpdated: false
 editLink: false
+prev: false
+next: false
+sidebar: false
+footer: false
+translator: CakesTwix
 ---
 
-# Privacy policy
+# Політика конфіденційності
 
-Kotatsu is an Open Source app.
-This SERVICE is provided at no cost and is intended for use as is.
+Kotatsu - це застосунок з відкритим вихідним кодом.
+Цей СЕРВІС надається безкоштовно і призначений для використання як є.
 
-This page details our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service.
+На цій сторінці детально описана наша політика щодо збору, використання та розкриття особистої інформації, якщо хтось вирішив скористатися нашим Сервісом.
 
-If you choose to use our Service, then you agree to the collection and use of information in relation to this policy.
-The Personal Information that we collect is used for providing and improving the Service.
-We will not use or share your information with anyone except as described in this Privacy Policy.
+Якщо ви вирішили скористатися нашим Сервісом, ви погоджуєтеся на збір і використання інформації відповідно до цієї політики.
+Особиста інформація, яку ми збираємо, використовується для надання та вдосконалення Сервісу.
+Ми не будемо використовувати або передавати вашу інформацію нікому, крім випадків, описаних у цій Політиці конфіденційності.
 
-## Log Data
+## Дані логів
 
-In a case of an error in the app, the Service collects data and information called Log Data.
-This Log Data may include information including your device name, operating system version, the configuration of the app when utilizing our Service, the time and date of your use of the Service, and other statistics.
+У разі виникнення помилки в додатку, Сервіс збирає дані та інформацію, які називаються Даними логу.
+Ці реєстраційні дані можуть містити інформацію, включаючи назву вашого пристрою, версію операційної системи, конфігурацію додатку під час використання нашого Сервісу, час і дату використання вами Сервісу та іншу статистику.
 
-Log Data can be sent at the discretion of the user.
+Дані логу можуть бути надіслані на розсуд користувача.
 
-## External Links
+## Зовнішні посилання
 
-This Service contains links to other sites.
-If you click on a third-party link, you will be directed to that site.
-Note that these external sites are not operated by us.
-Therefore, we strongly advise you to review the Privacy Policy of these websites.
-We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.
+Цей Сервіс містить посилання на інші сайти.
+Якщо ви натиснете на посилання третьої сторони, вас буде перенаправлено на цей сайт.
+Зверніть увагу, що ми не керуємо цими зовнішніми сайтами.
+Тому ми наполегливо рекомендуємо вам ознайомитися з політикою конфіденційності цих сайтів.
+Ми не контролюємо і не несемо жодної відповідальності за зміст, політику конфіденційності або практику будь-яких сторонніх сайтів або послуг.
 
-This includes the use of external tracking services (e.g. MyAnimeList).
+Це включає використання зовнішніх сервісів трекерів (наприклад, MyAnimeList).
 
-## Changes to This Privacy Policy
+## Зміни політики конфіденційності
 
-We may periodically update our Privacy Policy.
-Thus, you are advised to review this page periodically for any changes.
+Ми можемо періодично оновлювати нашу Політику конфіденційності.
+Тому радимо вам періодично переглядати цю сторінку на предмет будь-яких змін.
 
-The current iteration of this policy is effective as of October 2, 2023.
+Поточна ітерація цієї політики діє з 2 жовтня 2023 року.
 
-## Contact Us
+## Зв'яжіться з нами
 
-If you have any questions or suggestions about this Privacy Policy, do not hesitate to reach out to us on [our Telegram group](https://t.me/kotatsuapp).
+Якщо у вас виникли запитання або пропозиції щодо цієї Політики конфіденційності, не соромтеся звертатися до нас у [нашу групу в Telegram](https://t.me/kotatsuapp).
