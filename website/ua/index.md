@@ -12,10 +12,10 @@ main:
   actions:
     - theme: brand
       text: Завантажити
-      link: /download/
+      link: /ua/download/
     - theme: alt
       text: Посібники
-      link: /manuals/guides/getting-started/
+      link: /ua/manuals/guides/getting-started/
   features:
     - image: 
         alt: Feature Sources
