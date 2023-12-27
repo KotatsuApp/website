@@ -12,7 +12,7 @@ const changelog = computed(() => {
 	const flavoredString = (release[type.value].body ?? "")
 		.replace(/(?<=\(|(, ))@(.*?)(?=\)|(, ))/g, "[@$2](https://github.com/$2)")
 		.replace("https://github.com/KotatsuApp/Kotatsu/releases", "/changelogs/")
-		.replace("##", "-")
+		.replace(/## [ \t]*([^\n\r]*)/g, "### $1")
 
 	return md.render(flavoredString)
 })
@@ -71,34 +71,6 @@ const changelog = computed(() => {
 		margin: 0 0 1rem
 		color: var(--vp-c-text-2)
 		font-size: 0.9rem
-	}
-
-	table {
-		border-radius: 8px
-		border-collapse: collapse
-		border: 1px solid var(--vp-c-divider)
-
-		tr,
-		th,
-		td {
-			border: none
-			width: 100%
-		}
-
-		tbody tr {
-			border-top: 1px solid var(--vp-c-divider)
-		}
-
-		tr > td {
-			&:first-child {
-				color: var(--vp-c-text-2)
-			}
-
-			&:last-child {
-				font-family: var(--vp-font-family-mono)
-				font-size: var(--vp-code-font-size)
-			}
-		}
 	}
 }
 

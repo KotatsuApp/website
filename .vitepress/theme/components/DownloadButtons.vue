@@ -29,28 +29,6 @@ function handleAnalytics() {
 
 <template>
 	<div>
-		<div v-if="!isAndroid" class="custom-block danger">
-			<p class="custom-block-title">
-				Unsupported operating system
-			</p>
-			<p>
-				<strong>Kotatsu</strong> is an <strong>Android app</strong> only.
-				Use an <strong>Android device</strong> to download and install the app.
-			</p>
-		</div>
-		<div v-if="!isAndroid" class="custom-block warning">
-			<p class="custom-block-title">
-				Caution
-			</p>
-			<p>
-				Any app for any operating systems other than Android called
-				<strong>Kotatsu</strong> (except kotatsu-dl) is not affiliated with this project.
-			</p>
-			<blockquote>
-				For more information, read the
-				<a href="/manuals/faq/general">General FAQ</a>.
-			</blockquote>
-		</div>
 		<div class="download-buttons">
 			<a
 				class="download-button primary"
@@ -93,10 +71,7 @@ function handleAnalytics() {
   font-size: 16px;
   font-weight: 500;
   transition: all 0.25s, color 0.25s;
-}
-
-.download-button:hover {
-	text-decoration: none !important;
+  text-decoration: none !important;
 }
 
 .download-button.primary {
@@ -144,10 +119,11 @@ svg {
 
 .text {
 	margin-right: 10px;
+	font-weight: bold;
 }
 
 .version {
-	font-size: 0.8em;
+	font-size: 1em;
 }
 
 .version-disclaimer {

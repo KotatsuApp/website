@@ -1,7 +1,8 @@
 import type { DefaultTheme, LocaleConfig } from 'vitepress'
-import type { Theme } from '../theme/types'
+import type { CustomConfig, Theme } from '../theme/types'
 import { sections } from '../theme/plugins/section'
 import 'dotenv/config'
+import { baseHelper } from '../theme/utils'
 
 export const SITE_NAME = 'Kotatsu Website'
 export const META_DESCRIPTION = 'Простая и удобная читалка манги с открытым исходным кодом от сообщества и для сообщества, где вы можете найти и читать вашу любимую мангу проще как никогда.'
@@ -45,7 +46,7 @@ export const config: LocaleConfig<Theme.Config> = {
       nav: getNav(),
 
       sidebar: {
-        
+        "/": defaultSidebar(),
       },
 
       outline: {
@@ -70,14 +71,145 @@ export const config: LocaleConfig<Theme.Config> = {
         pattern: 'https://github.com/KotatsuApp/website/edit/main/website/:path',
         text: 'Предложить изменения на этой странице',
       },
-      footer: {
-        message: "<a href=\"https://www.gnu.org/licenses/gpl-3.0.en.html\" target=\"_blank\">Лицензия GPL-3.0</a> <span class=\"divider\">|</span> <a href=\"/privacy/\">Политика конфиденциальности</a>",
-        copyright: `Copyright © 2020 - ${new Date().getFullYear()} Kotatsu Developers`,
-      },
+      footer: baseHelper(getFooter(), ''),
 
       sections: sections
     },
   }
+}
+
+function defaultSidebar(): DefaultTheme.SidebarItem[] {
+	return [
+		{
+            text: "General sections",
+			items: [
+				{
+					text: "Download",
+					link: "/download/",
+				},
+				/* {
+					text: "Parsers",
+					link: "/parsers/",
+				}, */
+				{
+					text: "Changelogs",
+					link: "/changelogs/",
+				},
+			],
+		},
+		/* {
+			text: "Other projects",
+			items: [
+				{
+					text: "Kotatsu SSIV"
+				},
+				{
+					text: "kotatsu-dl"
+				}
+			]
+		}, */
+		{
+			text: "Frequently Asked Questions",
+			items: [
+				{ text: "General", link: "/manuals/faq/general/" },
+				{
+					text: "Feed",
+					link: "/manuals/faq/feed/",
+				},
+				{
+					text: "Explore",
+					link: "/manuals/faq/explore/",
+					collapsed: true,
+					items: [
+						{ 
+							text: "Sources", 
+							link: "/manuals/faq/explore/sources/" 
+						},
+						/* {
+							text: "Local storage",
+							link: "/manuals/faq/explore/local-storage",
+						}, */
+						/* {
+							text: "Bookmarks",
+							link: "/manuals/faq/explore/bookmarks",
+						},
+						{
+							text: "Random",
+							link: "/manuals/faq/explore/random",
+						}, */
+						{
+							text: "Downloads",
+							link: "/manuals/faq/explore/downloads/",
+						},
+						/* {
+							text: "Suggestions",
+							link: "/manuals/faq/explore/suggestions",
+						}, */
+					],
+				},
+				{
+					text: "Reader",
+					link: "/manuals/faq/reader/",
+				},
+				{
+					text: "Settings",
+					link: "/manuals/faq/settings/",
+				},
+				{
+					text: "Miscellaneous",
+					link: "/manuals/faq/miscellaneous/"
+				}
+			],
+		},
+		{
+			text: "Guides",
+			items: [
+				{
+					text: "Getting started",
+					link: "/manuals/guides/getting-started/",
+				},
+				{
+					text: "Troubleshooting",
+					link: "/manuals/guides/troubleshooting/",
+					collapsed: true,
+					items: [
+						{
+							text: "Common issues",
+							link: "/manuals/guides/troubleshooting/common-issues/",
+						},
+						{
+							text: "Diagnosis",
+							link: "/manuals/guides/troubleshooting/diagnosis/",
+						},
+					],
+				},
+				{ text: "Backups", link: "/manuals/guides/backups/" },
+				{ text: "Tracking", link: "/manuals/guides/tracking/" },
+				{ text: "Categories", link: "/manuals/guides/categories/" },
+				{
+					text: "Synchronization",
+					link: "/manuals/guides/synchronization/"
+				}
+			],
+		},
+		{
+			text: "For developers",
+			items: [
+				{
+					text: "Contribute",
+					link: "/dev/contribute/",
+				},
+				{
+					text: "Parsers library",
+					link: "/dev/parsers-library/",
+				},
+				{
+					text: "Synchronization server",
+					link: "/dev/sync-server/",
+				},
+			]
+		}
+	]
 }
 
 function getNav(): DefaultTheme.NavItem[] {
@@ -91,20 +223,48 @@ function getNav(): DefaultTheme.NavItem[] {
 				link: "/ru/download/",
 			},
 			{
-				text: "Изменения в версиях",
+				text: "Чейнджлоги",
 				link: "/ru/changelogs/",
 			},
 		],
     },
     {
-		text: "Инструкции",
-		link: "/ru/manuals/guides/getting-started",
+		text: "Руководства",
+		link: "/ru/manuals/guides/getting-started/",
 		activeMatch: "/ru/manuals/",
 	},
-	{
-		text: "Новости",
-		link: "/ru/news/",
-		activeMatch: "/ru/news/",
-	},
+/* 	{
+		text: "Desktop app",
+		link: "/desktop/",
+		activeMatch: "/desktop/",
+	}, */
+/* 	{
+		text: "News",
+		link: "/news/",
+		activeMatch: "/news/"
+	} */
   ]
+}
+
+function getFooter(): CustomConfig['footer'] {
+  return {
+	qrcodeTitle: 'Чат в Telegram',
+	qrcodeMessage: 'Присоеднияйтесь!',
+	qrcodeLink: 'https://t.me/kotatsuapp',
+	navigation: [
+	  {
+		title: 'Legal',
+		items: [
+		  {
+		    text: 'Конфиденциальность',
+			link: '/ru/privacy/',
+		  },
+		  {
+			text: 'DMCA дисклеймер',
+			link: '/ru/dmca/',
+		  },
+		],
+	  },
+	],
+  }
 }

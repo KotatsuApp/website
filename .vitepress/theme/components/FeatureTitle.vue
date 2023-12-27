@@ -1,3 +1,12 @@
+<script setup lang="ts">
+
+export interface Feature {
+  title: string
+  subtitle: string
+}
+
+</script>
+
 <template>
     <div class="FeatureTitle">
         <div class="container">

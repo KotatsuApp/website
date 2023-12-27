@@ -9,10 +9,9 @@ Allows you to continue reading on your device from where you left off on another
 
 List of official servers:
 
-| Domain           | IP:Port            |  Location        |
-| ---------------- | ------------------ | ---------------- |
-| sync.kotatsu.app | 86.57.183.214:8081 | Belarus          |
-| -                | 86.57.183.214:1337 | Belarus (Mirror) |
+| Domain           | Location        | Status                                        |
+| ---------------- | --------------- | --------------------------------------------- |
+| sync.kotatsu.app | Belarus         | ![](https://status.kotatsu.app/api/badge/1/status) |
 
 ## What is synchronization?
 Synchronization is needed to store your collection of favorites, history and categories and have remote access to them. On a synchronized device, you can restore your manga collection in real time without loss. It also supports working across multiple devices. It is convenient for those who use several devices.
