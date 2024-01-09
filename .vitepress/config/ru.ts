@@ -118,7 +118,6 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
 				},
 				{
 					text: "Explore",
-					link: "/manuals/faq/explore/",
 					collapsed: true,
 					items: [
 						{ 

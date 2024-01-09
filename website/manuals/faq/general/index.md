@@ -82,4 +82,8 @@ More information about backup and restore is listed [here](/manuals/guides/backu
 :::
 
 ## Can I restore my Tachiyomi backup to Kotatsu?
-No, you can't. This is due to the difficulty in supporting and adapting the `.proto.gz` format that **Tachiyomi** uses. Also **Kotatsu** and **Tachiyomi** and its forks have different data structures that they use.
+No, you can't. This is due to the difficulty in supporting and adapting the `.proto.gz` or `.tachibk` format that **Tachiyomi** uses. Also **Kotatsu** and **Tachiyomi** and its forks have different data structures that they use. For **Neko for MangaDex** users we recommend to use [Nekotatsu](https://github.com/PhantomShift/nekotatsu).
+
+:::tip Usage from project README
+`$ nekotatsu (input neko.tachibk) (optional output name)`
+:::

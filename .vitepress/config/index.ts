@@ -78,7 +78,7 @@ export default defineConfigWithTheme<Theme.Config>({
       options: {
         locales: {
           ...searchLocaleEn,
-          ...searchLocaleRu,
+          // ...searchLocaleRu,
           ...searchLocaleUa,
         },
       },
@@ -89,7 +89,7 @@ export default defineConfigWithTheme<Theme.Config>({
 
   locales: {
     ...root,
-    ...ru,
+    // ...ru,
     ...ua,
   },
 

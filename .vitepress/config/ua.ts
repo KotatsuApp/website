@@ -109,7 +109,6 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
 				},
 				{
 					text: "Огляд",
-					link: "/ua/manuals/faq/explore/",
 					collapsed: true,
 					items: [
 						{

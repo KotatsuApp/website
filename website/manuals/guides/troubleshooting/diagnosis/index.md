@@ -48,7 +48,7 @@ If you're the only one facing a problem, you might be encountering an IP ban, or
 - Avoid using downloads with the source.
 - Reduce the number of series in your favourites/history from that source.
 
-::: warning
+::: warning Warning
 These are general guidelines as each site has its specific undisclosed limits and triggers.
 :::
 
@@ -59,6 +59,6 @@ When everyone experiences a problem, it could be with the source or app:
 1. Check closed issues ([app](https://github.com/KotatsuApp/Kotatsu/issues?q=is%3Aissue+is%3Aclosed)/[parsers](https://github.com/KotatsuApp/kotatsu-parsers/issues?q=is%3Aissue+is%3Aclosed)) in case it's resolved but not yet released.
 1. If not found, create a new issue.
 
-::: warning
+::: warning Warning
 If the site itself is problematic, patience is the only solution until it becomes functional again.
 :::

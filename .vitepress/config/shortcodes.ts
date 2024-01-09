@@ -45,7 +45,7 @@ const navigationMappings: Record<string, Navigation> = {
 
     // Favourites
     "favourites_three_dots": { name: "Three dots", icon: iconMappings.threeDots, dependsOn: "main_favourites" },
-    "favourites_manage_categories" : { name: "Manage categories", dependsOn: "favourites_three_dots" },
+    "favourites_manage_categories" : { name: "Favourite categories", dependsOn: "favourites_three_dots" },
 
 	// Settings submenu
 	"appearance": { name: "Appearance", icon: iconMappings.paletteOutline, dependsOn: "main_settings" },
