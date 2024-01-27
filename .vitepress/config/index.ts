@@ -66,10 +66,8 @@ export default defineConfigWithTheme<Theme.Config>({
     },
 
     socialLinks: [
-      {
-        icon: { svg: telegram },
-        link: 'https://t.me/kotatsuapp',
-      },
+      { icon: { svg: telegram }, link: 'https://t.me/kotatsuapp' },
+      { icon: 'discord', link: 'https://discord.gg/NNJ5RgVBC5' },
       { icon: 'github', link: 'https://github.com/KotatsuApp/Kotatsu' },
     ],
 
