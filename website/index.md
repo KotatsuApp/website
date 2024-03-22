@@ -8,8 +8,8 @@ main:
   tagline: A simple and convenient open source manga reader from and for the community, where you can find and read your favorite manga easier than ever.
   image: 
     alt: Kotatsu Logo
-    light: /phone_light.webp
-    dark: /phone_dark.webp
+    light: /logo-compact.svg
+    dark: /logo-compact-dark.svg
   actions:
     - theme: brand
       text: Download

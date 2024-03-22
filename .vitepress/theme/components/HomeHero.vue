@@ -53,7 +53,6 @@ const qrcode = useQRCode('https://github.com/KotatsuApp/Kotatsu/releases/latest'
       </div>
       <div v-if="data.image || heroImageSlotExists" class="image">
         <div class="image-container">
-          <div class="image-bg" />
           <slot name="image">
             <VPImage class="image-src" :image="data.image" />
           </slot>
