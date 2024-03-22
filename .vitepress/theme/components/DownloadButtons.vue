@@ -7,8 +7,7 @@ import { data as release } from "../data/release.data"
 const downloadInformation = computed(() => ({
 	stable: {
 		tagName: release.stable.tag_name ?? "v0.0.0",
-		asset: (release.stable.assets ?? [])
-			.find((a) => /^kotatsu-\d+\.\d+\.\d+-release.apk/.test(a.name)),
+		asset: (release.stable.assets ?? []).find((a) => /^kotatsu-(\d+\.)?(\d+\.)?(\*|\d+)-release.apk/.test(a.name)),
 	},
 }))
 
