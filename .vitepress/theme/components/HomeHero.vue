@@ -35,6 +35,9 @@ const qrcode = useQRCode('https://github.com/KotatsuApp/Kotatsu/releases/latest'
           <h1 v-if="data.title" class="title">
             <span v-html="data.title" class="clip"></span>
           </h1>
+          <h2 v-if="data.text" class="text">
+            <span v-html="data.text" class="clip"></span>
+          </h2>
           <p v-if="data.tagline" v-html="data.tagline" class="description"></p>
         </slot>
         <div v-if="data.actions" class="actions">
@@ -124,8 +127,9 @@ const qrcode = useQRCode('https://github.com/KotatsuApp/Kotatsu/releases/latest'
   font-size: 48px;
   letter-spacing: -0.4px;
   line-height: 50px;
-  font-weight: 700;
+  font-weight: 800;
   max-width: 392px;
+  color: var(--vp-c-brand-1);
   white-space: pre-wrap;
 }
 
@@ -137,14 +141,14 @@ const qrcode = useQRCode('https://github.com/KotatsuApp/Kotatsu/releases/latest'
   .title {
     max-width: 576px;
     line-height: 56px;
-    font-size: 48px;
+    font-size: 64px;
   }
 }
 
 @media (min-width: 960px) {
   .title {
     line-height: 64px;
-    font-size: 56px;
+    font-size: 72px;
   }
 
   .VPHomeHero.has-image .title {
@@ -152,8 +156,39 @@ const qrcode = useQRCode('https://github.com/KotatsuApp/Kotatsu/releases/latest'
   }
 }
 
+.text {
+  font-size: 36px;
+  letter-spacing: -0.4px;
+  line-height: 50px;
+  font-weight: 700;
+  max-width: 392px;
+  white-space: pre-wrap;
+}
+
+.VPHomeHero.has-image .text {
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .text {
+    max-width: 576px;
+    line-height: 56px;
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 960px) {
+  .text {
+    line-height: 64px;
+    font-size: 56px;
+  }
+
+  .VPHomeHero.has-image .text {
+    margin: 1.5rem 0;
+  }
+}
+
 .description {
-  padding-top: 8px;
   max-width: 392px;
   line-height: 28px;
   font-size: 18px;
@@ -168,7 +203,6 @@ const qrcode = useQRCode('https://github.com/KotatsuApp/Kotatsu/releases/latest'
 
 @media (min-width: 640px) {
   .description {
-    padding-top: 12px;
     max-width: 576px;
     line-height: 32px;
     font-size: 20px;
