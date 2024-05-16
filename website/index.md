@@ -5,7 +5,7 @@ layout: home
 main:
   title: Kotatsu
   text: Manga in your pocket
-  tagline: A simple and convenient open source manga reader from and for the community, where you can find and read your favorite manga easier than ever.
+  tagline: A simple and convenient open source manga reader for Android from and for the community, where you can find and read your favorite manga easier than ever.
   image: 
     alt: Kotatsu Logo
     light: /logo-compact.svg
