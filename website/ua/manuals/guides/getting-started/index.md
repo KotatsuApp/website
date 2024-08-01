@@ -39,7 +39,7 @@ import { data as release } from "@theme/data/release.data"
 2. Знайшовши манґу, яку ви хочете додати, натисніть на неї для отримання додаткової інформації.
 3. Натисніть кнопку з сердечком на панелі інструментів, виберіть категорію або створіть нову, і манґа буде додана до ваших улюблених.
 
-<img src="/manuals/guides/getting-started/add-to-favourites.png" alt="Adding to favourites" width="500"/>
+<img src="/manuals/guides/getting-started/add-to-favourites.jpg" alt="Adding to favourites" width="500"/>
 
 ## Додаткове налаштування
 

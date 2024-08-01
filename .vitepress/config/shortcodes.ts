@@ -38,7 +38,7 @@ const navigationMappings: Record<string, Navigation> = {
     "explore_bookmarks" : { name: "Bookmarks", icon: iconMappings.bookmark, dependsOn: "main_explore" },
     "explore_random" : { name: "Random", icon: iconMappings.dice, dependsOn: "main_explore" },
     "explore_downloads" : { name: "Downloads", icon: iconMappings.downloadOutline, dependsOn: "main_explore" },
-    "explore_manage_sources" : { name: "Manage", dependsOn: "main_explore" },
+    "explore_manage_sources" : { name: "Catalog", dependsOn: "main_explore" },
 
     // Details
     "details_tracking" : { name: "Tracking", dependsOn: "main_three_dots" },

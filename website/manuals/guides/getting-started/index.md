@@ -36,9 +36,9 @@ Here's how you can add series to your favourites:
 
 1. Select the source you'd like to browse.
 1. Once you've found the series that you want to add, tap on it for more details.
-1. Press the heart button on toolbar, choose category or create new one, and the series will be added to your favourites.
+1. Press the "Favourite this" chip, choose category or create new one, and the series will be added to your favourites.
 
-<img src="/manuals/guides/getting-started/add-to-favourites.png" alt="Adding to favourites" width="500"/>
+<img src="/manuals/guides/getting-started/add-to-favourites.jpg" alt="Adding to favourites" width="500"/>
 
 ## Additional setup
 

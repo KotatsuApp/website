@@ -197,6 +197,10 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
 					text: "Synchronization server",
 					link: "/dev/sync-server/",
 				},
+				{
+					text: "External plugins SDK",
+					link: "/dev/plugin-sdk/",
+				},
 			]
 		}
 	]
