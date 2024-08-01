@@ -6,11 +6,11 @@ import container from 'markdown-it-container'
 import kbd from 'markdown-it-kbd'
 
 export const addPlugins = (md: MarkdownIt) => {
-  md.use(...createContainer('info', 'Информация', md))
-    .use(...createContainer('tip', 'Подсказка', md))
-    .use(...createContainer('warning', 'Внимание', md))
-    .use(...createContainer('danger', 'Осторожно', md))
-    .use(...createContainer('details', 'Подробнее', md))
+  md.use(...createContainer('info', 'Information', md))
+    .use(...createContainer('tip', 'Tip', md))
+    .use(...createContainer('warning', 'Warning', md))
+    .use(...createContainer('danger', 'Be careful', md))
+    .use(...createContainer('details', 'Get more details', md))
 
     .use(kbd)
 
