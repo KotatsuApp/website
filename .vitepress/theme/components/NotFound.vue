@@ -32,10 +32,10 @@ onMounted(() => {
         {{ theme.notFound?.quote }}
       </template>
       <template v-else>
-        <p>Похоже, что вы перешли по неверной или устаревшей ссылке.</p>
-        <p>Информация, которую вы искали, где-то здесь. Вы можете воспользоваться поиском.</p>
+        <p>It looks like you followed an incorrect or outdated link.</p>
+        <p>The information you were looking for is in here somewhere. You can use the search.</p>
         <br>
-        <p>Этот сайт автоматически генерируется из файлов, расположенных на GitHub, поэтому адреса могут иногда меняться.</p>
+        <p>This site is automatically generated from files hosted on GitHub, so addresses may sometimes change.</p>
       </template>
     </blockquote>
     <div class="action">
@@ -43,7 +43,7 @@ onMounted(() => {
         class="link"
         :href="root"
         theme="alt"
-        :text="theme.notFound?.linkText ?? 'Вернуться на главную'"
+        :text="theme.notFound?.linkText ?? 'Back to main page'"
       />
     </div>
   </div>

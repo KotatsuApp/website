@@ -7,6 +7,10 @@ footer: false
 # Synchronization
 Allows you to continue reading on your device from where you left off on another device.
 
+:::danger Unstable feature
+This function is experimental. Please make sure you have a backup to avoid data loss.
+:::
+
 List of official servers:
 
 | Domain           | Location        | Status                                             |

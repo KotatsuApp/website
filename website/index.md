@@ -23,7 +23,7 @@ main:
         light: /img/feature_sources-light.webp
         dark: /img/feature_sources-dark.webp
       title: Huge count of sources
-      details: Supports over a 500+ sources
+      details: Supports over a 1000+ sources
     - image: 
         alt: Feature Reader
         light: /img/feature_reader-light.webp
