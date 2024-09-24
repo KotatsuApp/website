@@ -19,7 +19,7 @@ allprojects {
 }
 ```
 
-2. Add the dependency
+Add the dependency
 
 :::tip For Java/Kotlin project:
 ```groovy
@@ -71,7 +71,7 @@ Note that the `MangaParserSource.DUMMY` parsers cannot be instantiated.
 
 ## Contribution
 
-See [CONTRIBUTING.md](./CONTRIBUTING.md) for the guidelines.
+Check [here](/dev/contribute/#parsers-contribution-guidelines) for the guidelines.
 
 ## DMCA disclaimer
 
