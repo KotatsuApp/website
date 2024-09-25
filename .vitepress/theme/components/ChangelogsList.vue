@@ -34,9 +34,12 @@ const dateFormatter = new Intl.DateTimeFormat("en", {
 				:href="release.html_url"
 				target="_blank"
 			>
-				{{ release.tag_name.substring(1) }}
+				{{ release.tag_name.replace("v", "") }}
 			</a>
 			<Badge v-if="index === 0" type="tip" text="Latest" />
+			<Badge v-if="release.tag_name.includes('a')" type="danger" text="Unstable" />
+			<Badge v-if="release.tag_name.includes('b')" type="warning" text="Unstable" />
+			<Badge v-if="release.tag_name.includes('rc')" type="warning" text="Unstable" />
 			<a
 				class="header-anchor"
 				:href="index === 0 ? '#latest' : `#${release.tag_name}`"
