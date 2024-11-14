@@ -14,10 +14,10 @@
         }
     ],
     "scripts": {
-		"dev": "vitepress dev",
-		"build": "node --max_old_space_size=4096 ./node_modules/vitepress/bin/vitepress.js build",
-		"preview": "vitepress preview",
-		"lint": "markdownlint **/*.md --disable MD045"
+        "dev": "vitepress dev",
+        "build": "node --max_old_space_size=4096 ./node_modules/vitepress/bin/vitepress.js build",
+        "preview": "vitepress preview",
+        "lint": "markdownlint **/*.md --disable MD045"
     },
     "devDependencies": {
         "@docsearch/css": "^3.3.3",
@@ -39,14 +39,13 @@
         "markdownlint-cli": "^0.34.0",
         "modx-tmlanguage": "^1.2.0",
         "plop": "^3.1.2",
-        "stylus": "0.60.0",
         "transliteration": "^2.3.5",
-        "vue3-carousel": "0.3.1",
         "vite-plugin-rewrite-all": "1.0.1",
         "vitepress": "1.0.0-rc.20",
         "vitepress-plugin-nprogress": "0.0.4",
         "vitepress-plugin-tabs": "0.4.1",
         "vue": "^3.3.4",
+        "vue3-carousel": "0.3.1",
         "x-satori": "0.1.5"
     },
     "pnpm": {
@@ -58,7 +57,7 @@
     },
     "dependencies": {
         "@octokit/rest": "20.0.2",
-		"@octokit/types": "12.0.0",
+        "@octokit/types": "12.0.0",
         "@vueuse/core": "^10.3.0",
         "@vueuse/integrations": "^10.3.0",
         "@xobotyi/scrollbar-width": "^1.9.5",

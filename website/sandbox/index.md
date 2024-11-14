@@ -62,9 +62,9 @@ Sandbox playground for demonstrating and documenting how different website funct
 - <nav to="services">
 - <nav to="about">
 
-<style lang="stylus" scoped>
+<style scoped>
 #full-list + div + ul {
-	padding-left: unset
-	list-style: none
+	padding-left: unset;
+	list-style: none;
 }
 </style>

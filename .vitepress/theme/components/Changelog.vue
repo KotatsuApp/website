@@ -35,48 +35,48 @@ const changelog = computed(() => {
 	</div>
 </template>
 
-<style lang="stylus">
+<style>
 .changelog {
-	display: block
-	border: 1px solid var(--vp-c-bg-soft)
-	border-radius: 12px
-	background-color: var(--vp-c-bg-soft)
-	transition: border-color 0.25s, background-color 0.25s
-	padding: 24px
-	height: 100%
-	margin: 1.5em auto 0.5em
+	display: block;
+	border: 1px solid var(--vp-c-bg-soft);
+	border-radius: 12px;
+	background-color: var(--vp-c-bg-soft);
+	transition: border-color 0.25s, background-color 0.25s;
+	padding: 24px;
+	height: 100%;
+	margin: 1.5em auto 0.5em;
+}
 
-	header {
-		display: flex
-		justify-content: center
-		align-items: baseline
-		margin: 0 0 1rem
-	}
+.changelog header {
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
+	margin: 0 0 1rem;
+}
 
-	svg {
-		font-size: 1.2em
-		margin-right: 0.5rem
-		vertical-align: middle
-	}
+.changelog svg {
+	font-size: 1.2em;
+	margin-right: 0.5rem;
+	vertical-align: middle;
+}
 
-	h2 {
-		font-size: 1.5rem
-		margin: 0
-		padding: 0
-		color: var(--vp-c-text-1)
-		border: none
-	}
+.changelog h2 {
+	font-size: 1.5rem;
+	margin: 0;
+	padding: 0;
+	color: var(--vp-c-text-1);
+	border: none;
+}
 
-	div > p {
-		margin: 0 0 1rem
-		color: var(--vp-c-text-2)
-		font-size: 0.9rem
-	}
+.changelog div > p {
+	margin: 0 0 1rem;
+	color: var(--vp-c-text-2);
+	font-size: 0.9rem;
 }
 
 .fullChangelog {
-	margin: 0 0 1rem
-	color: var(--vp-c-text-2)
-	font-size: 0.9rem
+	margin: 0 0 1rem;
+	color: var(--vp-c-text-2);
+	font-size: 0.9rem;
 }
 </style>
