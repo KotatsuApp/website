@@ -13,7 +13,9 @@ yarn-debug.log*
 yarn-error.log*
 
 .temp
-.idea
+.idea/
+.zed/
+.vscode/
 
 package-lock.json
 pnpm-lock.yaml
