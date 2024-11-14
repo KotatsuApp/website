@@ -2,10 +2,9 @@
 import { ref, onMounted } from 'vue'
 import { useData } from 'vitepress'
 import { createTranslate } from 'vitepress/dist/client/theme-default/support/translation'
-import { v4 as uuidv4 } from 'uuid'
 import { Icon24Search } from '@vkontakte/icons'
 
-const uid = uuidv4()
+const uid = crypto.randomUUID()
 const { theme } = useData()
 const $t = createTranslate(theme.value.search?.options)
 withDefaults(defineProps<{
