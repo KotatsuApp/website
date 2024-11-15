@@ -19,3 +19,6 @@ yarn-error.log*
 
 package-lock.json
 pnpm-lock.yaml
+
+release.data.json
+changelogs.data.json
