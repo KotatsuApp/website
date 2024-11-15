@@ -69,8 +69,8 @@ const qrcode = useQRCode(theme.value.footer.qrcodeLink)
       </footer>
     </div>
 </template>
-  
-<style lang="scss">
+
+<style>
 .footer-container {
   z-index: 1;
   position: relative;
@@ -79,19 +79,19 @@ const qrcode = useQRCode(theme.value.footer.qrcodeLink)
   padding: 0 32px;
   background-color: var(--vp-c-bg-alt);
 }
-  
+
 .is-home ~ .footer-container .footer {
   max-width: 1152px;
 }
-  
+
 .footer:first-child {
   padding-top: 2.5rem;
 }
-  
+
 .footer:last-child {
   row-gap: 1rem;
 }
-  
+
 .footer {
   display: grid;
   width: 100%;
@@ -103,21 +103,21 @@ const qrcode = useQRCode(theme.value.footer.qrcodeLink)
   line-height: 1.25rem;
   margin: 0 auto;
 }
-  
+
 .footer > * {
   display: grid;
   place-items: start;
   gap: 0.5rem;
 }
-  
+
 .footer {
   place-items: center;
 }
-  
+
 .footer-navigation:first-child {
   border-top: 1px solid var(--vp-c-divider);
 }
-  
+
 .footer-navigation {
   width: 100%;
   line-height: 32px;
@@ -127,31 +127,31 @@ const qrcode = useQRCode(theme.value.footer.qrcodeLink)
   border-bottom: 1px solid var(--vp-c-divider);
   gap: 0;
   overflow: hidden;
-  
+
   ul {
     width: 100%;
     height: 0;
     overflow: hidden;
     transition: 300ms ease;
-  
+
     li:last-child {
       margin-bottom: 16px;
     }
   }
-  
+
   ul > li > a {
     display: inline-block;
     transition: color 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
     color: var(--vp-c-text-1);
     padding: 6px 14px;
     width: 100%;
-  
+
     &:hover {
       color: var(--vp-c-brand);
     }
   }
 }
-  
+
 .footer-title {
   cursor: pointer;
   width: 100%;
@@ -163,7 +163,7 @@ const qrcode = useQRCode(theme.value.footer.qrcodeLink)
   letter-spacing: -0.01em;
   padding: 1rem 0;
   opacity: 0.8;
-  
+
   &::after {
     content: '+';
     filter: invert(50%);
@@ -175,18 +175,18 @@ const qrcode = useQRCode(theme.value.footer.qrcodeLink)
     transition: transform 0.3s ease;
   }
 }
-  
+
 .footer-title:hover {
   &::after {
     transform: rotate(45deg) scale(1.08);
   }
 }
-  
+
 .footer-title:hover ~ ul,
 .footer-title ~ ul:hover {
   height: 100%;
 }
-  
+
 .footer-qrcode {
   width: 192px;
   padding: 24px;
@@ -200,12 +200,12 @@ const qrcode = useQRCode(theme.value.footer.qrcodeLink)
   font-size: 14px;
   line-height: 22px;
   color: var(--vp-c-text-2);
-  
+
   img {
     box-shadow: var(--vp-shadow-1);
     border-radius: var(--vp-border-radius);
   }
-  
+
   h4 {
     margin: 4px 0 0;
     font-size: 16px;
@@ -214,69 +214,69 @@ const qrcode = useQRCode(theme.value.footer.qrcodeLink)
     color: var(--vp-c-text-1);
   }
 }
-  
+
 @media (min-width: 1440px) {
   .footer-container .footer {
     max-width: 945px;
   }
 }
-  
+
 @media (min-width: 960px) {
   .VPSidebar ~ .footer-container {
     width: calc(100% - var(--vp-sidebar-width));
     left: var(--vp-sidebar-width);
   }
 }
-  
+
 @media (min-width: 48rem) {
   .footer {
     grid-auto-flow: column;
     place-items: self-start;
     row-gap: 2.5rem;
   }
-  
+
   .footer:last-child {
     border-top: 1px solid var(--vp-c-divider);
   }
-  
+
   .footer-navigation:first-child {
     border-top: none;
   }
-  
+
   .footer-navigation {
     place-items: self-start;
     border: none;
-  
+
     ul {
       height: 100%;
     }
-  
+
     ul > li > a {
       padding: 0;
     }
   }
-  
+
   .footer-center {
     grid-auto-flow: row dense;
   }
-  
+
   .footer-qrcode {
     display: flex;
   }
-  
+
   .footer:first-child {
     padding-bottom: 2.5rem;
   }
-  
+
   .footer-title {
     cursor: default;
-  
+
     &::after {
       display: none;
     }
   }
 }
-  
+
 .footer-sociallink {
   display: flex;
   justify-content: center;
@@ -284,12 +284,12 @@ const qrcode = useQRCode(theme.value.footer.qrcodeLink)
   width: 36px;
   height: 36px;
   color: var(--vp-c-text-2);
-  
+
   &:hover {
     color: var(--vp-c-text-1);
     transition: color 0.25s;
   }
-  
+
   svg {
     width: 26px;
     height: 26px;
