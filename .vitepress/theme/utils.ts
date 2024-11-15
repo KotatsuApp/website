@@ -1,9 +1,16 @@
 import type { DefaultTheme, UserConfig } from 'vitepress'
 import type { SectionData, DocsPageData } from './plugins/section'
-import { normalize } from 'vitepress/dist/client/shared'
+
 
 import { type Translator, translators } from '../../website/translators'
 import { Theme } from './types'
+
+const HASH_RE = /#.*$/;
+const EXT_RE = /(index)?\.(md|html)$/;
+
+function normalize(path: string) {
+  return decodeURI(path).replace(HASH_RE, '').replace(EXT_RE, '');
+}
 
 const markdownLinkRegexp = /.md((\?|#).*)?$/
 
@@ -140,7 +147,7 @@ export const isLinkExternal = (link: string, base = '/'): boolean => {
   if (isLinkHttp(link) || isLinkFtp(link)) {
     return true
   }
-  
+
   // absolute link that does not start with `base` and does not end with `.md`
   if (
     link.startsWith('/') &&

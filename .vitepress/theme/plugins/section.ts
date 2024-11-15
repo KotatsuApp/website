@@ -1,6 +1,12 @@
 import type { DefaultTheme, PageData, SiteConfig } from 'vitepress'
-import { normalize } from 'vitepress/dist/client/shared'
 import { ensureStartingSlash, getTranslator } from '../utils'
+
+const HASH_RE = /#.*$/;
+const EXT_RE = /(index)?\.(md|html)$/;
+
+function normalize(path: string) {
+  return decodeURI(path).replace(HASH_RE, '').replace(EXT_RE, '');
+}
 
 import { readFileSync } from 'fs'
 import { basename } from 'path'

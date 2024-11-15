@@ -1,11 +1,17 @@
 import type { DefaultTheme } from 'vitepress'
-import { normalize } from 'vitepress/dist/client/shared'
 import faqCategories from '../../../website/faq/categories.json'
 
 import { readFileSync } from 'fs'
 import { join, basename } from 'path'
 import fg from 'fast-glob'
 import matter from 'gray-matter'
+
+const HASH_RE = /#.*$/;
+const EXT_RE = /(index)?\.(md|html)$/;
+
+function normalize(path: string) {
+  return decodeURI(path).replace(HASH_RE, '').replace(EXT_RE, '');
+}
 
 declare interface Options {
   root: string | Array<string>
