@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useQRCode } from '@vueuse/integrations/useQRCode'
 import { useData, withBase } from 'vitepress'
-import { socialList } from '../composables/social'
+import { socialList } from '../utils/index'
 import Link from './Link.vue'
 
 const { theme } = useData()

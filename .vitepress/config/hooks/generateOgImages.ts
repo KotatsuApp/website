@@ -55,22 +55,26 @@ interface GenerateImagesOptions {
 	fonts: SatoriOptions["fonts"]
 }
 
-function getDir(url: string) {
+type Dirs= "FAQ" | "Guide" | "News" | "Sandbox" | "Dev" | "Other"
+
+function getDir(url: string): Dirs {
 	if (url.startsWith("/manuals/faq/")) {
 		return "FAQ"
-	} else if (url.startsWith("/manuals/guides/")) {
-		return "Guide"
-	} else if (url.startsWith("/news/") && url !== "/news/") {
-		return "News"
-	} else if (url.startsWith("/sandbox/")) {
-        return "Sandbox"
-	} else if (url.startsWith("/dev/")) {
-        return "Dev"
-    } else if (url !== "/manuals/faq/" && url !== "/manuals/guides/" && url !== "/news/" && url !== "/sandbox/" && url !== "/dev/") {
-		return "Other"
 	}
+	if (url.startsWith("/manuals/guides/")) {
+		return "Guide"
+	}
+	if (url.startsWith("/news/") && url !== "/news/") {
+		return "News"
+	}
+	if (url.startsWith("/sandbox/")) {
+    return "Sandbox"
+	}
+	if (url.startsWith("/dev/")) {
+    return "Dev"
+  }
 
-	return undefined
+	return "Other"
 }
 
 async function generateImage({ page, template, outDir, fonts }: GenerateImagesOptions) {

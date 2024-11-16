@@ -7,8 +7,6 @@ import { slugify } from 'transliteration'
 import { fileURLToPath, URL } from 'node:url'
 import { telegram } from '../../website/icons'
 import { tabsMarkdownPlugin } from "vitepress-plugin-tabs"
-import pluginRewriteAll from 'vite-plugin-rewrite-all'
-
 import shortcode_plugin from "markdown-it-shortcode-tag"
 import shortcodes from "./shortcodes"
 import generateOgImages from "./hooks/generateOgImages"
@@ -48,7 +46,6 @@ export default defineConfigWithTheme<Theme.Config>({
     config (md) {
       addPlugins(md)
       md.use(tabsMarkdownPlugin)
-      md.use(pluginRewriteAll)
       md.use(shortcode_plugin, shortcodes)
     },
   },
@@ -73,8 +70,6 @@ export default defineConfigWithTheme<Theme.Config>({
       options: {
         locales: {
           ...searchLocaleEn,
-          // ...searchLocaleRu,
-          // ...searchLocaleUa,
         },
       },
     },
@@ -84,8 +79,6 @@ export default defineConfigWithTheme<Theme.Config>({
 
   locales: {
     ...root,
-    // ...ru,
-    // ...ua,
   },
 
   transformPageData(pageData, { siteConfig }) {

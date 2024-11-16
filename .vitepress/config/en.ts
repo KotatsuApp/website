@@ -2,7 +2,7 @@ import type { DefaultTheme, LocaleConfig } from 'vitepress'
 import type { CustomConfig, Theme } from '../theme/types'
 import { sections } from '../theme/plugins/section'
 import 'dotenv/config'
-import { baseHelper } from '../theme/utils'
+import { resolveBaseUrl } from '../theme/utils'
 
 export const SITE_NAME = 'Kotatsu Website'
 export const META_DESCRIPTION = 'A simple and convenient open source manga reader from and for the community, where you can find and read your favorite manga easier than ever.'
@@ -44,16 +44,13 @@ export const config: LocaleConfig<Theme.Config> = {
 
     themeConfig: {
       nav: getNav(),
-
       sidebar: {
         "/": defaultSidebar(),
       },
-
       outline: {
         label: 'On this page',
         level: 'deep',
       },
-
       docFooter: {
         prev: 'Previous page',
         next: 'Next page',
@@ -62,9 +59,8 @@ export const config: LocaleConfig<Theme.Config> = {
         pattern: 'https://github.com/KotatsuApp/website/edit/main/website/:path',
         text: 'Suggest changes to this page',
       },
-      footer: baseHelper(getFooter(), ''),
-
-	  sections: sections
+      footer: resolveBaseUrl(getFooter(), ''),
+      sections
     },
   }
 }
@@ -72,7 +68,7 @@ export const config: LocaleConfig<Theme.Config> = {
 function defaultSidebar(): DefaultTheme.SidebarItem[] {
 	return [
 		{
-            text: "General sections",
+      text: "General sections",
 			items: [
 				{
 					text: "Download",
@@ -111,9 +107,9 @@ function defaultSidebar(): DefaultTheme.SidebarItem[] {
 					text: "Explore",
 					collapsed: true,
 					items: [
-						{ 
-							text: "Sources", 
-							link: "/manuals/faq/explore/sources/" 
+						{
+							text: "Sources",
+							link: "/manuals/faq/explore/sources/"
 						},
 						/* {
 							text: "Local storage",
@@ -211,22 +207,22 @@ function getNav(): DefaultTheme.NavItem[] {
     {
       text: 'Get v{app_version}',
       activeMatch: "^/*?(download|changelogs)/*?$",
-		items: [
-			{
-				text: "Download",
-				link: "/download/",
-			},
-			{
-				text: "Changelogs",
-				link: "/changelogs/",
-			},
-		],
+      items: [
+  			{
+  				text: "Download",
+  				link: "/download/",
+  			},
+  			{
+  				text: "Changelogs",
+  				link: "/changelogs/",
+  			},
+      ],
     },
     {
-		text: "User manual",
-		link: "/manuals/guides/getting-started/",
-		activeMatch: "/manuals/",
-	},
+  		text: "User manual",
+  		link: "/manuals/guides/getting-started/",
+  		activeMatch: "/manuals/",
+    },
 /* 	{
 		text: "Desktop app",
 		link: "/desktop/",
@@ -242,23 +238,23 @@ function getNav(): DefaultTheme.NavItem[] {
 
 function getFooter(): CustomConfig['footer'] {
   return {
-	qrcodeTitle: 'Telegram Group',
-	qrcodeMessage: 'Contact us on Telegram',
-	qrcodeLink: 'https://t.me/kotatsuapp',
-	navigation: [
-	  {
-		title: 'Legal',
-		items: [
-		  {
-		    text: 'Privacy',
-			link: '/privacy/',
-		  },
-		  {
-			text: 'DMCA disclaimer',
-			link: '/dmca/',
-		  },
-		],
-	  },
-	],
+  	qrcodeTitle: 'Telegram Group',
+  	qrcodeMessage: 'Contact us on Telegram',
+  	qrcodeLink: 'https://t.me/kotatsuapp',
+  	navigation: [
+  	  {
+    		title: 'Legal',
+    		items: [
+    		  {
+    		    text: 'Privacy',
+       			link: '/privacy/',
+    		  },
+    		  {
+       			text: 'DMCA disclaimer',
+       			link: '/dmca/',
+    		  },
+    		],
+  	  },
+  	],
   }
 }
