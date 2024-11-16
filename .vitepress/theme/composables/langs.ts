@@ -1,4 +1,4 @@
-import { Ref, computed } from 'vue'
+import { type Ref, computed } from 'vue'
 import type { DefaultTheme, SiteData } from 'vitepress'
 import type { DocsPageData } from '../plugins/section'
 import { useData } from 'vitepress'

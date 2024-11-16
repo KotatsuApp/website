@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import MarkdownIt from "markdown-it"
 import { data as changelogs } from "../data/changelogs.data"
-import Contributors from "./Contributors.vue"
 
 const md = new MarkdownIt()
 

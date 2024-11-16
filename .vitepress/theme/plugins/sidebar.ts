@@ -1,8 +1,7 @@
 import type { DefaultTheme } from 'vitepress'
-import faqCategories from '../../../website/faq/categories.json'
 
-import { readFileSync } from 'fs'
-import { join, basename } from 'path'
+import { readFileSync } from 'node:fs'
+import { join, basename } from 'node:path'
 import fg from 'fast-glob'
 import matter from 'gray-matter'
 

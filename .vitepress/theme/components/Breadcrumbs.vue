@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Ref } from 'vue'
+import type { Ref } from 'vue'
 import { useData, withBase, useRoute } from 'vitepress'
 import type { DocsPageData } from '../plugins/section'
 

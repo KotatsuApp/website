@@ -1,8 +1,6 @@
 import type { Theme } from '../theme/types'
 import { defineConfigWithTheme } from 'vitepress'
-import { config as ru, searchLocale as searchLocaleRu } from './ru'
 import { config as root, searchLocale as searchLocaleEn } from './en'
-import { config as ua, searchLocale as searchLocaleUa } from './ua'
 import { addPlugins } from '../theme/plugins/markdown'
 import { sections, prepareData } from '../theme/plugins/section'
 import { slugify } from 'transliteration'
