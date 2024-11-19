@@ -59,8 +59,8 @@
         "@vueuse/core": "^10.3.0",
         "@vueuse/integrations": "^10.3.0",
         "@xobotyi/scrollbar-width": "^1.9.5",
+        "dayjs": "^1.11.13",
         "glightbox": "^3.2.0",
-        "moment": "2.29.4",
         "qrcode": "^1.5.3"
     },
     "engines": {

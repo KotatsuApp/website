@@ -1,14 +1,17 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, toRefs } from "vue"
-import moment from "moment"
+import dayjs from "dayjs"
+import relativeTime from "dayjs/plugin/relativeTime"
 import { type AppRelease, data as release } from "../data/release.data"
+
+dayjs.extend(relativeTime)
 
 const props = defineProps<{ type: keyof AppRelease }>()
 const { type } = toRefs(props)
 
-const momentInfo = computed(() => ({
-	relative: moment(release[type.value].published_at).fromNow(),
-	exact: moment(release[type.value].published_at).format("dddd, MMMM Do YYYY [at] HH:mm"),
+const dayjsInfo = computed(() => ({
+	relative: dayjs(release[type.value].published_at).fromNow(),
+	exact: dayjs(release[type.value].published_at).format("dddd, MMMM Do YYYY [at] HH:mm"),
 	iso: release[type.value].published_at ?? undefined,
 }))
 
@@ -21,10 +24,10 @@ onMounted(() => {
 </script>
 
 <template>
-	<time v-if="show" :datetime="momentInfo.iso" :title="momentInfo.exact">
-		{{ momentInfo.relative }}
+	<time v-if="show" :datetime="dayjsInfo.iso" :title="dayjsInfo.exact">
+	{{ dayjsInfo.relative }}
 	</time>
-	<time v-else :datetime="momentInfo.iso">
-		{{ momentInfo.exact }}
+	<time v-else :datetime="dayjsInfo.iso">
+		{{ dayjsInfo.exact }}
 	</time>
 </template>
