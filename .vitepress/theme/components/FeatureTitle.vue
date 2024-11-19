@@ -1,12 +1,3 @@
-<script setup lang="ts">
-
-export interface Feature {
-  title: string
-  subtitle: string
-}
-
-</script>
-
 <template>
     <div class="FeatureTitle">
         <div class="container">
@@ -45,5 +36,4 @@ export interface Feature {
   white-space: pre-wrap;
   color: var(--vp-c-text-2);
 }
-
 </style>

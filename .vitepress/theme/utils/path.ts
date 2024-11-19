@@ -9,7 +9,7 @@ export function ensureStartingSlash(path: string): string {
   return /^\//.test(path) ? path : `/${path}`
 }
 
-import { isExternalUrl, isPlainObject, isRelativeUrl } from '../utils/index'
+import { isExternalUrl, isPlainObject, isRelativeUrl } from '../utils'
 
 /**
  * Resolve base url for sidebar items

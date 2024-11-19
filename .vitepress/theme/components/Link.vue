@@ -1,13 +1,13 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 
-const props = defineProps<{
+const {href} = defineProps<{
   href?: string
   noIcon?: boolean
   title?: string
 }>()
 
-const isExternal = computed(() => props.href && /^[a-z]+:/i.test(props.href))
+const isExternal = computed(() => href && /^[a-z]+:/i.test(href))
 </script>
 
 <template>
@@ -17,7 +17,7 @@ const isExternal = computed(() => props.href && /^[a-z]+:/i.test(props.href))
     :href="href"
     :target="isExternal ? '_blank' : 'self'"
     :rel="isExternal ? 'noopener noreferrer' : undefined"
-    :title="title ? title : href"
+    :title="title || href"
   >
     <slot />
     <label

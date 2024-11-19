@@ -1,5 +1,5 @@
 import type { DefaultTheme, UserConfig } from 'vitepress'
-import { ensureStartingSlash, normalizePath } from '../utils/index'
+import { ensureStartingSlash, normalizePath } from '../utils'
 import type { DocsPageData, SectionData } from '../plugins/section'
 import type { Theme } from '../types'
 

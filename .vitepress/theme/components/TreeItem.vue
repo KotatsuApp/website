@@ -5,18 +5,16 @@ import type { DefaultTheme } from 'vitepress'
 import Tree from './Tree.vue'
 import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue'
 
-const props = defineProps<{
+const { item } = defineProps<{
   item: DefaultTheme.SidebarItem
 }>()
-const isOpen = ref<boolean>(false)
-const isFolder = computed<boolean>(() => {
-  return !!(props.item.items && props.item.items.length)
+const isOpen = ref(false)
+const isFolder = computed(() => {
+  return !!item.items?.length
 })
 
-const toggle = function () {
-  if (isFolder.value) {
-    isOpen.value = !isOpen.value
-  }
+function toggle() {
+  if (isFolder.value) isOpen.value = !isOpen.value
 }
 </script>
 
@@ -26,7 +24,7 @@ const toggle = function () {
     :class="{
       folder: isFolder,
       opened: isOpen,
-      'is-link': !!props.item.link
+      'is-link': !!item.link
     }"
   >
     <span

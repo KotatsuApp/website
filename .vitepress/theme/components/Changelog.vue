@@ -1,15 +1,14 @@
 <script setup lang="ts">
-import { computed, toRefs } from "vue"
+import { computed } from "vue"
 import MarkdownIt from "markdown-it"
 import { type AppRelease, data as release } from "../data/release.data"
 
-const props = defineProps<{ type: keyof AppRelease }>()
-const { type } = toRefs(props)
+const {type} = defineProps<{ type: keyof AppRelease }>()
 
 const md = new MarkdownIt()
 
 const changelog = computed(() => {
-	const flavoredString = (release[type.value].body ?? "")
+	const flavoredString = (release[type].body ?? "")
 		.replace(/(?<=\(|(, ))@(.*?)(?=\)|(, ))/g, "[@$2](https://github.com/$2)")
 		.replace("https://github.com/KotatsuApp/Kotatsu/releases", "/changelogs/")
 		.replace(/## [ \t]*([^\n\r]*)/g, "### $1")

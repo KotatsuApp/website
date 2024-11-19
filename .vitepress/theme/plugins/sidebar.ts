@@ -3,7 +3,7 @@ import { readFileSync } from 'node:fs'
 import { join, basename } from 'node:path'
 import fg from 'fast-glob'
 import matter from 'gray-matter'
-import { normalizePath } from '../utils/index'
+import { normalizePath } from '../utils'
 
 declare interface Options {
   root: string | string[];

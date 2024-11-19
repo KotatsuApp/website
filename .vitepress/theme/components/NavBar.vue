@@ -16,7 +16,7 @@ defineProps<{
 }>()
 
 defineEmits<{
-  (e: 'toggle-screen'): void
+  "toggle-screen": []
 }>()
 
 const { y } = useWindowScroll({ window: inBrowser && window })

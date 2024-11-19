@@ -3,7 +3,7 @@ import { computed } from 'vue'
 import { normalizeLink } from 'vitepress/dist/client/theme-default/support/utils'
 import { EXTERNAL_URL_RE } from 'vitepress/dist/client/shared'
 
-const props = defineProps<{
+const {tag,theme = "brand",href} = defineProps<{
   tag?: string
   theme?: 'brand' | 'alt' | 'sponsor'
   text: string
@@ -12,23 +12,17 @@ const props = defineProps<{
 }>()
 
 const classes = computed(() => [
-  props.theme ?? 'brand'
+  theme
 ])
 
-const isExternal = computed(() => props.href && EXTERNAL_URL_RE.test(props.href))
+const isExternal = computed(() => href && EXTERNAL_URL_RE.test(href))
 
-const component = computed(() => {
-  if (props.tag) {
-    return props.tag
-  }
-
-  return props.href ? 'a' : 'button'
-})
+const buttonTag = computed(() => tag ?? (href ? 'a' : 'button'))
 </script>
 
 <template>
   <component
-    :is="component"
+    :is="buttonTag"
     class="Button"
     :class="classes"
     :href="href ? normalizeLink(href) : undefined"
