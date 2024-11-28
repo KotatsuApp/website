@@ -13,6 +13,7 @@ type GitHubRelease = GetResponseDataTypeFromEndpointMethod<typeof octokit.repos.
 
 export interface AppRelease {
 	stable: GitHubRelease
+	nightly: GitHubRelease
 }
 
 declare const data: AppRelease
@@ -31,12 +32,17 @@ export default defineLoader({
 			repo: "Kotatsu",
 		})
 
-		const releaseData = {stable}
+		const { data: nightly } = await octokit.repos.getLatestRelease({
+			owner: "KotatsuApp",
+			repo: "Kotatsu-nightly",
+		})
+
+		const releaseData = {stable, nightly}
 
 		if (isDev) {
-      console.log("Creating release cache")
-      fs.writeFileSync(CACHE_PATH, JSON.stringify(releaseData, null, 2), "utf-8");
-    }
+      		console.log("Creating release cache")
+      		fs.writeFileSync(CACHE_PATH, JSON.stringify(releaseData, null, 2), "utf-8");
+    	}
 
 		return releaseData
 	},
