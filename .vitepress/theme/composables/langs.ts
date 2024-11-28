@@ -1,21 +1,21 @@
-import { Ref, computed } from 'vue'
+import { type Ref, computed } from 'vue'
 import type { DefaultTheme, SiteData } from 'vitepress'
 import type { DocsPageData } from '../plugins/section'
 import { useData } from 'vitepress'
 import { ensureStartingSlash } from '../utils'
 import { getFlatSideBarLinks } from 'vitepress/dist/client/theme-default/support/sidebar'
 
+interface Data {
+  site: Ref<SiteData>
+  localeIndex: Ref<string>
+  page: Ref<DocsPageData>
+  theme: Ref<DefaultTheme.Config>
+}
+
 export function useLangs({
   removeCurrent = true,
   correspondingLink = false
 } = {}) {
-  interface Data {
-    site: Ref<SiteData>
-    localeIndex: Ref<string>
-    page: Ref<DocsPageData>
-    theme: Ref<DefaultTheme.Config>
-  }
-
   const { site, localeIndex, page, theme }: Data = useData()
   const currentLang = computed(() => ({
     label: site.value.locales[localeIndex.value]?.label,
@@ -32,7 +32,7 @@ export function useLangs({
 
       const text = value.label
       const rootLink = value.link || (key === 'root' ? '/' : `/${key}/`)
-      let link = normalizeLink(
+      const link = normalizeLink(
         rootLink,
         theme.value.i18nRouting !== false && correspondingLink,
         page.value.relativePath.slice(currentLang.value.link.length - 1),

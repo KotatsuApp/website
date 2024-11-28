@@ -8,7 +8,7 @@ import Button from './Button.vue'
 const { site, theme } = useData()
 const { localeLinks } = useLangs({ removeCurrent: false })
 
-const root = ref<string>('/')
+const root = ref('/')
 onMounted(() => {
   const path = window.location.pathname
     .replace(site.value.base, '')

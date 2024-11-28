@@ -5,13 +5,13 @@ import { useData } from 'vitepress'
 import { isActive } from 'vitepress/dist/client/shared'
 import { getFlatSideBarLinks } from 'vitepress/dist/client/theme-default/support/sidebar'
 
-export function usePrevNext(): ComputedRef {
-  interface Data {
-    theme: Ref<any>
-    page: Ref<DocsPageData>
-    frontmatter: Ref<DocsPageData['frontmatter']>
-  }
+interface Data {
+  theme: Ref<any>
+  page: Ref<DocsPageData>
+  frontmatter: Ref<DocsPageData['frontmatter']>
+}
 
+export function usePrevNext(): ComputedRef {
   const { page, theme, frontmatter }: Data = useData()
 
   return computed(() => {
@@ -24,43 +24,32 @@ export function usePrevNext(): ComputedRef {
     const candidates = getFlatSideBarLinks([section])
     const index = candidates.findIndex((link) => isActive(page.value.relativePath, link.link))
 
+    const { prev: frontPrev, next: frontNext } = frontmatter.value
+    const { docFooter } = theme.value
+
     const hidePrev =
-      (theme.value.docFooter?.prev === false && !frontmatter.value.prev) ||
-      frontmatter.value.prev === false
+      (docFooter?.prev === false && !frontPrev) ||
+      frontPrev === false
 
     const hideNext =
-      (theme.value.docFooter?.next === false && !frontmatter.value.next) ||
-      frontmatter.value.next === false
+      (docFooter?.next === false && !frontNext) ||
+      frontNext === false
+
+    const getNavLink = (type: "prev" | "next", offset: number) => {
+      const frontLink = type === 'prev' ? frontPrev : frontNext
+      const candidate = candidates.at(index + offset)
+
+      return {
+        text: typeof frontLink === 'string'
+          ? frontLink
+          : frontLink?.text ?? candidate?.docFooterText ?? candidate?.text,
+        link: frontLink?.link ?? candidate?.link
+      }
+    }
 
     return {
-      prev: hidePrev
-        ? undefined
-        : {
-            text: (typeof frontmatter.value.prev === 'string'
-              ? frontmatter.value.prev
-              : typeof frontmatter.value.prev === 'object'
-                  ? frontmatter.value.prev.text
-                  : undefined) ??
-                candidates[index - 1]?.docFooterText ??
-                candidates[index - 1]?.text,
-            link: (typeof frontmatter.value.prev === 'object'
-              ? frontmatter.value.prev.link
-              : undefined) ?? candidates[index - 1]?.link
-          },
-      next: hideNext
-        ? undefined
-        : {
-            text: (typeof frontmatter.value.next === 'string'
-              ? frontmatter.value.next
-              : typeof frontmatter.value.next === 'object'
-                  ? frontmatter.value.next.text
-                  : undefined) ??
-                candidates[index + 1]?.docFooterText ??
-                candidates[index + 1]?.text,
-            link: (typeof frontmatter.value.next === 'object'
-              ? frontmatter.value.next.link
-              : undefined) ?? candidates[index + 1]?.link
-          },
+      prev: hidePrev ? undefined : getNavLink("prev", -1),
+      next: hideNext ? undefined: getNavLink("next", 1)
     }
   })
 }

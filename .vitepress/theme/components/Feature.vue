@@ -15,9 +15,9 @@ defineProps<{
       <h1 v-if="title" class="title">
         <span v-html="title" class="clip"></span>
       </h1>
-      <p v-if="details" class="details">
+      <div v-if="details" class="details">
         <p v-html="details"></p>
-      </p>
+      </div>
       <div class="image">
         <VPImage class="image-src" :image="image" />
       </div>

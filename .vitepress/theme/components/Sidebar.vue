@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { useScrollLock } from '@vueuse/core'
-import { ref, watchPostEffect, watch, computed } from 'vue'
-import { DefaultTheme, useRoute, useData, inBrowser } from 'vitepress'
+import { ref, watch, computed } from 'vue'
+import { type DefaultTheme, useRoute, useData, inBrowser } from 'vitepress'
 import { useSidebar } from 'vitepress/dist/client/theme-default/composables/sidebar'
 import VPSidebarItem from 'vitepress/dist/client/theme-default/components/VPSidebarItem.vue'
 
@@ -47,7 +47,7 @@ watch(() => route.path, () => {
   activeLinkEl.value = navEl.value.querySelector<HTMLElement>(`a[href="${route.path}"]`)
   activeGroupEl.value = activeLinkEl.value.closest<HTMLElement>('.VPSidebarItem.level-0')
 
-  const offset = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--vp-nav-height')) * 2
+  const offset = Number.parseInt(getComputedStyle(document.documentElement).getPropertyValue('--vp-nav-height')) * 2
 
   if (!isInViewport(activeGroupEl.value, offset)) {
     navEl.value.scrollTo({

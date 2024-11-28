@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useQRCode } from '@vueuse/integrations/useQRCode'
 import type { DefaultTheme } from 'vitepress/theme'
 import VPImage from 'vitepress/dist/client/theme-default/components/VPImage.vue'
 import Button from './Button.vue'
@@ -24,7 +23,6 @@ defineProps<{
 }>()
 
 const heroImageSlotExists = inject('hero-image-slot-exists') as Ref<boolean>
-const qrcode = useQRCode('https://github.com/KotatsuApp/Kotatsu/releases/latest')
 </script>
 
 <template>

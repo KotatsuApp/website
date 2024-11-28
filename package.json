@@ -14,15 +14,14 @@
         }
     ],
     "scripts": {
-		"dev": "vitepress dev",
-		"build": "node --max_old_space_size=4096 ./node_modules/vitepress/bin/vitepress.js build",
-		"preview": "vitepress preview",
-		"lint": "markdownlint **/*.md --disable MD045"
+        "dev": "vitepress dev",
+        "build": "node --max_old_space_size=4096 ./node_modules/vitepress/bin/vitepress.js build",
+        "preview": "vitepress preview",
+        "lint": "markdownlint **/*.md --disable MD045"
     },
     "devDependencies": {
         "@docsearch/css": "^3.3.3",
         "@docsearch/js": "^3.3.3",
-        "@modix/smarty-tmlanguage": "^1.1.0",
         "@resvg/resvg-js": "2.4.1",
         "@types/gtag.js": "0.0.14",
         "@types/markdown-it": "^12.2.3",
@@ -37,16 +36,14 @@
         "markdown-it-shortcode-tag": "1.1.0",
         "markdownlint": "^0.29.0",
         "markdownlint-cli": "^0.34.0",
-        "modx-tmlanguage": "^1.2.0",
         "plop": "^3.1.2",
-        "stylus": "0.60.0",
+        "postcss-nesting": "^13.0.1",
         "transliteration": "^2.3.5",
-        "vue3-carousel": "0.3.1",
-        "vite-plugin-rewrite-all": "1.0.1",
-        "vitepress": "1.0.0-rc.20",
-        "vitepress-plugin-nprogress": "0.0.4",
+        "unocss": "^0.54.2",
+        "vitepress": "^1.2.0",
         "vitepress-plugin-tabs": "0.4.1",
-        "vue": "^3.3.4",
+        "vue": "^3.5.13",
+        "vue3-carousel": "0.3.1",
         "x-satori": "0.1.5"
     },
     "pnpm": {
@@ -58,16 +55,13 @@
     },
     "dependencies": {
         "@octokit/rest": "20.0.2",
-		"@octokit/types": "12.0.0",
+        "@octokit/types": "12.0.0",
         "@vueuse/core": "^10.3.0",
         "@vueuse/integrations": "^10.3.0",
         "@xobotyi/scrollbar-width": "^1.9.5",
+        "dayjs": "^1.11.13",
         "glightbox": "^3.2.0",
-        "moment": "2.29.4",
-        "qrcode": "^1.5.3",
-        "sass": "^1.64.2",
-        "unocss": "^0.54.2",
-        "uuid": "^9.0.0"
+        "qrcode": "^1.5.3"
     },
     "engines": {
         "node": ">=18"

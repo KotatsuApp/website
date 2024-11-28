@@ -1,5 +1,5 @@
 import { type Router, inBrowser, useData } from 'vitepress'
-import { type App, watch, defineComponent, watchEffect } from 'vue'
+import { type App, watchEffect } from 'vue'
 import { createZoom } from './composables/zoom'
 import { enhanceAppWithTabs } from "vitepress-plugin-tabs/client"
 import analytics from "./plugins/analytics"

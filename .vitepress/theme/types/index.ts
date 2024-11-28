@@ -1,4 +1,4 @@
-import { DefaultTheme } from 'vitepress'
+import type { DefaultTheme } from 'vitepress'
 import type { SectionData } from '../plugins/section'
 
 export namespace Theme {

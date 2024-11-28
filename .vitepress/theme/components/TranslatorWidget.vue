@@ -15,8 +15,8 @@ export interface Data {
 
 const { page, frontmatter, lang }: Data = useData()
 
-const translatorLabel = computed<string>(() => (lang.value === 'ru') ? ('Переводчик') : ((lang.value === 'ua') ? ('Перекладач') : ('Translator')))
-const translator = computed<Translator>(() => {
+const translatorLabel = computed(() => (lang.value === 'ru') ? ('Переводчик') : ((lang.value === 'ua') ? ('Перекладач') : ('Translator')))
+const translator = computed(() => {
   const data = page.value?.section?.translator || translators[frontmatter.value.translator]
 
   if (!data) {

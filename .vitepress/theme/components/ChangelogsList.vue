@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import MarkdownIt from "markdown-it"
 import { data as changelogs } from "../data/changelogs.data"
-import Contributors from "./Contributors.vue"
 
 const md = new MarkdownIt()
 
@@ -26,10 +25,12 @@ const dateFormatter = new Intl.DateTimeFormat("en", {
 
 <template>
 	<div
+	  class="release"
 		v-for="(release, index) of changelogs"
-		:key="release.tag_name"
+		:key="release.id"
 	>
-		<h2 :id="index === 0 ? 'latest' : release.tag_name">
+		<h2 class="release__title"
+		    :id="index === 0 ? 'latest' : release.tag_name">
 			<a
 				:href="release.html_url"
 				target="_blank"
@@ -46,23 +47,25 @@ const dateFormatter = new Intl.DateTimeFormat("en", {
 				:aria-label="`Permalink to &quot;${release.tag_name}&quot;`"
 			/>
 		</h2>
-		<time :datetime="release.published_at!">
+		<time class="release__date" :datetime="release.published_at!">
 			{{ dateFormatter.format(new Date(release.published_at!)) }}
 		</time>
 		<div v-html="renderMarkdown(release.body)" />
 	</div>
 </template>
 
-<style lang="stylus" scoped>
-h2 {
-	margin-bottom: 0
-	display: flex
-	align-items: center
-	gap: 0.5rem
-}
+<style scoped>
+.release {
+  .release__title {
+    margin-bottom: 0;
+    display: flex;
+  	align-items: center;
+  	gap: 0.5rem;
+  }
 
-time {
-	font-size: 0.875rem
-	color: var(--vp-c-text-2)
+  .release__date {
+    font-size: 0.875rem;
+    color: var(--vp-c-text-2);
+  }
 }
 </style>

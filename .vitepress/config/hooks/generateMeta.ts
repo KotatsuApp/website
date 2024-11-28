@@ -7,15 +7,18 @@ function generateMeta(context: TransformContext, hostname: string) {
 
 	const url = `${hostname}/${pageData.relativePath.replace(/((^|\/)index)?\.md$/, "$2")}`
 
+	// Fonts
 	head.push(['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }])
-    head.push(['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }])
-    head.push(['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap' }])
+  head.push(['link', { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' }])
+  head.push(['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap' }])
 
-    head.push(['link', { rel: 'icon', href: '/favicon.ico?v=2', sizes: 'any' }])
-    head.push(['link', { rel: 'icon', href: '/logo-compact.svg?v=2', type: 'image/svg+xml' }])
-    head.push(['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png?v=2' }])
-    head.push(['link', { rel: 'manifest', href: '/site.webmanifest' }])
+  // Icons & manifest
+  head.push(['link', { rel: 'icon', href: '/favicon.ico?v=2', sizes: 'any' }])
+  head.push(['link', { rel: 'icon', href: '/logo-compact.svg?v=2', type: 'image/svg+xml' }])
+  head.push(['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png?v=2' }])
+  head.push(['link', { rel: 'manifest', href: '/site.webmanifest' }])
 
+  // Canonical
 	head.push(["link", { rel: "canonical", href: url }])
 	head.push(["meta", { property: "og:url", content: url }])
 	head.push(["meta", { name: "twitter:url", content: url }])

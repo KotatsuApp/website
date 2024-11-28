@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Ref } from 'vue'
+import type { Ref } from 'vue'
 import { useData, withBase, useRoute } from 'vitepress'
 import type { DocsPageData } from '../plugins/section'
 
@@ -74,33 +74,37 @@ const route = useRoute()
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-}
 
-@media (max-width: 767px) {
-  .item:last-child {
+  &:last-child {
     display: none;
   }
-}
 
-.item + .item::before {
-  content: '/';
-  font-weight: normal;
-  margin-right: 8px;
+  & + .item::before {
+    content: '/';
+    font-weight: normal;
+    margin-right: 8px;
+  }
 }
 
 .link {
   font-weight: 500;
   color: var(--vp-c-text-1);
   transition: color 0.25s;
-}
 
-.link:hover {
-  color: var(--vp-c-brand-1);
+  &:hover {
+    color: var(--vp-c-brand-1);
+  }
 }
 
 .name {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+@media (min-width: 768px) {
+  .item:last-child {
+    display: unset;
+  }
 }
 </style>

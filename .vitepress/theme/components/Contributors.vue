@@ -1,25 +1,24 @@
 <script setup lang="ts">
-import { computed, ref, toRefs } from "vue"
+import { computed, ref } from "vue"
 
-const props = defineProps<{ body: string; author: string; tag: string }>()
-const { body, author, tag } = toRefs(props)
+const {body, author, tag} = defineProps<{ body: string; author: string; tag: string }>()
 
 function isHigherThan(tagName: string, reference: string) {
 	return reference.localeCompare(tagName, undefined, { numeric: true, sensitivity: "base" }) >= 0
 }
 
 const notMentioned = computed(() => {
-	return isHigherThan("v0.1", tag.value) ? ["Koitharu"] : []
+	return isHigherThan("v0.1", tag) ? ["Koitharu"] : []
 })
 
 const nonExistent = ref<string[]>([])
 
 const contributors = computed(() => {
-	const list = [...body.value.matchAll(/(?<=\(|(, ))@(.*?)(?=\)|(, ))/g)]
+	const list = [...body.matchAll(/(?<=\(|(, ))@(.*?)(?=\)|(, ))/g)]
 		.map((match) => match[2])
-	const uncredited = author.value.includes("[bot]")
+	const uncredited = author.includes("[bot]")
 		? notMentioned.value
-		: [author.value, ...notMentioned.value]
+		: [author, ...notMentioned.value]
 
 	return [...new Set([...uncredited, ...list])].filter((user) => !nonExistent.value.includes(user))
 })
@@ -36,7 +35,7 @@ const contributorsText = computed(() => {
 
 	return listFormatter.format([
 		...contributors.value.slice(0, 2),
-		`${contributors.value.length - 2} other contributors`,
+		`${contributors.value.at(-2)} other contributors`,
 	])
 })
 
@@ -50,8 +49,9 @@ function addToNonExistent(user: string) {
 <template>
 	<div v-if="contributors.length > 0" class="contributors">
 		<h3>Contributors</h3>
-		<ul>
+		<ul class="contributors__list">
 			<li
+			  class="contributor"
 				v-for="contributor of contributors"
 				:key="contributor"
 			>
@@ -65,44 +65,46 @@ function addToNonExistent(user: string) {
 						:src="`https://github.com/${contributor}.png?size=32`"
 						:alt="`@${contributor} profile picture`"
 						loading="lazy"
-						class="avatar"
+						class="contributor__avatar"
 						@error="addToNonExistent(contributor)"
 					>
 				</a>
 			</li>
 		</ul>
-		<div class="names">
+		<div class="contributors__names">
 			{{ contributorsText }}
 		</div>
 	</div>
 </template>
 
-<style lang="stylus" scoped>
-.contributors {
-	ul {
-		display: flex
-		align-items: center
-		flex-wrap: wrap
-		gap: 0.5rem
-		list-style-type: none
-		padding-left: 0
+<style scoped>
+.contrubutors {
+  .contrubutors__contributors__list {
+    display: flex;
+  	align-items: center;
+  	flex-wrap: wrap;
+  	gap: 0.5rem;
+  	list-style-type: none;
+  	padding-left: 0;
+  }
 
-		li + li {
-			margin-top: 0
-		}
-	}
+  .contrubutors__names {
+    font-size: 0.875rem;
+    color: var(--vp-c-text-2);
+  }
 
-	.avatar {
-		width: 32px
-		height: 32px
-		border-radius: 50%
-		box-shadow: var(--vp-shadow-1)
-		border: 1px solid var(--vp-c-divider)
-	}
+  & li + li {
+    margin-top: 0
+  }
+}
 
-	.names {
-		font-size: 0.875rem
-		color: var(--vp-c-text-2)
-	}
+.contributor {
+  .avatar {
+    width: 32px;
+  	height: 32px;
+  	border-radius: 50%;
+  	box-shadow: var(--vp-shadow-1);
+  	border: 1px solid var(--vp-c-divider);
+  }
 }
 </style>

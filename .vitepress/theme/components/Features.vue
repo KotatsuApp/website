@@ -4,7 +4,7 @@ import type { DefaultTheme } from 'vitepress/theme-without-fonts'
 
 import Feature from './Feature.vue'
 
-export interface Feature {
+interface IFeature {
   image?: DefaultTheme.ThemeableImage
   title: string
   details: string
@@ -12,14 +12,14 @@ export interface Feature {
   linkText?: string
 }
 
-const props = defineProps<{
-  features: Feature[]
+const {features} = defineProps<{
+  features: IFeature[]
 }>()
 
 const grid = computed(() => {
-  const length = props.features.length
+  const length = features.length
 
-  if (!length) {
+  if (length === 0) {
     return
   } else if (length === 2) {
     return 'grid-2'
@@ -47,8 +47,6 @@ const grid = computed(() => {
             :image="feature.image"
             :title="feature.title"
             :details="feature.details"
-            :link="feature.link"
-            :link-text="feature.linkText"
           />
         </div>
       </div>

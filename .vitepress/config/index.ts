@@ -1,19 +1,14 @@
 import type { Theme } from '../theme/types'
 import { defineConfigWithTheme } from 'vitepress'
-import { config as ru, searchLocale as searchLocaleRu } from './ru'
 import { config as root, searchLocale as searchLocaleEn } from './en'
-import { config as ua, searchLocale as searchLocaleUa } from './ua'
 import { addPlugins } from '../theme/plugins/markdown'
 import { sections, prepareData } from '../theme/plugins/section'
 import { slugify } from 'transliteration'
 import { fileURLToPath, URL } from 'node:url'
 import { telegram } from '../../website/icons'
 import { tabsMarkdownPlugin } from "vitepress-plugin-tabs"
-import pluginRewriteAll from 'vite-plugin-rewrite-all'
-
 import shortcode_plugin from "markdown-it-shortcode-tag"
 import shortcodes from "./shortcodes"
-
 import generateOgImages from "./hooks/generateOgImages"
 import generateMeta from "./hooks/generateMeta"
 import Unocss from 'unocss/vite'
@@ -51,7 +46,6 @@ export default defineConfigWithTheme<Theme.Config>({
     config (md) {
       addPlugins(md)
       md.use(tabsMarkdownPlugin)
-      md.use(pluginRewriteAll)
       md.use(shortcode_plugin, shortcodes)
     },
   },
@@ -76,8 +70,6 @@ export default defineConfigWithTheme<Theme.Config>({
       options: {
         locales: {
           ...searchLocaleEn,
-          // ...searchLocaleRu,
-          // ...searchLocaleUa,
         },
       },
     },
@@ -87,8 +79,6 @@ export default defineConfigWithTheme<Theme.Config>({
 
   locales: {
     ...root,
-    // ...ru,
-    // ...ua,
   },
 
   transformPageData(pageData, { siteConfig }) {

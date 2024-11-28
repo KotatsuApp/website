@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { DefaultTheme, useRoute, withBase } from 'vitepress'
+import { type DefaultTheme, useRoute, withBase } from 'vitepress'
 
 import List from './List.vue'
 import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue'

@@ -1,16 +1,11 @@
 import type { DefaultTheme, PageData, SiteConfig } from 'vitepress'
-import { normalize } from 'vitepress/dist/client/shared'
-import { ensureStartingSlash, getTranslator } from '../utils'
-
-import { readFileSync } from 'fs'
-import { basename } from 'path'
+import { ensureStartingSlash, getTranslator,normalizePath, findSidebarPath } from '../utils/index'
+import { readFileSync } from 'node:fs'
+import { basename } from 'node:path'
 import fg from 'fast-glob'
 import matter from 'gray-matter'
-
 import { generateSidebarItem, getTitleFromContent } from './sidebar'
-
 import type { Translator } from '../../../website/translators'
-import { findPath } from '../utils'
 
 export interface SectionData {
   path: string
@@ -18,15 +13,12 @@ export interface SectionData {
   title: string
   titleLower: string
   description?: string
-
   text?: string
   translator?: Translator
   logo?: string
-  dependencies?: Array<string>
-  categories?: Array<string>
-
+  dependencies?: string[]
+  categories?: string[]
   repository?: string
-
   items?: DefaultTheme.SidebarItem[]
 }
 
@@ -35,23 +27,15 @@ export interface DocsPageData extends PageData {
   breadcrumbs?: DefaultTheme.SidebarItem[]
 }
 
+const paths = [
+  'website/manuals/*.md',
+  '!website/manuals/index.md',
+  '!website/manuals/faq/*/index.md',
+  '!website/manuals/guides/*/index.md',
+]
+
 export const sections: SectionData[] = fg
-  .sync([
-    'website/manuals/*.md',
-    '!website/manuals/index.md',
-    '!website/manuals/faq/*/index.md',
-    '!website/manuals/guides/*/index.md',
-
-    'website/ua/manuals/*.md',
-    '!website/ua/manuals/index.md',
-    '!website/ua/manuals/faq/*/index.md',
-    '!website/ua/manuals/guides/*/index.md',
-
-    'website/ru/manuals/*.md',
-    '!website/ru/manuals/index.md',
-    '!website/ru/manuals/faq/*/index.md',
-    '!website/ru/manuals/guides/*/index.md',
-  ])
+  .sync(paths)
   .map(file => {
     const content = readFileSync(file, 'utf-8')
     const { data } = matter(content)
@@ -69,7 +53,7 @@ export const sections: SectionData[] = fg
     const filePath = file.substring(file.indexOf('/') + 1)
     const section: SectionData = {
       path: filePath,
-      link: ensureStartingSlash(normalize(filePath)),
+      link: ensureStartingSlash(normalizePath(filePath)),
       repository,
       title,
       titleLower: title.toLowerCase(),
@@ -78,9 +62,8 @@ export const sections: SectionData[] = fg
       logo,
       dependencies: Array.isArray(dependencies) ? dependencies : Array(dependencies),
       categories: Array.isArray(categories) ? categories : Array(categories),
+      translator: getTranslator(translator),
     }
-
-    section.translator = getTranslator(translator)
 
     if (items) {
       section.items = generateSidebarItem(items, section.link)
@@ -90,32 +73,23 @@ export const sections: SectionData[] = fg
   })
   .sort((a, b) => (a.text && b.text) ? a.text.localeCompare(b.text) : 0)
 
-export default class DocsSection {
-  static prepareData(
-    pageData: DocsPageData,
-    siteConfig: SiteConfig,
-  ): DocsPageData {
-    const section = sections.find(section => pageData.relativePath.startsWith(section.path.replace(/index\.md$/, '')))
+export function prepareData (pageData: DocsPageData, siteConfig: SiteConfig): DocsPageData  {
+  const section = sections.find(section => pageData.relativePath.startsWith(section.path.replace(/index\.md$/, '')))
 
-    pageData.section = section
-    pageData.breadcrumbs = findPath(pageData, siteConfig.userConfig)
+  pageData.section = section
+  pageData.breadcrumbs = findSidebarPath(pageData, siteConfig.userConfig)
 
-    pageData.title = !pageData.frontmatter.title && pageData.breadcrumbs.length
-        ? pageData.breadcrumbs.map(item => item.text).reverse().join(siteConfig.userConfig.themeConfig.titleSeparator)
-        : pageData.title
+  pageData.title = !pageData.frontmatter.title && pageData.breadcrumbs.length
+    ? pageData.breadcrumbs.map(item => item.text).reverse().join(siteConfig.userConfig.themeConfig.titleSeparator)
+    : pageData.title
 
-    if (
-      section
-      && !pageData.description
-      && pageData.section.description
-    ) {
-      pageData.description = pageData.section.description
-    }
-
-    return pageData
+  if (
+    section
+    && !pageData.description
+    && pageData.section.description
+  ) {
+    pageData.description = pageData.section.description
   }
+
+  return pageData
 }
-
-export { DocsSection }
-
-export const { prepareData } = DocsSection
