@@ -39,7 +39,6 @@
         "plop": "^3.1.2",
         "postcss-nesting": "^13.0.1",
         "transliteration": "^2.3.5",
-        "unocss": "^0.54.2",
         "vitepress": "1.0.0-rc.20",
         "vitepress-plugin-tabs": "0.4.1",
         "vue": "^3.5.13",

@@ -7,7 +7,6 @@ import DefaultTheme from 'vitepress/theme-without-fonts'
 import Layout from './components/Layout.vue'
 import './styles/global.css'
 import './styles/glightbox.css'
-import 'uno.css'
 
 export default {
   extends: DefaultTheme,
