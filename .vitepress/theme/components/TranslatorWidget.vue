@@ -2,7 +2,7 @@
 import { type Ref, computed } from 'vue'
 import { type PageData, useData } from 'vitepress'
 import type { DocsPageData } from '../plugins/section'
-import { type Translator, translators } from '../../../website/translators'
+import { translators } from '../../../website/translators'
 
 import { VPImage } from 'vitepress/theme-without-fonts'
 import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue'
@@ -37,7 +37,7 @@ const translator = computed(() => {
   >
     <VPLink
       :href="translator.github"
-      :no-icon="true"
+      no-icon
       class="body"
     >
       <VPImage

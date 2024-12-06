@@ -39,7 +39,8 @@ function createContainer(
           if (klass === 'details')
             return `<details class="${klass} custom-block"${attrs}><summary>${title}</summary>\n`
           return `<div class="${klass} custom-block"${attrs}><p class="custom-block-title">${title}</p>\n`
-        } else return klass === 'details' ? `</details>\n` : `</div>\n`
+        }
+        return klass === 'details' ? "</details>\n" : "</div>\n"
       }
     }
   ]
@@ -59,26 +60,26 @@ function table(
       terminatorRules, firstCh, secondCh;
 
   // should have at least two lines
-  if (startLine + 2 > endLine) { return false; }
+  if (startLine + 2 > endLine) return false;
 
   nextLine = startLine + 1;
 
-  if (state.sCount[nextLine] < state.blkIndent) { return false; }
+  if (state.sCount[nextLine] < state.blkIndent) return false;
 
   // if it's indented more than 3 spaces, it should be a code block
-  if (state.sCount[nextLine] - state.blkIndent >= 4) { return false; }
+  if (state.sCount[nextLine] - state.blkIndent >= 4) return false;
 
   // first character of the second line should be '|', '-', ':',
   // and no other characters are allowed but spaces;
   // basically, this is the equivalent of /^[-:|][-:|\s]*$/ regexp
 
   pos = state.bMarks[nextLine] + state.tShift[nextLine];
-  if (pos >= state.eMarks[nextLine]) { return false; }
+  if (pos >= state.eMarks[nextLine]) return false;
 
   firstCh = state.src.charCodeAt(pos++);
-  if (firstCh !== 0x7C/* | */ && firstCh !== 0x2D/* - */ && firstCh !== 0x3A/* : */) { return false; }
+  if (firstCh !== 0x7C/* | */ && firstCh !== 0x2D/* - */ && firstCh !== 0x3A/* : */) return false;
 
-  if (pos >= state.eMarks[nextLine]) { return false; }
+  if (pos >= state.eMarks[nextLine]) return false;
 
   secondCh = state.src.charCodeAt(pos++);
   if (secondCh !== 0x7C/* | */ && secondCh !== 0x2D/* - */ && secondCh !== 0x3A/* : */ && !isSpace(secondCh)) {
@@ -87,12 +88,12 @@ function table(
 
   // if first character is '-', then second character must not be a space
   // (due to parsing ambiguity with list)
-  if (firstCh === 0x2D/* - */ && isSpace(secondCh)) { return false; }
+  if (firstCh === 0x2D/* - */ && isSpace(secondCh)) return false;
 
   while (pos < state.eMarks[nextLine]) {
     ch = state.src.charCodeAt(pos);
 
-    if (ch !== 0x7C/* | */ && ch !== 0x2D/* - */ && ch !== 0x3A/* : */ && !isSpace(ch)) { return false; }
+    if (ch !== 0x7C/* | */ && ch !== 0x2D/* - */ && ch !== 0x3A/* : */ && !isSpace(ch)) return false;
 
     pos++;
   }
@@ -108,12 +109,11 @@ function table(
       // e.g. allow ` |---| `, disallow ` ---||--- `
       if (i === 0 || i === columns.length - 1) {
         continue;
-      } else {
-        return false;
       }
+      return false;
     }
 
-    if (!/^:?-+:?$/.test(t)) { return false; }
+    if (!/^:?-+:?$/.test(t)) return false;
     if (t.charCodeAt(t.length - 1) === 0x3A/* : */) {
       aligns.push(t.charCodeAt(0) === 0x3A/* : */ ? 'center' : 'right');
     } else if (t.charCodeAt(0) === 0x3A/* : */) {
@@ -124,8 +124,8 @@ function table(
   }
 
   lineText = getLine(state, startLine).trim();
-  if (lineText.indexOf('|') === -1) { return false; }
-  if (state.sCount[startLine] - state.blkIndent >= 4) { return false; }
+  if (lineText.indexOf('|') === -1) return false;
+  if (state.sCount[startLine] - state.blkIndent >= 4) return false;
   columns = escapedSplit(lineText);
   if (columns.length && columns[0] === '') columns.shift();
   if (columns.length && columns[columns.length - 1] === '') columns.pop();
@@ -134,9 +134,9 @@ function table(
   // and align row should be exactly the same (the rest of the rows can differ)
   columnCount = columns.length;
   headers = [...columns];
-  if (columnCount === 0 || columnCount !== aligns.length) { return false; }
+  if (columnCount === 0 || columnCount !== aligns.length) return false;
 
-  if (silent) { return true; }
+  if (silent) return true;
 
   oldParentType = state.parentType;
   // @ts-expect-error
@@ -172,7 +172,7 @@ function table(
   token     = state.push('thead_close', 'thead', -1);
 
   for (nextLine = startLine + 2; nextLine < endLine; nextLine++) {
-    if (state.sCount[nextLine] < state.blkIndent) { break; }
+    if (state.sCount[nextLine] < state.blkIndent) break;
 
     terminate = false;
     for (i = 0, l = terminatorRules.length; i < l; i++) {
@@ -182,10 +182,10 @@ function table(
       }
     }
 
-    if (terminate) { break; }
+    if (terminate) break;
     lineText = getLine(state, nextLine).trim();
-    if (!lineText) { break; }
-    if (state.sCount[nextLine] - state.blkIndent >= 4) { break; }
+    if (!lineText) break;
+    if (state.sCount[nextLine] - state.blkIndent >= 4) break;
     columns = escapedSplit(lineText);
     if (columns.length && columns[0] === '') columns.shift();
     if (columns.length && columns[columns.length - 1] === '') columns.pop();
@@ -237,8 +237,8 @@ function getLine(
   state: StateBlock,
   line: number
 ): string {
-  var pos = state.bMarks[line] + state.tShift[line],
-      max = state.eMarks[line];
+  const pos = state.bMarks[line] + state.tShift[line];
+  const max = state.eMarks[line];
 
   return state.src.slice(pos, max)
 }

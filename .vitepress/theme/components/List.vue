@@ -13,8 +13,8 @@ defineProps<{
 <template>
   <ul>
     <li
-      v-for="(item, key) in items"
-      :key="key"
+      v-for="(item, idx) in items"
+      :key="idx"
       class="item"
       :class="{ 'has-link': item.link }"
     >

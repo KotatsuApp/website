@@ -38,7 +38,7 @@ const translator = computed<Translator>(() => {
   >
     <VPLink
       :href="translator.github"
-      :no-icon="true"
+      no-icon
       class="body"
     >
       <VPImage

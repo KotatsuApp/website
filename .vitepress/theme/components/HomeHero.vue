@@ -4,13 +4,13 @@ import VPImage from 'vitepress/dist/client/theme-default/components/VPImage.vue'
 import Button from './Button.vue'
 import { type Ref, inject } from 'vue'
 
-export interface HeroAction {
+interface HeroAction {
   theme?: 'brand' | 'alt'
   text: string
   link: string
 }
 
-export interface Data {
+interface Data {
   image?: DefaultTheme.ThemeableImage
   title: string
   text: string

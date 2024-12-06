@@ -66,5 +66,5 @@ export async function createZoom(app: App, router: Router) {
 }
 
 function updateFixedElements(scrollWidth?: number) {
-  document.documentElement.style.setProperty('--scrollbar-width', scrollWidth ? scrollWidth + 'px' : '')
+  document.documentElement.style.setProperty('--scrollbar-width', scrollWidth ? `${scrollWidth}px` : '')
 }

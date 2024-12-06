@@ -45,8 +45,8 @@ const nav = computed(() => {
 	<nav v-if="nav" aria-labelledby="main-nav-aria-label" class="VPNavBarMenu">
 		<span id="main-nav-aria-label" class="visually-hidden">Main navigation</span>
 		<template v-for="item in nav" :key="item.text">
-			<VPNavBarMenuLink v-if="'link' in item" :item="item" />
-			<VPNavBarMenuGroup v-else :item="item" />
+			<VPNavBarMenuLink v-if="'link' in item" :item />
+			<VPNavBarMenuGroup v-else :item />
 		</template>
 	</nav>
 </template>

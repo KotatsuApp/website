@@ -70,9 +70,9 @@ function onSearchBarClick(event: PointerEvent) {
       </div>
       <input
         ref="searchInput"
-        :id="id"
+        :id
         :value="modelValue"
-        :placeholder="placeholder"
+        :placeholder
         class="search-input"
         @input="$emit('update:modelValue', ($event.target as HTMLInputElement).value)"
       />

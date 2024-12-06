@@ -1,7 +1,7 @@
 <script setup lang="ts">
 /// <reference types="@types/gtag.js" />
 
-import { computed, onMounted, ref } from "vue"
+import { computed } from "vue"
 import { data as release } from "../data/release.data"
 
 const downloadInformation = computed(() => ({
@@ -15,12 +15,6 @@ const downloadInformation = computed(() => ({
       		.find(a => /^release.apk/.test(a.name)),
   	},
 }))
-
-const isAndroid = ref(true)
-
-onMounted(() => {
-	isAndroid.value = !!navigator.userAgent.match(/android/i)
-})
 
 function handleAnalytics() {
 	window.gtag?.("event", "Download", {
