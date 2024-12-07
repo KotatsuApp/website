@@ -17,8 +17,5 @@ yarn-error.log*
 .zed/
 .vscode/
 
-package-lock.json
-pnpm-lock.yaml
-
 release.data.json
 changelogs.data.json

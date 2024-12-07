@@ -37,7 +37,7 @@ const qrcode = useQRCode(theme.value.footer.qrcodeLink)
 
       <div class="footer__socials">
         <div class="footer__copyright">
-          <GPL/>
+          <GPL height="24" />
           <p>GPL-3.0 Licensed<br />Kotatsu Developers</p>
         </div>
 
