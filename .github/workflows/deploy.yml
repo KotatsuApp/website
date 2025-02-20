@@ -24,3 +24,5 @@ jobs:
         with:
           branch: gh-pages
           folder: .vitepress/dist # The folder the action should deploy.
+          git-config-name: kotatsu-bot
+          git-config-email: bot@kotatsu.app
