@@ -19,7 +19,7 @@ defineProps<{
         <p v-html="details"></p>
       </div>
       <div class="image">
-        <VPImage class="image-src" :image="image" />
+        <VPImage class="image-src" :image />
       </div>
     </div>
   </div>

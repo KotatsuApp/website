@@ -13,7 +13,7 @@ defineProps<{
     <TreeItem
       v-for="(item, index) in items"
       :key="index"
-      :item="item"
+      :item
     />
   </ul>
 </template>

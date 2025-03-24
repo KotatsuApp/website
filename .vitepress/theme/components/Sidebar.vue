@@ -17,7 +17,7 @@ const props = defineProps<{
 }>()
 
 // a11y: focus Nav element when menu has opened
-const navEl = ref<HTMLElement | null>(null)
+const navEl = ref<HTMLElement>()
 const isLocked = useScrollLock(inBrowser ? document.body : null)
 
 watch(
@@ -57,7 +57,7 @@ watch(() => route.path, () => {
 }, { flush: 'post' })
 
 // tmp fix vitepress bug
-watch(lang, () => activeGroupEl.value && activeGroupEl.value.classList.remove('collapsed'), { flush: 'post' })
+watch(lang, () => activeGroupEl.value?.classList.remove('collapsed'), { flush: 'post' })
 
 function isInViewport(el: HTMLElement, offset: number) {
   const { top, bottom } = el.getBoundingClientRect()
@@ -88,7 +88,7 @@ function isInViewport(el: HTMLElement, offset: number) {
         :key="item.text"
         class="group"
       >
-        <VPSidebarItem :item="item" :depth="0" :class="{ landing: !item.items }" />
+        <VPSidebarItem :item :depth="0" :class="{ landing: !item.items }" />
       </div>
 
       <slot name="sidebar-nav-after" />

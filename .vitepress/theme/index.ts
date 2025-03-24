@@ -2,17 +2,16 @@ import { type Router, inBrowser, useData } from 'vitepress'
 import { type App, watchEffect } from 'vue'
 import { createZoom } from './composables/zoom'
 import { enhanceAppWithTabs } from "vitepress-plugin-tabs/client"
-import analytics from "./plugins/analytics"
+import initializeAnalytics from "./plugins/analytics"
 import DefaultTheme from 'vitepress/theme-without-fonts'
 import Layout from './components/Layout.vue'
 import './styles/global.css'
 import './styles/glightbox.css'
-import 'uno.css'
 
+/** @type {import('vitepress').Theme} */
 export default {
   extends: DefaultTheme,
   Layout: Layout,
-
   setup() {
     const { lang } = useData()
     watchEffect(() => {
@@ -21,10 +20,9 @@ export default {
       }
     })
   },
-
   enhanceApp({ app, router }: { app: App, router: Router }) {
     enhanceAppWithTabs(app)
     createZoom(app, router)
-    analytics({ id: "G-X37JGMJE4R" })
+    initializeAnalytics("G-X37JGMJE4R")
   },
 }

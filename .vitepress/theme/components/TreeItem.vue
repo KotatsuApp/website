@@ -5,7 +5,7 @@ import type { DefaultTheme } from 'vitepress'
 import Tree from './Tree.vue'
 import VPLink from 'vitepress/dist/client/theme-default/components/VPLink.vue'
 
-const { item } = defineProps<{
+const {item} = defineProps<{
   item: DefaultTheme.SidebarItem
 }>()
 const isOpen = ref(false)
@@ -42,14 +42,14 @@ function toggle() {
           <path d="M6.113,15.495 C5.531,16.076 4.01,16.395 4.01,14.494 L4.01,1.506 C4.01,-0.333 5.531,-0.076 6.113,0.506 L12.557,6.948 C13.137,7.529 13.137,8.47 12.557,9.052 L6.113,15.495 L6.113,15.495 Z"></path>
         </svg>
       </div>
-      <VPLink :href="props.item.link">
-        {{ props.item.text }}
+      <VPLink :href="item.link">
+        {{ item.text }}
       </VPLink>
     </span>
     <Tree
       v-show="isOpen"
       v-if="isFolder"
-      :items="props.item.items"
+      :items="item.items"
       class="list"
     />
   </li>

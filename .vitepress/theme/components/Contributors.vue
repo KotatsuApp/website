@@ -99,7 +99,7 @@ function addToNonExistent(user: string) {
 }
 
 .contributor {
-  .avatar {
+  .contributor__avatar {
     width: 32px;
   	height: 32px;
   	border-radius: 50%;

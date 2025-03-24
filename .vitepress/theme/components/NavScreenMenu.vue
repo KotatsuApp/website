@@ -45,7 +45,7 @@ const nav = computed(() => {
 		<template v-for="item in nav" :key="item.text">
 			<VPNavScreenMenuLink
 				v-if="'link' in item"
-				:item="item"
+				:item
 			/>
 			<VPNavScreenMenuGroup
 				v-else

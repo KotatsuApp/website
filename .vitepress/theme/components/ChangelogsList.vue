@@ -47,8 +47,8 @@ const dateFormatter = new Intl.DateTimeFormat("en", {
 				:aria-label="`Permalink to &quot;${release.tag_name}&quot;`"
 			/>
 		</h2>
-		<time class="release__date" :datetime="release.published_at!">
-			{{ dateFormatter.format(new Date(release.published_at!)) }}
+		<time class="release__date" :datetime="release.published_at">
+			{{ dateFormatter.format(new Date(release.published_at)) }}
 		</time>
 		<div v-html="renderMarkdown(release.body)" />
 	</div>

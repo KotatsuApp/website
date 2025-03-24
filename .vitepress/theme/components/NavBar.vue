@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { useWindowScroll } from '@vueuse/core'
-import { ref, watchPostEffect } from 'vue'
+import { computed } from 'vue'
 import { useData, inBrowser } from 'vitepress'
 import { useSidebar } from 'vitepress/dist/client/theme-default/composables/sidebar'
 import VPNavBarTitle from 'vitepress/dist/client/theme-default/components/VPNavBarTitle.vue'
@@ -23,14 +23,10 @@ const { y } = useWindowScroll({ window: inBrowser && window })
 const { hasSidebar } = useSidebar()
 const { frontmatter } = useData()
 
-const classes = ref<Record<string, boolean>>({})
-
-watchPostEffect(() => {
-  classes.value = {
-    'has-sidebar': hasSidebar.value,
-    top: frontmatter.value?.layout === 'home' && y.value === 0,
-  }
-})
+const classes = computed(() => ({
+  'has-sidebar': hasSidebar.value,
+  top: frontmatter.value?.layout === 'home' && y.value === 0,
+}))
 </script>
 
 <template>
@@ -163,18 +159,19 @@ watchPostEffect(() => {
   align-items: center;
   height: calc(var(--vp-nav-height) - 1px);
   transition: background-color 0.5s;
+  gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .content-body {
+    gap: unset
+  }
 }
 
 @media (min-width: 960px) {
   .VPNavBar:not(.top) .content-body {
     position: relative;
     background-color: var(--vp-nav-bg-color);
-  }
-}
-
-@media (max-width: 767px) {
-  .content-body {
-    column-gap: 0.5rem;
   }
 }
 

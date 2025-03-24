@@ -8,14 +8,15 @@ function mountGoogleAnalytics(id: string) {
 	}
 
 	const analyticsScript = document.createElement("script")
+	analyticsScript.src = `https://www.googletagmanager.com/gtag/js?id=${id}`
 
 	analyticsScript.addEventListener("load", () => {
 		// @ts-expect-error Missing types
 		window.dataLayer = window.dataLayer || []
-		function gtag(..._args: any[]) {
+		const gtag = (...args: unknown[]) =>{
 			// @ts-expect-error Missing types
 			// eslint-disable-next-line prefer-rest-params
-			window.dataLayer.push(arguments)
+			window.dataLayer.push(args)
 		}
 
 		gtag("js", new Date())
@@ -24,14 +25,12 @@ function mountGoogleAnalytics(id: string) {
 		window.gtag = gtag
 	})
 
-	analyticsScript.src = `https://www.googletagmanager.com/gtag/js?id=${id}`
 
 	document.body.appendChild(analyticsScript)
 }
 
-export default function ({ id }: { id: string }) {
-	// eslint-disable-next-line n/prefer-global/process
-	if (process.env.NODE_ENV === "production" && id && typeof window !== "undefined") {
+export default function initializeAnalytics(id: string) {
+  if (process.env.NODE_ENV === "production" && id && typeof window !== "undefined") {
 		mountGoogleAnalytics(id)
 	}
 }

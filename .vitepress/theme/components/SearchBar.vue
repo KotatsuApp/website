@@ -2,7 +2,7 @@
 import { ref, onMounted, useId } from 'vue'
 import { useData } from 'vitepress'
 import { createTranslate } from 'vitepress/dist/client/theme-default/support/translation'
-import { Icon24Search } from '@vkontakte/icons'
+import {MagnifyingGlass, ArrowLeft, X} from '../icons'
 
 const id = useId()
 const { theme } = useData()
@@ -40,7 +40,7 @@ function onSearchBarClick(event: PointerEvent) {
   <search>
     <form class="search-bar" @pointerup="onSearchBarClick($event)" @submit.prevent="">
       <label :title="placeholder" id="localsearch-label" :for="id">
-        <Icon24Search width="18" height="18" fill="currentColor" />
+        <MagnifyingGlass width="18px" height="18[x" />q
       </label>
       <div
         v-if="backButton"
@@ -51,28 +51,14 @@ function onSearchBarClick(event: PointerEvent) {
           :title="$t('modal.backButtonTitle')"
           @click="$emit('close')"
         >
-          <svg
-            width="18"
-            height="18"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-            <path
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M19 12H5m7 7l-7-7l7-7"
-            />
-          </svg>
+          <ArrowLeft width="18" height="18" />
         </button>
       </div>
       <input
         ref="searchInput"
-        :id="id"
+        :id
         :value="modelValue"
-        :placeholder="placeholder"
+        :placeholder
         class="search-input"
         @input="$emit('update:modelValue', ($event.target as HTMLInputElement).value)"
       />
@@ -83,9 +69,7 @@ function onSearchBarClick(event: PointerEvent) {
           :title="$t('modal.resetButtonTitle')"
           @click="$emit('update:modelValue', '')"
         >
-          <svg width="24" height="24" viewBox="0 0 20 20">
-            <path d="M10 10l5.09-5.09L10 10l5.09 5.09L10 10zm0 0L4.91 4.91 10 10l-5.09 5.09L10 10z" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
+          <X width="24" height="24" />
         </button>
       </div>
     </form>

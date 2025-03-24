@@ -18,23 +18,23 @@ const changelog = computed(() => {
 </script>
 
 <template>
-	<div class="changelog">
-		<header>
-			<h2>Changelog</h2>
+	<section class="changelog">
+		<header class="changelog__header">
+			<h2 class="changelog__title">Changelog</h2>
 		</header>
-		<div v-html="changelog" />
-	</div>
-	<div class="fullChangelog">
+		<article class="changelog__content" v-html="changelog" />
+	</section>
+	<footer class="full-changelog">
 		<p>
 			View the full release
-			<a href="https://github.com/KotatsuApp/Kotatsu/releases/latest" target="_blank" rel="noopener">
+			<a class="full-changelog__link" href="https://github.com/KotatsuApp/Kotatsu/releases/latest" target="_blank" rel="noopener">
 				here
 			</a>
 		</p>
-	</div>
+	</footer>
 </template>
 
-<style>
+<style scoped>
 .changelog {
 	display: block;
 	border: 1px solid var(--vp-c-bg-soft);
@@ -44,38 +44,42 @@ const changelog = computed(() => {
 	padding: 24px;
 	height: 100%;
 	margin: 1.5em auto 0.5em;
+
+	.changelog__header {
+	  display: flex;
+		justify-content: center;
+		align-items: baseline;
+		margin: 0 0 1rem;
+
+		.changelog__title {
+			font-size: 1.5rem;
+			margin: 0;
+			padding: 0;
+			color: var(--vp-c-text-1);
+			border: none;
+		}
+	}
+
+	.changelog__content {
+		margin: 0;
+
+		& > p {
+		  margin: 0 0 1rem;
+			color: var(--vp-c-text-2);
+			font-size: 0.875rem;
+		}
+
+		& svg {
+		  font-size: 1.2em;
+			margin-right: 0.5rem;
+			vertical-align: middle;
+		}
+	}
 }
 
-.changelog header {
-	display: flex;
-	justify-content: center;
-	align-items: baseline;
-	margin: 0 0 1rem;
-}
-
-.changelog svg {
-	font-size: 1.2em;
-	margin-right: 0.5rem;
-	vertical-align: middle;
-}
-
-.changelog h2 {
-	font-size: 1.5rem;
-	margin: 0;
-	padding: 0;
-	color: var(--vp-c-text-1);
-	border: none;
-}
-
-.changelog div > p {
+.full-changelog {
 	margin: 0 0 1rem;
 	color: var(--vp-c-text-2);
-	font-size: 0.9rem;
-}
-
-.fullChangelog {
-	margin: 0 0 1rem;
-	color: var(--vp-c-text-2);
-	font-size: 0.9rem;
+	font-size: 0.875rem;
 }
 </style>
