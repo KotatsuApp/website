@@ -57,6 +57,9 @@
         "glightbox": "^3.2.0",
         "qrcode": "^1.5.3"
     },
+    "optionalDependencies": {
+        "@rollup/rollup-linux-x64-gnu": "4.9.5"
+    },
     "engines": {
         "node": ">=18"
     }
