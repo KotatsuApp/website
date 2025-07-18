@@ -1,8 +1,10 @@
 name: Deploy
 
 on:
-  schedule:
-    - cron: "0 0 * * *"
+  push:
+    branches: [main]
+  repository_dispatch:
+    types: [app-release]
   workflow_dispatch:
 
 permissions:
