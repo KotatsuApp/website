@@ -1,4 +1,4 @@
----
+bft---
 title: Getting started
 description: Essential information to help you get set up with Kotatsu.
 footer: false
