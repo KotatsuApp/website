@@ -1,3 +1,4 @@
+![Screenshot_20251106-185640](https://github.com/user-attachments/assets/84361546-aedd-45ea-8734-c2c49a523d1f)
 ---
 title: Getting started
 description: Essential information to help you get set up with Kotatsu.
